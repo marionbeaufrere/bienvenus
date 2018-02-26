@@ -1,2 +1,14 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class = "container">
+  <% @categories.each do |category| %>
+    <li> <a href = "#<%=category%>"> <%= category %> </a></li>
+  <% end %>
+</div>
+<br><br><br><br><br><br><br><br><br><br><br><br>
+<div class = "container">
+  <% @categories.each do |category| %>
+    <uL>
+      <li><%= category.upcase %></li><a name= "<%=category%>"></a>
+      <br><br>
+    </uL>
+  <% end %>
+</div>
