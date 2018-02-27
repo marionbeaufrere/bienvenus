@@ -1,4 +1,4 @@
-class SubtaskController < ApplicationController
+class SubtasksController < ApplicationController
 
 def update
    @subtask = Subtask.find(params[:id])
