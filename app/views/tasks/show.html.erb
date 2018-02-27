@@ -1,0 +1,7 @@
+<% @subtasks.each do |subtask| %>
+<ul>
+<li><%= subtask.title %></li>
+<li><%= subtask.description %></li>
+<%= link_to "update", subtask_path(subtask), method: :patch %>
+</ul>
+<% end %>
