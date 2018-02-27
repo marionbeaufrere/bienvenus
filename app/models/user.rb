@@ -23,6 +23,19 @@
 #
 
 class User < ApplicationRecord
+  include AASM
+
+    aasm do
+      state :state_zero, initial: true
+      state :state_first
+      # state :state_200
+      # state :state_300
+      # state :state_400
+
+      event :activate do
+        transitions from: :state_zero, to: :state_first
+      end
+    end
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
