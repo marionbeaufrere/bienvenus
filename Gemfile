@@ -17,8 +17,11 @@ gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker'
 
+gem "pundit"
+
 group :development do
   gem 'web-console', '>= 3.3.0'
+  gem 'annotate'
 end
 
 group :development, :test do
