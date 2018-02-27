@@ -29,6 +29,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
   has_many :user_subtasks
   has_many :subtasks, through: :user_subtasks
-  # has_many :tasks, through: :subtasks
   validates :first_name, :last_name, presence: true
 end
