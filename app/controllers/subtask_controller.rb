@@ -1,0 +1,2 @@
+class SubtaskController < ApplicationController
+end
