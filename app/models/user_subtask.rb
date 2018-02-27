@@ -1,4 +1,4 @@
 class UserSubtask < ApplicationRecord
-  belongs_to :user;
-  belongs_to :subtask;
+  belongs_to :user
+  belongs_to :subtask
 end
