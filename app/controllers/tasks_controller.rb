@@ -1,5 +1,5 @@
 class TasksController < ApplicationController
-
+  before_action :update_user_state
   def index
     @tasks = Task.all
   end

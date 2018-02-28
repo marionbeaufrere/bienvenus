@@ -1,5 +1,5 @@
 class SubtasksController < ApplicationController
-
+  before_action :update_user_state
 
   def index
    @subtasks = current_user.subtasks

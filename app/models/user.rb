@@ -60,7 +60,7 @@ class User < ApplicationRecord
 
 
   def setup_state_zero
-    add_task_to_user("Title")
+    add_task_to_user("Obtain a residence permit")
   end
 
   def add_task_to_user(task_title)
