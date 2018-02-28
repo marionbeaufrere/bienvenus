@@ -17,7 +17,6 @@ gem 'sass-rails'
 gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker'
-gem 'aasm'
 gem "pundit"
 
 group :development do

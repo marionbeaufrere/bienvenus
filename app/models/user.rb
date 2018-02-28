@@ -20,36 +20,12 @@
 #  last_name              :string
 #  language               :string
 #  user_type              :string
+#  aasm_state             :string
+#  photo                  :string
+#  access                 :integer          default(1)
 #
 
 class User < ApplicationRecord
-  mount_uploader :photo, PhotoUploader
-  include AASM
-
-    aasm do
-      state :state_zero, initial: true
-      state :state_first
-      state :state_second
-      state :state_third
-      state :state_fourth
-
-      event :run do
-        after do
-
-          add_task_to_user("do that")
-        end
-        transitions from: :state_zero, to: :state_first
-      end
-      event :activate do
-        transitions from: :state_first, to: :state_second
-      end
-      event :integrate do
-        transitions from: :state_second, to: :state_third
-      end
-      event :include do
-        transitions from: :state_third, to: :state_fourth
-      end
-    end
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
@@ -58,18 +34,11 @@ class User < ApplicationRecord
   has_many :subtasks, through: :user_subtasks
   validates :first_name, :last_name, presence: true
 
-  after_create :setup_state_zero
+  mount_uploader :photo, PhotoUploader
 
-  # def visible_tasks
-  #   []
-  # end
-
-  def setup_state_zero
-    add_task_to_user("Obtain a residence permit")
-  end
-
-  def add_task_to_user(task_title)
-    task = Task.find_by(title: task_title)
+  def visible_tasks
+    Task.where(position: self.access)
+    # AJOUTER TOUTES LES TACHES COMPLETE D'UNE POSITIONE INFERIEUERE
   end
 end
 
