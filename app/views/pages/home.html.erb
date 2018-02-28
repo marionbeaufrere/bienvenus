@@ -1,17 +1,3 @@
-<div class = "container" id="home">
-  <% @categories.each do |category| %>
-    <li> <a href = "#<%=category%>"> <%= category %> </a></li>
-  <% end %>
-  <br><br>
-  <h3> This website is under construction </h3>
-  <h4> If you have any question, please contact us at contact@bienvenus.org < 3 </h4>
-</div>
-<br><br><br><br><br><br><br><br><br><br><br><br>
 <div class = "container">
-  <% @categories.each do |category| %>
-    <uL>
-      <li><%= category.upcase %></li><a name= "<%=category%>"></a>
-      <br><br>
-    </uL>
-  <% end %>
+  <h1> <%= link_to "BIENVENUE", welcome1_path %></h1>
 </div>
