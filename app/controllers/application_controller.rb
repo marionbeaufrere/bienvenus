@@ -34,14 +34,13 @@ def configure_permitted_parameters
   # end
 
   def update_user_state
-    subtasks = current_user.subtasks
     case current_user.aasm_state
       when "state_zero"
-        needed_subtasks = [
-          Subtask.find_by(title: "do this")
+        needed_tasks = [
+          Task.find_by(title: "Title")
         ]
-        result = needed_subtasks.map do |nst|
-          nst.status == true ? 0 : 1
+        result = needed_tasks.map do |task|
+          task.status == true ? 0 : 1
         end.reduce(:+)
         # result = needed_subtasks.map { |nst| nst.status == true ? 0 : 1 }.reduce(:+)
         unless result # on veut que result = 0 ce qui veut dire que toutes les taches sont completed

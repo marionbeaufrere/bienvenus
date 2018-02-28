@@ -34,7 +34,7 @@ class User < ApplicationRecord
 
       event :run do
         after do
-          # add_subtask_to_user("do that")
+          # add_task_to_user("do that")
         end
         transitions from: :state_zero, to: :state_first
       end
@@ -60,13 +60,11 @@ class User < ApplicationRecord
 
 
   def setup_state_zero
-    add_subtask_to_user("do this")
+    add_task_to_user("Title")
   end
 
-  def add_subtask_to_user(subtask_title)
-    subtask = Subtask.find_by(title: subtask_title)
-    ust = UserSubtask.new(subtask: subtask, user: self)
-    ust.save
+  def add_task_to_user(task_title)
+    task = Task.find_by(title: task_title)
   end
 end
 
