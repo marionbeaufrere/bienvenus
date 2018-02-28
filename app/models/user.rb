@@ -33,6 +33,9 @@ class User < ApplicationRecord
       state :state_fourth
 
       event :run do
+        after do
+          # add_subtask_to_user("do that")
+        end
         transitions from: :state_zero, to: :state_first
       end
       event :activate do
@@ -53,5 +56,17 @@ class User < ApplicationRecord
   has_many :subtasks, through: :user_subtasks
   validates :first_name, :last_name, presence: true
 
+  after_create :setup_state_zero
+
+
+  def setup_state_zero
+    add_subtask_to_user("do this")
+  end
+
+  def add_subtask_to_user(subtask_title)
+    subtask = Subtask.find_by(title: subtask_title)
+    ust = UserSubtask.new(subtask: subtask, user: self)
+    ust.save
+  end
 end
 

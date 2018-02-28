@@ -2,6 +2,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   before_action :configure_permitted_parameters, if: :devise_controller?
   before_action :authenticate_user!
+  before_action :update_user_state
   include Pundit
 
   #### DO NOT FORGET TO UNCOMMENT THE TWO LINES BELOW ONCE PUNDIT IS FULLY SET UP!!!!!!!!!!!!!!
@@ -28,8 +29,26 @@ def configure_permitted_parameters
   def skip_pundit?
     devise_controller? || params[:controller] =~ /(^(rails_)?admin)|(^pages$)/
   end
-
   # def after_sign_in_path_for(resource)
   #   user_path(resource)
   # end
+
+  def update_user_state
+    subtasks = current_user.subtasks
+    case current_user.aasm_state
+      when "state_zero"
+        needed_subtasks = [
+          Subtask.find_by(title: "do this")
+        ]
+        result = needed_subtasks.map do |nst|
+          nst.status == true ? 0 : 1
+        end.reduce(:+)
+        # result = needed_subtasks.map { |nst| nst.status == true ? 0 : 1 }.reduce(:+)
+        unless result # on veut que result = 0 ce qui veut dire que toutes les taches sont completed
+          current_user.run
+          current_user.save
+        end
+        # when "state_first"
+    end
+  end
 end
