@@ -23,6 +23,7 @@
 #
 
 class User < ApplicationRecord
+  mount_uploader :photo, PhotoUploader
   include AASM
 
     aasm do
@@ -34,7 +35,8 @@ class User < ApplicationRecord
 
       event :run do
         after do
-          # add_task_to_user("do that")
+
+          add_task_to_user("do that")
         end
         transitions from: :state_zero, to: :state_first
       end
@@ -58,6 +60,9 @@ class User < ApplicationRecord
 
   after_create :setup_state_zero
 
+  # def visible_tasks
+  #   []
+  # end
 
   def setup_state_zero
     add_task_to_user("Obtain a residence permit")
