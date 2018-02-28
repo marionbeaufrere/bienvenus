@@ -1,7 +1,14 @@
 <% @subtasks.each do |subtask| %>
-<ul>
-<li><%= subtask.title %></li>
-<li><%= subtask.description %></li>
-<%= link_to "update", subtask_path(subtask), method: :patch %>
-</ul>
+  <div class="show-subtask-line"><%= subtask.title %>
+    <% if subtask.user_subtasks.where(user: current_user).empty? %>
+    <%= render "user_subtasks/form_create", subtask: subtask %>
+    <% else %>
+   <%= render "user_subtasks/link_destroy", subtask: subtask %>
+    <% end %>
+  </div>
 <% end %>
+
+
+<!-- <i class="fas fa-circle show-subtask-circle" style="color: #BB6BD9;"></i> -->
+
+

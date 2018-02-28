@@ -1,0 +1,6 @@
+  <%= simple_form_for @user_subtask, remote: true do |f| %>
+      <%= f.hidden_field :subtask_id, value: subtask.id %>
+      <%= button_tag class: "show-subtask-btn" do %>
+      <i class="far fa-circle" id="show-subtask-btn-unmarked-<%= subtask.id %>" style="color: #BB6BD9;"></i>
+      <% end %>
+      <% end %>

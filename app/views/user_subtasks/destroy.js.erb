@@ -1,0 +1,8 @@
+let newSubtaskButton = document.getElementById('show-subtask-btn-marked-<%= subtask.id %>').querySelector("i");
+  console.log(newSubtaskButton);
+  newSubtaskButton.innerHTML = '<%= simple_form_for @user_subtask, remote: true, :method => :delete do |f| %>
+      <%= f.hidden_field :subtask_id, value: subtask.id %>
+      <%= button_tag class: "show-subtask-btn" do %>
+      <i class="fas fa-circle show-subtask-circle" id="show-subtask-btn-marked-<%= subtask.id %>" style="color: #BB6BD9;"></i>
+      <% end %>
+      <% end %>'
