@@ -28,12 +28,21 @@ class User < ApplicationRecord
     aasm do
       state :state_zero, initial: true
       state :state_first
-      # state :state_200
-      # state :state_300
-      # state :state_400
+      state :state_second
+      state :state_third
+      state :state_fourth
 
-      event :activate do
+      event :run do
         transitions from: :state_zero, to: :state_first
+      end
+      event :activate do
+        transitions from: :state_first, to: :state_second
+      end
+      event :integrate do
+        transitions from: :state_second, to: :state_third
+      end
+      event :include do
+        transitions from: :state_third, to: :state_fourth
       end
     end
   # Include default devise modules. Others available are:
@@ -43,4 +52,6 @@ class User < ApplicationRecord
   has_many :user_subtasks
   has_many :subtasks, through: :user_subtasks
   validates :first_name, :last_name, presence: true
+
 end
+
