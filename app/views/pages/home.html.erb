@@ -1,17 +1,34 @@
-<div class = "container" id="home">
-  <% @categories.each do |category| %>
-    <li> <a href = "#<%=category%>"> <%= category %> </a></li>
-  <% end %>
-  <br><br>
-  <h3> This website is under construction </h3>
-  <h4> If you have any question, please contact us at contact@bienvenus.org < 3 </h4>
+<div class = "container content-wrapper">
+  <div class = "row">
+    <div class = home-title>
+      <span> Hello Sergio </span>
+    </div>
+  </div>
+
+  <div class = "row">
+    <div class = "home-subtitle">
+      <span> Latest News </span>
+    </div>
+    <div class = "card card-content" style= "margin-left: 37px">
+      <p> Your CPAM is closed today. If you need help please talk to someone </p>
+    </div>
+  </div>
+
+<div class = "row">
+  <div class="class home-subtitle">
+    <span> Today, your to-do list </span>
+  </div>
 </div>
-<br><br><br><br><br><br><br><br><br><br><br><br>
-<div class = "container">
-  <% @categories.each do |category| %>
-    <uL>
-      <li><%= category.upcase %></li><a name= "<%=category%>"></a>
-      <br><br>
-    </uL>
+
+  <% 10.times do |i| %>
+    <div class = "row">
+      <h2> Today, your to-do list</h2>
+      <h2> Today, your to-do list</h2>
+    </div>
   <% end %>
+
+  <div class = "footer">
+  <i class="fas fa-home"></i>
+  </div>
+
 </div>
