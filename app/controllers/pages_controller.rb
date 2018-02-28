@@ -1,16 +1,10 @@
 class PagesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:home]
+  skip_before_action :authenticate_user!, only: [:home, :onboarding]
+
+  ### COMMENT THIS LINE ONCE PUNDIT HAS BEEN IMPLEMENTED ###########
+  skip_after_action :verify_authorized, only: [:home, :onboarding]
 
   def home
-  end
-
-  def welcome1
-  end
-
-  def welcome2
-  end
-
-  def welcome3
   end
 
   def onboarding
