@@ -1,0 +1,12 @@
+.welcome-container{
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  text-align: center;
+}
+
+#welcome-icon{
+  color: $yellow-bienvenus;
+  font-size: 50px;
+}
