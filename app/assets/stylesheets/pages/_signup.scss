@@ -1,4 +1,8 @@
-.button-rounded {
+.sign-up-container {
+  padding: 20px;
+}
+
+.button-rounded-signup {
   height: 50px;
   width: 110px;
   border: 0;
@@ -8,14 +12,12 @@
   letter-spacing: 0.15em;
   border-radius: 0;
   color: #42D4B9;
-  position: absolute;
-  top: 500px;
   border: 2px solid #42D4B9;
   border-radius: 40px;
   font-size: 16px;
-  margin: 0px 130px;
   outline: 0;
   padding: 12px;
+  margin-top: 30px;
   transition: opacity 0.4s $bezier, background 0.4s $bezier;
   cursor: pointer;
     &:hover {
@@ -23,3 +25,10 @@
       background: #42D4B9;
     }
   }
+
+.police {
+  color: $grey-text;
+}
+
+.optional {
+}

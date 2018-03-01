@@ -1,4 +1,3 @@
-
 function changeToActive(){
 
 const hideSubtaskList = document.querySelector(".subtask-list");

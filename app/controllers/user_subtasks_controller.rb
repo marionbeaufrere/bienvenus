@@ -1,5 +1,5 @@
 class UserSubtasksController < ApplicationController
-  
+
 ################# DELETE THIS ONCE PUNDIT HAS BEEN IMPLEMENTED ###############
   skip_before_action :authenticate_user!, only: [:show, :index, :new, :create, :destroy]
   skip_after_action :verify_authorized, only: [:show, :index, :new, :create, :destroy]
