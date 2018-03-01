@@ -1,21 +1,55 @@
-<h2>Sign up</h2>
+<div id="signup-carousel" class="carousel slide" data-ride="carousel" date-interval="false" data-keyboard="false" data-interval="false">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#signup-carousel" data-slide-to="0" class="active"></li>
+    <li data-target="#signup-carousel" data-slide-to="1"></li>
+    <li data-target="#signup-carousel" data-slide-to="2"></li>
+  </ol>
 
-<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= f.error_notification %>
+  <!-- Wrapper for slides -->
+  <div class="sign-up-container">
+    <div class="carousel-inner">
+      <div class="item active slow">
+        <h3>Sign up</h3>
+        <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+        <%= f.error_notification %>
 
-  <div class="form-inputs">
-    <%= f.input :first_name, required: true %>
-    <%= f.input :last_name, required: true %>
-    <%= f.input :email, required: true, autofocus: true %>
-    <%= f.input :phone_number, required: true %>
-    <%= f.input :language, required: true %>
-    <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
-    <%= f.input :password_confirmation, required: true %>
-    <%= f.input :photo %>
-  </div>
-
-  <div class="form-actions">
-    <%= f.button :submit, "Sign up" %>
-  </div>
-  <%= render "devise/shared/links" %>
-<% end %>
+        <div class="form-inputs">
+          <%= f.input :first_name, label: "Your first name", required: true %>
+          <%= f.input :last_name, label: "Your last name", required: true %>
+        </div>
+      </div>
+      <div class="item">
+         <h3>Sign up</h3>
+        <div class="form-inputs">
+          <%= f.input :email, label: "Your e-mail", required: true, autofocus: true %>
+          <%= f.input :password, label: "Your password", required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
+          <%= f.input :password_confirmation, label: "Please, confirm your password", label_html: {class: "police"}, required: true %>
+        </div>
+      </div>
+      <div class="item">
+         <h3>Sign up</h3>
+        <div class="form-inputs">
+          <%= f.input :phone_number, label: "Your phone number", required: true %>
+          <%= f.input :language, label: "Your prefered language", required: true %>
+          <div class="police largeur">
+            <%= f.input :photo, label: "You can upload your photo", label_html: {class: "police"} %>
+          </div>
+        </div>
+        <div class="form-actions">
+          <%= f.button :submit, "Sign up", class: "button-rounded-signup" %>
+        </div>
+        <%#= render "devise/shared/links" %>
+        <% end %>
+      </div>
+    </div>
+   <!-- Left and right controls -->
+  <a class="left carousel-control" href="#signup-carousel" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#signup-carousel" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
