@@ -7,7 +7,6 @@ h3 {
       text-align: center;
     }
 
-
 .show-subtask-btn {
   background-color: transparent;
   border: 0px;
@@ -31,7 +30,9 @@ h3 {
   color: $grey-text;
   margin-left: 25px;
   margin-right: 25px;
+  margin-top: 15px;
   line-height: 2em;
+  height: 50%;
 }
 
 .task {
@@ -58,6 +59,10 @@ h3 {
   //z-index: 10;
   transition: .3s ease all;
   background: $yellow-bienvenus;
+  text-align: center;
+  p {
+    opacity: 0.7;
+  }
 }
 
 .details {
@@ -92,4 +97,9 @@ h3 {
 
 .details__inner {
   padding: 15px 30px;
+}
+
+#back_to_tasks_button {
+  margin-left: 35px;
+  text-decoration: none;
 }

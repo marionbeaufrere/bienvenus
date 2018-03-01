@@ -29,7 +29,8 @@
 }
 
 .card-container-task{
-  width: 100%;
+  width: 120%;
+  margin-bottom: 5px;
   display: flex;
   justify-content: space-around;
 }
@@ -52,8 +53,7 @@ align-item: center;
 }
 
 .category-color{
-  background-color: red;
-  width:25px;
+  width:30px;
 }
 .completion{
   text-align: center;
@@ -74,6 +74,25 @@ align-item: center;
   color:black;
   p{
     margin: 0px;
+  }
+}
+
+.task-text{
+  justify-content: space-around;
+  width: 120%;
+  margin-left: 10px;
+  padding: 10px 0px;
+  display: flex;
+  flex-direction: column;
+  p{
+    margin: 0px;
+    color: $grey-text;
+    font-size: 12px;
+  }
+  a {
+    text-decoration: none;
+    color: $grey-text;
+    font-size: 16px;
   }
 }
 
