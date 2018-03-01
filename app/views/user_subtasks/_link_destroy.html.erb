@@ -1,0 +1,4 @@
+ <% ust = subtask.user_subtasks.where(user: current_user).first %>
+    <%= link_to user_subtask_path(ust), method: :delete, remote: true, locals: { subtask: @subtask } do %>
+      <i class="fas fa-circle show-subtask-circle" id="show-subtask-btn-marked-<%= subtask.id %>" style="color: #BB6BD9;"></i>
+      <% end %>

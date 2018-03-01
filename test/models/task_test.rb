@@ -10,6 +10,8 @@
 #  periodicity     :integer
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
+#  category        :string
+#  position        :integer
 #
 
 require 'test_helper'
