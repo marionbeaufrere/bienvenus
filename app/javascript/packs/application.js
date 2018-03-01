@@ -1,7 +1,8 @@
 import "bootstrap";
+import { loadDynamicBannerText } from '../components/banner';
+loadDynamicBannerText();
 import { changeToActive } from '../tasks/show_tasks';
 changeToActive();
-
 
 //// JS for onboarding
 
@@ -130,14 +131,12 @@ $('.carousel').carousel({
   interval: false
 });
 
-$(".carousel").swipe({
 
-  swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
 
-    if (direction == 'left') $(this).carousel('next');
-    if (direction == 'right') $(this).carousel('prev');
+///// automatic redirect
 
-  },
-  allowPageScroll:"vertical"
-
+$('.welcome-container').ready(function () {
+    window.setTimeout(function () {
+        location.href = "https://www.google.co.in";
+    }, 5000);
 });
