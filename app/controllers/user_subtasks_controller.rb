@@ -1,5 +1,11 @@
 class UserSubtasksController < ApplicationController
 
+#########################################################################
+  skip_before_action :authenticate_user!, only: [:show, :index, :new, :create, :destroy]
+  skip_after_action :verify_authorized, only: [:show, :index, :new, :create, :destroy]
+  skip_after_action :verify_policy_scoped, only: [:show, :index, :new, :create, :destroy]
+#########################################################################
+
 def new
   @user_subtask = UserSubtask.new
 
