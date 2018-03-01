@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :users, controllers: { registrations: "registrations" }
   root to: 'pages#onboarding2'
   resources :users, only: [:edit, :update, :show]
   resources :tasks, only: [:index, :show, :update]
