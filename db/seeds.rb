@@ -1,8 +1,8 @@
 puts 'Cleaning database...'
 UserSubtask.destroy_all
 Subtask.destroy_all
-Category.destroy_all
 Task.destroy_all
+Category.destroy_all
 puts 'Creating tasks and associated subtasks...'
 
 ################ CATEGORIES ######################################################################################

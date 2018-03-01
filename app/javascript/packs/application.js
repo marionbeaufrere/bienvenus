@@ -1,4 +1,6 @@
 import "bootstrap";
+import { loadDynamicBannerText } from '../components/banner';
+loadDynamicBannerText();
 
 //// JS for onboarding
 
@@ -125,16 +127,4 @@ dependencies:
 
 $('.carousel').carousel({
   interval: false
-});
-
-$('.carousel').swipe({
-
-  swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
-
-    if (direction == 'left') $(this).carousel('next');
-    if (direction == 'right') $(this).carousel('prev');
-
-  },
-  allowPageScroll:"vertical"
-
 });

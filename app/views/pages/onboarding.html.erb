@@ -1,17 +1,17 @@
-<button class='open-walkthrough'>Bienvenue</button>
-<div class='walkthrough show reveal'>
-  <div class='walkthrough-pagination'>
-    <a class='dot active'></a>
-    <a class='dot'></a>
-    <a class='dot'></a>
-  </div>
-  <div class='walkthrough-body'>
-    <ul class='screens animate'>
+<div id="myCarousel" class="carousel slide" data-ride="carousel" date-interval="false">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+  </ol>
 
-      <li class='screen active'>
-        <h3>
-          Paperwork
-          <br>Made Easy</br>
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <div class="item active">
+      <h3>
+          Paperwork Made Easy
+          <br>For Refugees</br>
         </h3>
         <div class='media logo'>
           <%= image_tag 'analytics.png', class: 'logo' %>
@@ -20,47 +20,42 @@
           <img class='icon' src='https://s3.amazonaws.com/jebbles-codepen/file_icon_3.png'>
           <img class='icon' src='https://s3.amazonaws.com/jebbles-codepen/file_icon_4.png'> -->
         </div>
-        <p>French administration can be complicated. We provide you with simple tasks to complete in order to make
-        sure you can benefit from everything you are entitled to.</p>
-      </li>
+        <p>French administration can be complicated, especially if you just arrived in our beautiful country. We provide you with <strong> simple tasks to complete </strong> in order to make sure you can benefit from everything you are entitled to.</p>
+    </div>
 
-      <li class='screen'>
-        <h3>
-          You Know Exactly
-          <br>What To Do Next</br>
+    <div class="item">
+      <h3>
+          Know Exactly What
+          <br>You Need To Do Next</br>
         </h3>
         <div class='media logo'>
           <%= image_tag 'placeholder.png', class: 'logo'%>
           <!-- <img class='logo' src='https://s3.amazonaws.com/jebbles-codepen/icon.png'> -->
         </div>
-        <p>We provide help every step of the way. We help you understand what you need to do and what is coming next.
+        <p>We provide help <strong> every step of the way </strong>. We help you understand what you need to do and what is coming next.
         You will never be lost again.</p>
-      </li>
+    </div>
 
-      <li class='screen'>
-        <h3>
+    <div class="item">
+      <h3>
          Ask For Help
           <br>Any Time</br>
         </h3>
         <div class='media logo'>
           <%= image_tag 'networking.png', class: 'logo' %>
         </div>
-        <p>We hope our product is awesome. But in case you have an issue with something, you have the option to get help.
-        We put you in touch with a volunteer that will help you for your specific issue. But you can always talk further
-        later </p>
-      </li>
-    </ul>
-    <button class='prev-screen'>
-      <i class='icon-angle-left'></i>
-    </button>
-    <button class='next-screen'>
-      <i class='icon-angle-right'></i>
-    </button>
+        <p>We hope our product is awesome. But in case you have an issue with something, you have the option to <strong> get in touch with someone to get help </strong>. Our awesome volunteers will do their best to help you with your specific issue. </p>
+        <%= link_to 'SIGN ME UP!', new_user_registration_path, class: 'button-rounded' %>
+    </div>
   </div>
-  <div class='walkthrough-footer'>
-    <button class='button next-screen'>Got it!</button>
-    <button class='button finish close' disabled='true'>Try it!</button>
-  </div>
-</div>
 
-<!-- <div>Icons made by <a href="https://www.flaticon.com/authors/vectors-market" title="Vectors Market">Vectors Market</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div> -->
+  <!-- Left and right controls -->
+  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>

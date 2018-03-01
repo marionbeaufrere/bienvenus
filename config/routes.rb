@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
   devise_for :users
-  root to: 'pages#onboarding2'
+  root to: 'pages#welcome_screen'
   resources :users, only: [:edit, :update, :show]
   resources :tasks, only: [:index, :show]
   resources :substasks, only: [:show]
   resources :user_subtasks
+  get '/pages/onboarding', to: 'pages#onboarding', as: 'onboarding'
 end
