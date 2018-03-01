@@ -1,13 +1,9 @@
-// body {
-//   font-family: 'Source Sans Pro', sans serif;
-//   background-color: #ddd;
-// }
-
 // .cards {
 //   margin: 5rem auto;
 //   max-width: 90%;
 //   text-align: center;
 // }
+
 
 .card {
   width: 100%;
@@ -30,6 +26,12 @@
 
 .card-container{
  width: 100%;
+}
+
+.card-container-task{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
 }
 
 .card-home{
@@ -69,6 +71,7 @@ align-item: center;
   justify-content: center;
   align-items:center;
   width: 90%;
+  color:black;
   p{
     margin: 0px;
   }

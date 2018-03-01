@@ -1,7 +1,64 @@
-<% @tasks.each do |task| %>
-<ul>
-<li><%= link_to task.title, task_path(task) %></li>
-<li><%= task.description %></li>
-<li><%= task.status %></li>
-</ul>
+<div class="content-wrapper">
+  <div class="my-container">
+    <h1>My Tasks</h1>
+    <div class="to-do">
+      <h2>TO DO (3)</h2>
+    </div>
+    <div class="card-container-task">
+      <div class="category">
+        <div class="category-color"></div>
+        <div class="category-text"> <p>banking</p></div>
+        <div class="checkbox"></div>
+      </div>
+    </div>
+    <div class="card-container-task">
+      <div class="category">
+        <div class="category-color"></div>
+        <div class="category-text"> <p>housing</p></div>
+      </div>
+    </div>
+    <div class="card-container-task">
+      <div class="category">
+        <div class="category-color"></div>
+        <div class="category-text"> <p>housing</p></div>
+      </div>
+    </div>
+
+    <h2>DONE (2)</h2>
+    <div class="card-container-task">
+      <div class="category">
+        <div class="category-color"></div>
+        <div class="category-text"> <p>Social Security</p></div>
+      </div>
+    </div>
+    <div class="card-container-task">
+      <div class="category">
+        <div class="category-color"></div>
+        <div class="category-text"> <p>Employment</p></div>
+      </div>
+    </div>
+      <div class="footer">
+        <div style="font-size:2em; color:grey">
+          <i class="fas fa-home"></i>
+        </div>
+        <div style="font-size:2em; color:grey">
+          <i class="fas fa-user"></i>
+        </div>
+        <div style="font-size:2em; color:grey">
+          <i class="fas fa-rocket"></i>
+        </div>
+      </div>
+    </div>
+</div>
+
+
+
+<% if @tasks %>
+  <% @tasks.each do |task| %>
+  <ul>
+  <li><%= link_to task.title, task_path(task) %></li>
+  <li><%= task.description %></li>
+  <li><%= task.status %></li>
+  </ul>
+  <% end %>
 <% end %>

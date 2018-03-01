@@ -1,5 +1,6 @@
 class TasksController < ApplicationController
 
+
 ######### DELETE THIS ONCE PUNDIT HAS BEEN IMPLEMENTED ###################
   skip_before_action :authenticate_user!, only: [:show, :index, :completed_task, :initializer, :update]
   skip_after_action :verify_authorized, only: [:show, :index, :completed_task, :initializer, :update]
