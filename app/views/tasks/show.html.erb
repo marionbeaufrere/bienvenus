@@ -1,7 +1,8 @@
 <% @subtasks.each do |subtask| %>
-<ul>
-<li><%= subtask.title %></li>
-<li><%= subtask.description %></li>
-<%= link_to "update", subtask_path(subtask), method: :patch %>
-</ul>
+  <%= render 'subtask', subtask: subtask %>
 <% end %>
+
+
+<!-- <i class="fas fa-circle show-subtask-circle" style="color: #BB6BD9;"></i> -->
+
+

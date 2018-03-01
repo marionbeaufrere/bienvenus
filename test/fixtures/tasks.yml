@@ -10,6 +10,8 @@
 #  periodicity     :integer
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
+#  category        :string
+#  position        :integer
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html

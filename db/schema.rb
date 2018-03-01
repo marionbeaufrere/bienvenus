@@ -39,6 +39,7 @@ ActiveRecord::Schema.define(version: 20180228175417) do
     t.integer "periodicity"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "position"
     t.bigint "category_id"
     t.index ["category_id"], name: "index_tasks_on_category_id"
   end
@@ -70,6 +71,8 @@ ActiveRecord::Schema.define(version: 20180228175417) do
     t.string "last_name"
     t.string "language"
     t.string "user_type"
+    t.string "photo"
+    t.integer "access", default: 1
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
