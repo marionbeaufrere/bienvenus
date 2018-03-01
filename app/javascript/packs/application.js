@@ -130,3 +130,13 @@ dependencies:
 $('.carousel').carousel({
   interval: false
 });
+
+
+
+///// automatic redirect
+
+$('.welcome-container').ready(function () {
+    window.setTimeout(function () {
+        location.href = "https://www.google.co.in";
+    }, 5000);
+});

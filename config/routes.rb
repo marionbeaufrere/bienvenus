@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   resources :substasks, only: [:show]
   resources :user_subtasks
   get '/pages/onboarding', to: 'pages#onboarding', as: 'onboarding'
+  get '/pages/are_you', to: 'pages#are_you', as: 'are_you'
 end
