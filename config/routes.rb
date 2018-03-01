@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   resources :tasks, only: [:index, :show]
   resources :substasks, only: [:show]
   resources :user_subtasks
+  get '/pages/home', to: 'pages#home', as: 'home'
 end
