@@ -6,7 +6,7 @@ $bezier: cubic-bezier(.25,.8,.25,1);
 
 body {
   color: white;
-  font-family: "Lato";
+  font-family: 'Quicksand', 'sans-serif';
   font-weight: light;
   display: flex;
   justify-content: center;
@@ -73,7 +73,7 @@ body {
       background: none;
       border: 0;
       margin-top: 40px;
-      color: rgba(white, 0.25);
+      color: $grey-text;
       cursor: pointer;
       flex: 0 0 auto;
       font-size: 24px;
@@ -119,7 +119,7 @@ body {
     }
 
     .media {
-      background: rgba(white, 0.25);
+      /*background: rgba(white, 0.25);*/
       border-radius: 132px;
       height: 132px;
       margin: 32px auto;
@@ -137,9 +137,9 @@ body {
     p {
       line-height: 1.6em;
       font-size: 15px;
-      margin: 20px 20px 0px 5px;
+      /*margin: 20px 20px 0px 5px;*/
       padding: 10px 30px 30px 30px;
-      color: rgba(black, 0.8);
+      color: $grey-text;
     }
   }
 
@@ -174,13 +174,14 @@ body {
 
     button {
       height: 50px;
+      width: 110px;
       border: 0;
-      background: #42D4B9;
+      background: $white;
       font-weight: bold;
       text-transform: uppercase;
       letter-spacing: 0.15em;
       border-radius: 0;
-      color: #fff;
+      color: #42D4B9;
       position: absolute;
       top: 500px;
       border: 2px solid #42D4B9;
@@ -191,30 +192,31 @@ body {
       padding: 12px;
       transition: opacity 0.4s $bezier, background 0.4s $bezier;
       cursor: pointer;
-      &.hover {
-        color:white;
-        background: #42D4B9;
-      }
+        &:hover {
+          color: $white;
+          background: #42D4B9;
+        }
       &.active {
-        background: #42D4B9;
+        background: $white;
       }
 
       &.disabled {
         cursor: pointer;
       }
       &.finish {
-        background: #42D4B9;
+        background: $white;
         position: absolute;
         top: 500px;
+        width: 110px;
         bottom: 0;
         opacity:0;
         transform: scale(0, 1);
         transform-origin: center;
         transition: opacity 0.4s $bezier, background 0.4s $bezier, transform 0.4s $bezier;
-        &:hover {
-          color:white;
-          background: #42D4B9;
-        }
+          &:hover {
+            color: $white;
+            background: #42D4B9;
+          }
         &:active {
           background: #42D4B9;
         }
@@ -249,11 +251,10 @@ body {
 
       &.logo {
         .logo {
-          margin-top: 20px;
           opacity: 0;
           transform: translateY(-60px);
           transition: opacity 0.4s $bezier, transform 0.4s $bezier;
-          width: 80px;
+          width: 132px;
         }
       }
       .icon {

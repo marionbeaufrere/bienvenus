@@ -37,8 +37,21 @@ class User < ApplicationRecord
   mount_uploader :photo, PhotoUploader
 
   def visible_tasks
-    Task.where(position: self.access)
-    # AJOUTER TOUTES LES TACHES COMPLETE D'UNE POSITIONE INFERIEUERE
+    Task.where(position: 1..self.access).order('position DESC, id ASC')
+  end
+
+   def update_user_access
+    @accessable_tasks = self.visible_tasks
+    @completed_tasks = 0
+    @accessable_tasks.each do |task|
+      if task.status == "completed"
+        @completed_tasks += 1
+      end
+    end
+    if @completed_tasks == @accessable_tasks.count && self.access < 6
+      self.access += 1
+      self.save
+    end
   end
 end
 

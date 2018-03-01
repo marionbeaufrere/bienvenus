@@ -16,3 +16,10 @@
 </div>
 
 
+<% @tasks.each do |task| %>
+<ul>
+<li><%= link_to task.title, task_path(task) %></li>
+<li><%= task.description %></li>
+<li><%= task.status %></li>
+</ul>
+<% end %>
