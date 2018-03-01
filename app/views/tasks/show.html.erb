@@ -1,11 +1,5 @@
 <% @subtasks.each do |subtask| %>
-  <div class="show-subtask-line"><%= subtask.title %>
-    <% if subtask.user_subtasks.where(user: current_user).empty? %>
-    <%= render "user_subtasks/form_create", subtask: subtask %>
-    <% else %>
-   <%= render "user_subtasks/link_destroy", subtask: subtask %>
-    <% end %>
-  </div>
+  <%= render 'subtask', subtask: subtask %>
 <% end %>
 
 
