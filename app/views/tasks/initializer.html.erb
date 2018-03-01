@@ -1,0 +1,8 @@
+<% @tasks.each do |task| %>
+<%= task.title %>
+<!-- add a submit form to check if done -->
+<%= simple_form_for task do |f| %>
+    <%= f.submit %>
+  <% end %>
+<% end %>
+<%= link_to 'Done!', tasks_path %>
