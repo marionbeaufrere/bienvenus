@@ -40,5 +40,12 @@ class User < ApplicationRecord
     Task.where(position: self.access)
     # AJOUTER TOUTES LES TACHES COMPLETE D'UNE POSITIONE INFERIEUERE
   end
+
+   def update_user_access
+    @tasks = Task.where(position: self.access)
+    if @tasks.status == "completed" && self.access =< 5
+      self.access += 1
+    end
+  end
 end
 
