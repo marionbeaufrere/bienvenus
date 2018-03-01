@@ -20,6 +20,9 @@
 #  last_name              :string
 #  language               :string
 #  user_type              :string
+#  aasm_state             :string
+#  photo                  :string
+#  access                 :integer          default(1)
 #
 
 class User < ApplicationRecord
@@ -30,4 +33,12 @@ class User < ApplicationRecord
   has_many :user_subtasks
   has_many :subtasks, through: :user_subtasks
   validates :first_name, :last_name, presence: true
+
+  mount_uploader :photo, PhotoUploader
+
+  def visible_tasks
+    Task.where(position: self.access)
+    # AJOUTER TOUTES LES TACHES COMPLETE D'UNE POSITIONE INFERIEUERE
+  end
 end
+

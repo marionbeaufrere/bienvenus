@@ -10,8 +10,11 @@
 #  periodicity     :integer
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
+#  category        :string
+#  position        :integer
 #
 
 class Task < ApplicationRecord
   has_many :subtasks, dependent: :destroy
+  belongs_to :category
 end

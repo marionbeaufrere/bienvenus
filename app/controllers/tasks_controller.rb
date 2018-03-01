@@ -1,7 +1,9 @@
 class TasksController < ApplicationController
-
+  before_action :update_user_state
   def index
-    @tasks = Task.all
+    # @tasks = Task.all
+    @tasks = current_user.visible_tasks
+    # raise
   end
 
   def show
