@@ -1,7 +1,11 @@
 <div class="wrap">
   <div class="task">
-    <div class="abstract">
-      <h3><%= @task.title %><span class="glyphicon glyphicon-menu-down"></span></h3>
+    <div class="abstract", style= "background-color:<%= @task.category.color%>">
+      <p> <%= @task.category.name %> </p>
+      <h3>
+        <%= @task.title %>
+      </h3>
+      <span class="glyphicon glyphicon-menu-down"></span>
     </div>
     <div class="details card-content">
       <div class="details__inner">
@@ -16,6 +20,7 @@
 <% end %>
 </div>
 
+<%= link_to "Back to the list of tasks", tasks_path, class:"button-rounded", id:"back_to_tasks_button" %>
 
 <!-- <i class="fas fa-circle show-subtask-circle" style="color: #BB6BD9;"></i> -->
 

@@ -20,7 +20,7 @@
     <% end %>
       <% end %>
 
-    <h2>DONE (2)</h2>
+<!--     <h2>DONE (2)</h2>
     <div class="card-container-task">
       <div class="category">
         <div class="category-color"></div>
@@ -45,7 +45,7 @@
       <div style="font-size:2em; color:grey">
         <i class="fas fa-rocket"></i>
       </div>
-    </div>
+    </div> -->
   </div>
 </div>
 
@@ -53,10 +53,10 @@
 <% if @tasks %>
 <% @tasks.each do |task| %>
 <ul>
-  <li><%= link_to task.title, task_path(task) %></li>
-  <li><%= task.description %></li>
-  <li><%= task.status %></li>
-  <li><%= task.category.color%></li>
+  <li><% link_to task.title, task_path(task) %></li>
+  <li><% task.description %></li>
+  <li><% task.status %></li>
+  <li><% task.category.color%></li>
 </ul>
 <% end %>
 <% end %>
