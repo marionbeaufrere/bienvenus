@@ -1,6 +1,6 @@
 class TasksController < ApplicationController
-  before_action :update_user_access
-  # :update_user_state
+  skip_after_action :verify_authorized, only: [:show, :index, :completed_task]
+  #before_action :update_user_access
   def index
     @tasks = current_user.visible_tasks
 
@@ -11,6 +11,7 @@ class TasksController < ApplicationController
     @tasks.each do |task|
       if task.substasks.user_subtasks.count == task.subtasks.count
         task.status = "completed"
+      end
     end
   end
 
@@ -18,5 +19,4 @@ class TasksController < ApplicationController
     @task = Task.find(params[:id])
     @subtasks = @task.subtasks
   end
-
 end
