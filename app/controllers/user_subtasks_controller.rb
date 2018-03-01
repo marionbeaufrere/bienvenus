@@ -9,10 +9,11 @@ def create
   @user_subtask = UserSubtask.new(user_subtask_params)
   @user_subtask.user = current_user
   @user_subtask.save
+  @subtask = @user_subtask.subtask
   @subtask_id = @user_subtask.subtask_id
     respond_to do |format|
       format.html { redirect_to task_path(@user_subtask.subtask.task) }
-      format.js  # <-- will render `app/views/reviews/create.js.erb`
+      format.js  # <-- will render `app/views/user_subtask/create.js.erb`
     end
 end
 
@@ -22,7 +23,7 @@ def destroy
   @user_subtask.destroy
     respond_to do |format|
       format.html { redirect_to task_path(task) }
-      format.js  # <-- will render `app/views/reviews/destroy.js.erb`
+      format.js  # <-- will render `app/views/user_subtask/destroy.js.erb`
     end
 end
 
