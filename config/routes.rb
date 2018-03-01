@@ -3,6 +3,6 @@ Rails.application.routes.draw do
   root to: 'pages#onboarding'
   resources :users, only: [:edit, :update, :show]
   resources :tasks, only: [:index, :show]
-  resources :subtasks, only: [:index, :update]
+  resources :substasks, only: [:show]
   resources :user_subtasks
 end

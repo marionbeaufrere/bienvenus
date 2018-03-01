@@ -1,0 +1,7 @@
+<div class="show-subtask-line" id="subtask_<%= subtask.id %>"><%= subtask.title %>
+  <% if subtask.user_subtasks.where(user: current_user).empty? %>
+    <%= render "user_subtasks/form_create", subtask: subtask %>
+  <% else %>
+    <%= render "user_subtasks/link_destroy", subtask: subtask %>
+  <% end %>
+</div>
