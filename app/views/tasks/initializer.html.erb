@@ -1,0 +1,28 @@
+<div class="container">
+  <h1 id="header-initializer">Before we go further, we need to confirm if you've finished these!</h1>
+  <div class="row">
+  <% @tasks.each do |task| %>
+  <%= simple_form_for task do |f| %>
+    <div class="col-xs-12 col-sm-4">
+        <div class="card">
+     <!--      <div class="card-category"><%#= task.category.name %>
+          </div> -->
+          <div class="card-description">
+            <h2><%= task.title %></h2>
+          </div>
+          <div class="card-btn">
+          <%= button_tag class: "initialize-btn" do %>
+            <i class="far fa-circle" style="color: #BB6BD9;"></i>
+          <% end %>
+          </div>
+        </div>
+    </div>
+
+  <% end %>
+<% end %>
+  </div>
+  <%= link_to 'Done!', tasks_path %>
+</div>
+
+
+
