@@ -48,8 +48,10 @@ def check_task_status
   @subtask = @user_subtask.subtask
   if @task.subtasks.count <= @task.user_subtasks.count
     @task.status = "completed"
+    @task.save!
   else
     @task.status = "in progress"
+    @task.save!
   end
 end
 

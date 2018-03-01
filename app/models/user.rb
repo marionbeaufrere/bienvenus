@@ -38,24 +38,14 @@ class User < ApplicationRecord
 
   def visible_tasks
     Task.where(position: 1..self.access)
-    # AJOUTER TOUTES LES TACHES COMPLETE D'UNE POSITIONE INFERIEUERE
-    # tasks_done = SELECT COUNT(*) FROM tasks
-    # (JOIN users ON users.access)
-    # WHERE self.access < tasks.position
-    # AND tasks.status = "completed"
-
-    #tasks_in_progress + tasks_done
-
-    #SHOULD WE JOIN USER_SUBTASKS? SUBTASKS IS THE ISSUE
   end
 
    def update_user_access
-    # tasks_in_progress = Task.where(position: self.access)
-    # #STATUS NEEDS TO BE COMPLETED ON ALL VISIBLE TASKS
-    #   if tasks_in_progress.status == "completed" && self.access < 6
-    #     self.access += 1
-    #     #ELSE HE STAYS ON CURRENT ACCESS
-    #   end
+    @accessable_tasks = self.visible_tasks
+  #   @accessable_tasks.each do |task|
+  #     if task.status == "completed" && self.access < 6
+  #       self.access += 1
+  #     end
   end
 end
 
