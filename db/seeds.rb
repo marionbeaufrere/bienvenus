@@ -1,4 +1,6 @@
 puts 'Cleaning database...'
+UserSubtask.destroy_all
+Subtask.destroy_all
 Category.destroy_all
 Task.destroy_all
 puts 'Creating tasks and associated subtasks...'
@@ -37,7 +39,6 @@ cat_h = Category.create!(
   name: "Financial Aid",
   color: "#0180B5"
 )
-
 cat_i = Category.create!(
   name: "Employment",
   color: "#02B5AO"
@@ -57,10 +58,16 @@ cat_l = Category.create!(
 
 ################ ALL TASKS ######################################################################################
 
+az = Category.create!(
+  name: "Essentials",
+  color: "Red"
+)
+
 a = Task.create!(
 title: "Obtain a residence permit",
 category: cat_a,
 position: 1,
+status: "in progress",
 description: "As a refugee, you are entitled to a resident card valid 10 years, automatically recreateable.
 In some prefectures you can ask for your resident card or residence permit as soon as you sign the CIR;
 however, in other prefectures you will have to wait for the Ofpra to put together and send your civil status documents.
@@ -73,6 +80,7 @@ b = Task.create!(
 title: "Obtain your civil status certificate",
 category: cat_a,
 position: 2,
+status: "",
 description: "The civil status documents issued by the Ofpra are:
 birth, marriage and death certi cates and the family record book (for marriages that took place abroad and
 for minors born outside France). For a marriage or the birth of a child in France, the town hall where they were registered
@@ -85,6 +93,7 @@ c = Task.create!(
 title: "Learn French",
 category: cat_c,
 position: 2,
+status: "in progress",
 description: "Learning French is essential in everyday life in order to better understand administrative procedures, and a job and
 housing, defend your rights and make your start in society easier. It is also a right that France must repect: as a host country,
 its role is to stimulate the integration of refugees, in particular by learning French. It is vital for all refugees to speak and
@@ -93,7 +102,6 @@ Level A1 (oral and written) is the level to reach for the CIR in order to get th
 (initial diploma in the French language). If you fail the DILF, the O i can, upon request,  nance a second training course so that
 you can retake the exam. After the DILF, there is another course to reach level A2 (financed by the Ofi)."
 )
-
 
 ################### TASK 1 - SUBTASKS ######################################################################
 
@@ -147,8 +155,33 @@ Subtask.create!(
 title: "Family signs the CIR",
 description: "If your family has joined you in France, they will receive a notification to sign the `Contrat d’Intégration
 Républicaine pour la Famille` (CIRF) (Family Republican Integration Contract).",
-task: a
+task: b
 )
+
+Subtask.create!(
+title: "Timbre fiscal",
+description: "Timbre fiscal’ (tax stamp) and tax: refugees and beneficiaries of subsidiary protection must pay a ‘timbre fiscal’
+(tax stamp) of €19 for their first residence permit however, unlike other foreigners, they will not pay the tax on their
+first permit.",
+task: b
+)
+
+
+Subtask.create!(
+title: "Family signs the CIR",
+description: "If your family has joined you in France, they will receive a notification to sign the `Contrat d’Intégration
+Républicaine pour la Famille` (CIRF) (Family Republican Integration Contract).",
+task: c
+)
+
+Subtask.create!(
+title: "Timbre fiscal",
+description: "Timbre fiscal’ (tax stamp) and tax: refugees and beneficiaries of subsidiary protection must pay a ‘timbre fiscal’
+(tax stamp) of €19 for their first residence permit however, unlike other foreigners, they will not pay the tax on their
+first permit.",
+task: c
+)
+
 
 
 ##################### TASK 2 - SUBTASKS ###################################################################################
