@@ -251,11 +251,10 @@ body {
 
       &.logo {
         .logo {
-          margin-top: 20px;
           opacity: 0;
           transform: translateY(-60px);
           transition: opacity 0.4s $bezier, transform 0.4s $bezier;
-          width: 80px;
+          width: 132px;
         }
       }
       .icon {
