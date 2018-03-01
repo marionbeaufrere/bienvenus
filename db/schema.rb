@@ -10,7 +10,6 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
 ActiveRecord::Schema.define(version: 20180228175417) do
 
   # These are extensions that must be enabled in order to support this database
@@ -40,13 +39,9 @@ ActiveRecord::Schema.define(version: 20180228175417) do
     t.integer "periodicity"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-<<<<<<< HEAD
-    t.string "category"
     t.integer "position"
-=======
     t.bigint "category_id"
     t.index ["category_id"], name: "index_tasks_on_category_id"
->>>>>>> master
   end
 
   create_table "user_subtasks", force: :cascade do |t|
