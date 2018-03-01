@@ -3,10 +3,16 @@ Task.destroy_all
 puts 'Creating tasks and associated subtasks...'
 ################ ALL TASKS ######################################################################################
 
+az = Category.create!(
+  name: "Essentials",
+  color: "Red"
+)
+
 a = Task.create!(
 title: "Obtain a residence permit",
-category: "Essentials",
 position: 1,
+status: "completed",
+category: az,
 description: "As a refugee, you are entitled to a resident card valid 10 years, automatically recreateable.
 In some prefectures you can ask for your resident card or residence permit as soon as you sign the CIR;
 however, in other prefectures you will have to wait for the Ofpra to put together and send your civil status documents.
@@ -17,8 +23,9 @@ to open a bank account, change your driver’s licence, have access to social ho
 
 b = Task.create!(
 title: "Obtain your civil status certificates",
-category: "Essentials",
 position: 2,
+status: "",
+category: az,
 description: "The civil status documents issued by the Ofpra are:
 birth, marriage and death certi cates and the family record book (for marriages that took place abroad and
 for minors born outside France). For a marriage or the birth of a child in France, the town hall where they were registered
@@ -29,8 +36,9 @@ enter into a civil partnership)."
 
 c = Task.create!(
 title: "Learn French",
-category: "Language",
 position: 2,
+status: "completed",
+category: az,
 description: "Learning French is essential in everyday life in order to better understand administrative procedures, and a job and
 housing, defend your rights and make your start in society easier. It is also a right that France must repect: as a host country,
 its role is to stimulate the integration of refugees, in particular by learning French. It is vital for all refugees to speak and

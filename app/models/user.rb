@@ -43,7 +43,7 @@ class User < ApplicationRecord
 
    def update_user_access
     @tasks = Task.where(position: self.access)
-    if @tasks.status == "completed" && self.access =< 5
+    if @tasks.status == "completed" && self.access < 6
       self.access += 1
     end
   end

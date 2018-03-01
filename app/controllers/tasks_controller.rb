@@ -13,6 +13,7 @@ class TasksController < ApplicationController
         task.status = "completed"
     end
   end
+
   def show
     @task = Task.find(params[:id])
     @subtasks = @task.subtasks
