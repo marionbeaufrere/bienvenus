@@ -127,7 +127,7 @@ $('.carousel').carousel({
   interval: false
 });
 
-$(".carousel").swipe({
+$('.carousel').swipe({
 
   swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
 
