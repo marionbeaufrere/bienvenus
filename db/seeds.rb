@@ -104,7 +104,7 @@ you can retake the exam. After the DILF, there is another course to reach level 
 )
 
 d = Task.create!(
-title: "Learn French Threee",
+title: "Learn French Three",
 category: cat_c,
 position: 3,
 status: "in progress",
