@@ -1,11 +1,19 @@
 
 <div class = "content-wrapper">
   <div class="my-container">
-    <h1>Hello Sergio</h1>
+    <h1>Hello Sergio !</h1>
+
+    <div class = "date">
+    <%= Time.now.strftime("%A").upcase %>
+    <%= Time.now.strftime("%B, %d %Y") %>
+    </div>
+
     <h2>Latest News</h2>
 
     <div class = "card card-content" style= "margin-left: 37px">
-      <p> Your CPAM is closed today. If you need help please talk to someone </p>
+          <p>Your CPAM is closed today. If you need help please talk to someone </p>
+           <p>You need to wash your teeth</p>
+
     </div>
 
     <h2>Today, your to-do list</h2>
@@ -14,16 +22,26 @@
       <div class="card-home">
         <div class="category">
           <div class="category-color"></div>
-          <p>banking</p>
+          <div class="category-text"> <p>banking</p></div>
         </div>
         <div class="completion">
           <p>90%</p>
         </div>
       </div>
-
     </div>
   </div>
+    <div class="footer">
+      <div style="font-size:2em; color:grey">
+      <i class="fas fa-home"></i>
+      </div>
+      <div style="font-size:2em; color:grey">
+      <i class="fas fa-user"></i>
+      </div>
+      <div style="font-size:2em; color:grey">
+      <i class="fas fa-rocket"></i>
+    </div>
 
+  </div>
 
 </div>
 
