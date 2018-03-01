@@ -8,4 +8,5 @@ Rails.application.routes.draw do
   get 'initialize', to: 'tasks#initializer', as: :initialize
   get '/pages/onboarding', to: 'pages#onboarding', as: 'onboarding'
   get '/pages/are_you', to: 'pages#are_you', as: 'are_you'
+  get '/pages/asylum_seeker', to: 'pages#asylum_seeker', as: 'asylum_seeker'
 end
