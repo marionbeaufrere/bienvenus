@@ -3,6 +3,8 @@ import { changeToActive } from '../tasks/show_tasks';
 changeToActive();
 
 
+//// JS for onboarding
+
 (function() {
   $(document).ready(function() {
     var walkthrough;
@@ -111,3 +113,31 @@ changeToActive();
   });
 
 }).call(this);
+
+
+
+/*
+
+dependencies:
+
+//cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.4/jquery.touchSwipe.min.js
+//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js
+//cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.4/jquery.touchSwipe.min.js
+
+*/
+
+$('.carousel').carousel({
+  interval: false
+});
+
+$(".carousel").swipe({
+
+  swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
+
+    if (direction == 'left') $(this).carousel('next');
+    if (direction == 'right') $(this).carousel('prev');
+
+  },
+  allowPageScroll:"vertical"
+
+});
