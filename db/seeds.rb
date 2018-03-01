@@ -1,8 +1,8 @@
 puts 'Cleaning database...'
 UserSubtask.destroy_all
 Subtask.destroy_all
-Category.destroy_all
 Task.destroy_all
+Category.destroy_all
 puts 'Creating tasks and associated subtasks...'
 
 ################ CATEGORIES ######################################################################################
@@ -90,9 +90,23 @@ enter into a civil partnership)."
 )
 
 c = Task.create!(
-title: "Learn French",
+title: "Learn French Two",
 category: cat_c,
 position: 2,
+status: "in progress",
+description: "Learning French is essential in everyday life in order to better understand administrative procedures, and a job and
+housing, defend your rights and make your start in society easier. It is also a right that France must repect: as a host country,
+its role is to stimulate the integration of refugees, in particular by learning French. It is vital for all refugees to speak and
+use French at every opportunity.
+Level A1 (oral and written) is the level to reach for the CIR in order to get the ‘Diplôme Initial de Langue Française’ (DILF)
+(initial diploma in the French language). If you fail the DILF, the O i can, upon request,  nance a second training course so that
+you can retake the exam. After the DILF, there is another course to reach level A2 (financed by the Ofi)."
+)
+
+d = Task.create!(
+title: "Learn French Three",
+category: cat_c,
+position: 3,
 status: "in progress",
 description: "Learning French is essential in everyday life in order to better understand administrative procedures, and a job and
 housing, defend your rights and make your start in society easier. It is also a right that France must repect: as a host country,
@@ -180,6 +194,16 @@ description: "Timbre fiscal’ (tax stamp) and tax: refugees and beneficiaries o
 (tax stamp) of €19 for their first residence permit however, unlike other foreigners, they will not pay the tax on their
 first permit.",
 task: c
+)
+
+Subtask.create!(
+title: "Confirm a personal address",
+description: "You must have a personal address either at a hotel
+(with a certificate from the hotel and an invoice for the last month),
+at a private property (certificate from the owner, copy of their ID, copy of their property tax document)
+or in a tenant’s home (certificate from the landlord, ID, copy of a gas or electricity bill or other bill).
+Domiciliation through an association is recognised but is more difficult.",
+task: d
 )
 
 

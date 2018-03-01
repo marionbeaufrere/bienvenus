@@ -1,19 +1,19 @@
-button-rounded {
+.button-rounded {
   height: 50px;
   width: 110px;
   border: 0;
   background: $white;
-  font-weight: bold;
+/*  font-weight: bold;*/
   text-transform: uppercase;
   letter-spacing: 0.15em;
   border-radius: 0;
   color: #42D4B9;
-  position: absolute;
+/*  position: absolute;*/
   top: 500px;
   border: 2px solid #42D4B9;
   border-radius: 40px;
   font-size: 16px;
-  margin: 0px 130px;
+/*  margin: 0px 130px;*/
   outline: 0;
   padding: 12px;
   transition: opacity 0.4s $bezier, background 0.4s $bezier;
@@ -21,5 +21,27 @@ button-rounded {
     &:hover {
       color: $white;
       background: #42D4B9;
+    }
+  }
+
+.button-normal {
+  height: 50px;
+  width: 200px;
+  border: 0;
+  background: #42D4B9;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: $white;
+  top: 500px;
+  border: 2px solid #42D4B9;
+  border-radius: 5px;
+  font-size: 16px;
+  outline: 0;
+  padding: 12px;
+  transition: opacity 0.4s $bezier, background 0.4s $bezier;
+  cursor: pointer;
+    &:hover {
+      color: #42D4B9;
+      background: $white;
     }
   }
