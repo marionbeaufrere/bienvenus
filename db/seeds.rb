@@ -50,6 +50,14 @@ Level A1 (oral and written) is the level to reach for the CIR in order to get th
 you can retake the exam. After the DILF, there is another course to reach level A2 (financed by the Ofi)."
 )
 
+d = Task.create!(
+title: "Ladiddididi",
+position: 3,
+status: "",
+category: az,
+description: "LOREEEEEEEM"
+)
+
 ################### TASK 1 - SUBTASKS ######################################################################
 
 Subtask.create!(
@@ -102,8 +110,33 @@ Subtask.create!(
 title: "Family signs the CIR",
 description: "If your family has joined you in France, they will receive a notification to sign the `Contrat d’Intégration
 Républicaine pour la Famille` (CIRF) (Family Republican Integration Contract).",
-task: a
+task: b
 )
+
+Subtask.create!(
+title: "Timbre fiscal",
+description: "Timbre fiscal’ (tax stamp) and tax: refugees and beneficiaries of subsidiary protection must pay a ‘timbre fiscal’
+(tax stamp) of €19 for their first residence permit however, unlike other foreigners, they will not pay the tax on their
+first permit.",
+task: b
+)
+
+
+Subtask.create!(
+title: "Family signs the CIR",
+description: "If your family has joined you in France, they will receive a notification to sign the `Contrat d’Intégration
+Républicaine pour la Famille` (CIRF) (Family Republican Integration Contract).",
+task: c
+)
+
+Subtask.create!(
+title: "Timbre fiscal",
+description: "Timbre fiscal’ (tax stamp) and tax: refugees and beneficiaries of subsidiary protection must pay a ‘timbre fiscal’
+(tax stamp) of €19 for their first residence permit however, unlike other foreigners, they will not pay the tax on their
+first permit.",
+task: c
+)
+
 
 
 ##################### TASK 2 - SUBTASKS ###################################################################################
