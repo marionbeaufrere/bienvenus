@@ -7,6 +7,9 @@ class TasksController < ApplicationController
   skip_after_action :verify_policy_scoped, only: [:show, :index, :completed_task]
 #########################################################################
 
+  def user_initializer
+  end
+
   def index
     current_user.update_user_access
     @tasks = current_user.visible_tasks
