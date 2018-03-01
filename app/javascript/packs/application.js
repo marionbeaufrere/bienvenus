@@ -1,4 +1,7 @@
 import "bootstrap";
+import { changeToActive } from '../tasks/show_tasks';
+changeToActive();
+
 
 //// JS for onboarding
 
