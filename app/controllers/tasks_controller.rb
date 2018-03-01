@@ -1,5 +1,4 @@
 class TasksController < ApplicationController
-  # before_action :update_user_state
 
 ######### DELETE THIS ONCE PUNDIT HAS BEEN IMPLEMENTED ###################
   skip_before_action :authenticate_user!, only: [:show, :index, :completed_task, :initializer, :update]
