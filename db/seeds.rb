@@ -1,4 +1,6 @@
 puts 'Cleaning database...'
+UserSubtask.destroy_all
+Subtask.destroy_all
 Task.destroy_all
 puts 'Creating tasks and associated subtasks...'
 ################ ALL TASKS ######################################################################################
@@ -11,7 +13,7 @@ az = Category.create!(
 a = Task.create!(
 title: "Obtain a residence permit",
 position: 1,
-status: "completed",
+status: "in progress",
 category: az,
 description: "As a refugee, you are entitled to a resident card valid 10 years, automatically recreateable.
 In some prefectures you can ask for your resident card or residence permit as soon as you sign the CIR;
@@ -37,7 +39,7 @@ enter into a civil partnership)."
 c = Task.create!(
 title: "Learn French",
 position: 2,
-status: "completed",
+status: "in progress",
 category: az,
 description: "Learning French is essential in everyday life in order to better understand administrative procedures, and a job and
 housing, defend your rights and make your start in society easier. It is also a right that France must repect: as a host country,

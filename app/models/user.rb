@@ -37,15 +37,25 @@ class User < ApplicationRecord
   mount_uploader :photo, PhotoUploader
 
   def visible_tasks
-    Task.where(position: self.access)
+    Task.where(position: 1..self.access)
     # AJOUTER TOUTES LES TACHES COMPLETE D'UNE POSITIONE INFERIEUERE
+    # tasks_done = SELECT COUNT(*) FROM tasks
+    # (JOIN users ON users.access)
+    # WHERE self.access < tasks.position
+    # AND tasks.status = "completed"
+
+    #tasks_in_progress + tasks_done
+
+    #SHOULD WE JOIN USER_SUBTASKS? SUBTASKS IS THE ISSUE
   end
 
    def update_user_access
-    @tasks = Task.where(position: self.access)
-    if @tasks.status == "completed" && self.access < 6
-      self.access += 1
-    end
+    # tasks_in_progress = Task.where(position: self.access)
+    # #STATUS NEEDS TO BE COMPLETED ON ALL VISIBLE TASKS
+    #   if tasks_in_progress.status == "completed" && self.access < 6
+    #     self.access += 1
+    #     #ELSE HE STAYS ON CURRENT ACCESS
+    #   end
   end
 end
 
