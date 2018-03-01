@@ -1,8 +1,61 @@
 puts 'Cleaning database...'
 UserSubtask.destroy_all
 Subtask.destroy_all
+Category.destroy_all
 Task.destroy_all
 puts 'Creating tasks and associated subtasks...'
+
+################ CATEGORIES ######################################################################################
+
+cat_a = Category.create!(
+  name: "Essentials",
+  color: "#FFD35C"
+)
+cat_b = Category.create!(
+  name: "Housing",
+  color: "#FFF8201"
+)
+cat_c = Category.create!(
+  name: "Language",
+  color: "#F37252"
+)
+cat_d = Category.create!(
+  name: "Finance",
+  color: "#C72C3A"
+)
+cat_e = Category.create!(
+  name: "Education",
+  color: "#EA3E70"
+)
+cat_f = Category.create!(
+  name: "Mobility",
+  color: "#954567"
+)
+cat_g = Category.create!(
+  name: "Healthcare",
+  color: "#4BC4D5"
+)
+cat_h = Category.create!(
+  name: "Financial Aid",
+  color: "#0180B5"
+)
+cat_i = Category.create!(
+  name: "Employment",
+  color: "#02B5AO"
+)
+cat_j = Category.create!(
+  name: "Family Unit",
+  color: "#8A9747"
+)
+cat_k = Category.create!(
+  name: "Naturalisation",
+  color: "#C6CCCC"
+)
+cat_l = Category.create!(
+  name: "Integration",
+  color: "#CF97D7"
+)
+
 ################ ALL TASKS ######################################################################################
 
 az = Category.create!(
@@ -12,9 +65,9 @@ az = Category.create!(
 
 a = Task.create!(
 title: "Obtain a residence permit",
+category: cat_a,
 position: 1,
 status: "in progress",
-category: az,
 description: "As a refugee, you are entitled to a resident card valid 10 years, automatically recreateable.
 In some prefectures you can ask for your resident card or residence permit as soon as you sign the CIR;
 however, in other prefectures you will have to wait for the Ofpra to put together and send your civil status documents.
@@ -24,10 +77,10 @@ to open a bank account, change your driver’s licence, have access to social ho
 )
 
 b = Task.create!(
-title: "Obtain your civil status certificates",
+title: "Obtain your civil status certificate",
+category: cat_a,
 position: 2,
 status: "",
-category: az,
 description: "The civil status documents issued by the Ofpra are:
 birth, marriage and death certi cates and the family record book (for marriages that took place abroad and
 for minors born outside France). For a marriage or the birth of a child in France, the town hall where they were registered
@@ -38,9 +91,9 @@ enter into a civil partnership)."
 
 c = Task.create!(
 title: "Learn French",
+category: cat_c,
 position: 2,
 status: "in progress",
-category: az,
 description: "Learning French is essential in everyday life in order to better understand administrative procedures, and a job and
 housing, defend your rights and make your start in society easier. It is also a right that France must repect: as a host country,
 its role is to stimulate the integration of refugees, in particular by learning French. It is vital for all refugees to speak and
@@ -48,14 +101,6 @@ use French at every opportunity.
 Level A1 (oral and written) is the level to reach for the CIR in order to get the ‘Diplôme Initial de Langue Française’ (DILF)
 (initial diploma in the French language). If you fail the DILF, the O i can, upon request,  nance a second training course so that
 you can retake the exam. After the DILF, there is another course to reach level A2 (financed by the Ofi)."
-)
-
-d = Task.create!(
-title: "Ladiddididi",
-position: 3,
-status: "",
-category: az,
-description: "LOREEEEEEEM"
 )
 
 ################### TASK 1 - SUBTASKS ######################################################################
