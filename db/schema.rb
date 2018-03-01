@@ -10,10 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180228171615) do
+
+ActiveRecord::Schema.define(version: 20180228175417) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "categories", force: :cascade do |t|
+    t.string "name"
+    t.string "color"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "subtasks", force: :cascade do |t|
     t.string "title"
@@ -32,8 +40,13 @@ ActiveRecord::Schema.define(version: 20180228171615) do
     t.integer "periodicity"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+<<<<<<< HEAD
     t.string "category"
     t.integer "position"
+=======
+    t.bigint "category_id"
+    t.index ["category_id"], name: "index_tasks_on_category_id"
+>>>>>>> master
   end
 
   create_table "user_subtasks", force: :cascade do |t|
@@ -70,6 +83,7 @@ ActiveRecord::Schema.define(version: 20180228171615) do
   end
 
   add_foreign_key "subtasks", "tasks"
+  add_foreign_key "tasks", "categories"
   add_foreign_key "user_subtasks", "subtasks"
   add_foreign_key "user_subtasks", "users"
 end

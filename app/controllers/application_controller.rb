@@ -6,8 +6,8 @@ class ApplicationController < ActionController::Base
   include Pundit
 
   #### DO NOT FORGET TO UNCOMMENT THE TWO LINES BELOW ONCE PUNDIT IS FULLY SET UP!!!!!!!!!!!!!!
-  # after_action :verify_authorized, except: :index, unless: :skip_pundit?
-  # after_action :verify_policy_scoped, only: :index, unless: :skip_pundit?
+  after_action :verify_authorized, except: :index, unless: :skip_pundit?
+  after_action :verify_policy_scoped, only: :index, unless: :skip_pundit?
 
  # Uncomment when you *really understand* Pundit!
   # rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized

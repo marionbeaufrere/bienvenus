@@ -1,7 +1,12 @@
 class PagesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:home]
+  skip_before_action :authenticate_user!, only: [:home, :onboarding]
+
+  ### COMMENT THIS LINE ONCE PUNDIT HAS BEEN IMPLEMENTED ###########
+  skip_after_action :verify_authorized, only: [:home, :onboarding]
 
   def home
-    @categories = ["statut","carte de séjour","état civil","langue française","aides financières","banque","logement/domiciliation","emploi","santé","mobilité","unité familiale","naturalisation"]
+  end
+
+  def onboarding
   end
 end

@@ -1,0 +1,28 @@
+h1{
+font-family: $headings-font-family;
+font-weight: bold;
+font-size: 40px;
+text-align: center;
+margin-top: 30px;
+}
+
+h2{
+font-size: 15px;
+font-family: "Quicksand", "sans-serif";
+padding-top: 40px;
+color: grey;
+}
+
+.content-wrapper{
+  display: flex;
+  min-height: calc(100vh - 80px);
+  justify-content:center;
+}
+
+.footer{
+  height: 80px;
+  background-color: black;
+}
+.my-container{
+  width: 80%;
+}
