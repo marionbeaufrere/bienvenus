@@ -20,6 +20,9 @@
 #  last_name              :string
 #  language               :string
 #  user_type              :string
+#  aasm_state             :string
+#  photo                  :string
+#  access                 :integer          default(1)
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
