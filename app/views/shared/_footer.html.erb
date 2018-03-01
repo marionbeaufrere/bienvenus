@@ -1,0 +1,22 @@
+<div class="footer">
+  <%= link_to home_path do %>
+    <div style="font-size:2em; color:grey">
+      <i class="fas fa-home"></i>
+    </div>
+      <p> HOME </p>
+     <% end %>
+
+    <%= link_to user_path(current_user) do %>
+    <div style="font-size:2em; color:grey">
+      <i class="fas fa-user"></i>
+    </div>
+      <p> USER </p>
+     <% end %>
+
+    <%= link_to tasks_path do %>
+    <div style="font-size:2em; color:grey">
+      <i class="fas fa-rocket"></i>
+    </div>
+      <p> RESOURCES </p>
+     <% end %>
+</div>

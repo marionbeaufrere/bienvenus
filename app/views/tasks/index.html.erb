@@ -20,7 +20,7 @@
     <% end %>
       <% end %>
 
-<!--     <h2>DONE (2)</h2>
+    <!-- <h2>DONE (2)</h2>
     <div class="card-container-task">
       <div class="category">
         <div class="category-color"></div>
@@ -34,29 +34,7 @@
         <div class="category-text"> <p>Employment</p></div>
         <div class="checkbox-done"></div>
       </div>
-    </div>
-    <div class="footer">
-      <div style="font-size:2em; color:grey">
-        <i class="fas fa-home"></i>
-      </div>
-      <div style="font-size:2em; color:grey">
-        <i class="fas fa-user"></i>
-      </div>
-      <div style="font-size:2em; color:grey">
-        <i class="fas fa-rocket"></i>
-      </div>
     </div> -->
   </div>
 </div>
-
-
-<% if @tasks %>
-<% @tasks.each do |task| %>
-<ul>
-  <li><% link_to task.title, task_path(task) %></li>
-  <li><% task.description %></li>
-  <li><% task.status %></li>
-  <li><% task.category.color%></li>
-</ul>
-<% end %>
-<% end %>
+<%= render 'shared/footer' %>
