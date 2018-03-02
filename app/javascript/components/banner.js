@@ -8,4 +8,8 @@ function loadDynamicBannerText() {
   });
 }
 
+if ( document.querySelector(".welcome-container") ) {
+  loadDynamicBannerText();
+};
+
 export { loadDynamicBannerText };
