@@ -73,7 +73,7 @@ Getting the refugee status means that from now, you will be a French citizen and
 - Why is it important ? This is the beginning of your new life. You will have new rights and new obligations.
 - What's next ? Once you have the refugee status, the receipt (récépissé) of the international protection or of the application for a residence permit allows
 you to work and entitles you to civil and social rights."
-
+)
 
 b = Task.create!(
 title: "Obtain a residence permit",
