@@ -3,18 +3,18 @@
       <h2>Please tell us if you've already done these, and click 'I'm ready!'</h1>
     </div>
     <% @tasks.each do |task| %>
-    <%= simple_form_for task do |f| %>
     <div class="card-initalizer">
       <div class="initializer-text">
         <p><%= task.title %></p>
       </div>
+    <%= simple_form_for task do |f| %>
       <div class="card-btn">
         <%= button_tag class: "initialize-btn" do %>
         <i class="far fa-circle" style="color: #BB6BD9;"></i>
         <% end %>
       </div>
-    </div>
     <% end %>
+    </div>
     <% end %>
     <%= link_to "I'm ready!", tasks_path, class: "button-rounded button-redirect-index" %>
 </div>

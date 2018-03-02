@@ -12,7 +12,6 @@
 
 .card-initalizer {
   background-color: #fff !important;
-  color: white;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -30,8 +29,6 @@
 }
 
 .initializer-text {
-  justify-content: space-around;
-  width: 100%;
   margin-left: 15px;
   padding: 10px 0px;
   p{
@@ -43,7 +40,7 @@
 
 .initialize-btn {
   line-height: inherit;
-  padding-right: 35px;
+  padding-right: 10px;
   background-color: transparent;
   border: 0px;
 }
