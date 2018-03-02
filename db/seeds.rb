@@ -41,7 +41,7 @@ cat_h = Category.create!(
 )
 cat_i = Category.create!(
   name: "Employment",
-  color: "#02B5AO"
+  color: "#ec7700"
 )
 cat_j = Category.create!(
   name: "Family Unit",
