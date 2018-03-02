@@ -16,7 +16,7 @@
 
         <div class="form-inputs">
           <%= f.input :first_name, label: "Your first name", required: true %>
-          <%= f.input :last_name, label: "Your last name", required: true %>
+          <%= f.input :last_name, label: "Your last name", required: false %>
         </div>
       </div>
       <div id="last-item" class="item middle-item">
@@ -31,9 +31,10 @@
          <h3>Sign up</h3>
         <div class="form-inputs">
           <%= f.input :phone_number, label: "Your phone number", required: true %>
-          <%= f.input :language, label: "Your prefered language", required: true %>
+          <%#= f.input :language, label: "Your preferred language (optional)", required: false %>
+          <br><br>
           <div class="police largeur">
-            <%= f.input :photo, label: "You can upload your photo", label_html: {class: "police"} %>
+            <%= f.input :photo, label: "Upload a profile photo (optional)", label_html: {class: "police"} %>
           </div>
         </div>
         <div class="form-actions">
