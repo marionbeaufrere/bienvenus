@@ -53,11 +53,11 @@ class User < ApplicationRecord
       self.save
     end
     # Intermediate Position: Employment
-    @french_class = Task.where(title: "Learn French")
-    if @french_class[0].status == "completed" && self.access < 5
-      self.access += 1
-      self.save
-    end
+    # @french_class = Task.where(title: "Learn French")
+    # if @french_class[0].status == "completed" && self.access < 5
+    #   self.access += 1
+    #   self.save
+    # end
 
     # # Intermediate Position: Financial Aid
     # @open_bank_account = Task.where(title: "Open a bank account")
