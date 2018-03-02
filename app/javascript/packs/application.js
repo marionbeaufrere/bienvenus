@@ -1,10 +1,14 @@
 import "bootstrap";
-// import { loadDynamicBannerText } from '../components/banner';
-// loadDynamicBannerText();
-// import { changeToActive } from '../tasks/show_tasks';
-// changeToActive();
-import { intializeButton } from "./initialize.js";
+import { loadDynamicBannerText } from '../components/banner';
+loadDynamicBannerText();
+import { changeToActive } from '../tasks/show_tasks';
+changeToActive();
+import { intializeButton } from "../components/initialize";
 intializeButton();
+console.log("supp")
+
+
+
 
 //// JS for onboarding
 
