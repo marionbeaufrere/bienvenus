@@ -1,6 +1,6 @@
 .footer{
   height: 50px;
-  background-color: white;
+  background-color: transparent;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -13,6 +13,21 @@
   }
 }
 
-.fas:hover{
-  color: $yellow-bienvenus;
+.footer-content{
+  width: 50px;
+  font-size:14px;
+  color:$grey-text;
+  opacity: 0.7;
+  a {
+    &:hover{
+      color: $dark-yellow;
+    }
+  }
+  .active{
+    color: $black;
+    opacity: none;
+  }
+}
+.fas {
+  font-size: 2em;
 }

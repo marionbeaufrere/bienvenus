@@ -1,22 +1,26 @@
 <div class="footer">
-  <%= link_to home_path do %>
-    <div style="font-size:2em; color:grey">
+  <div class="footer-content">
+    <%= link_to home_path, class: current_class?(home_path) do %>
       <i class="fas fa-home"></i>
-    </div>
       <p> HOME </p>
-     <% end %>
-
-    <%= link_to user_path(current_user) do %>
-    <div style="font-size:2em; color:grey">
+    <% end %>
+  </div>
+  <div class="footer-content">
+    <%= link_to user_path(current_user), class: current_class?(user_path(current_user)) do %>
       <i class="fas fa-user"></i>
-    </div>
       <p> USER </p>
      <% end %>
-
-    <%= link_to tasks_path do %>
-    <div style="font-size:2em; color:grey">
+  </div>
+  <div class="footer-content">
+    <%= link_to tasks_path, class: current_class?(tasks_path) do %>
+      <i class="fas fa-tasks"></i>
+      <p> TASKS </p>
+    <% end %>
+  </div>
+  <div class="footer-content">
+    <%= link_to resources_path, class: current_class?(resources_path) do %>
       <i class="fas fa-rocket"></i>
-    </div>
       <p> RESOURCES </p>
      <% end %>
+  </div>
 </div>

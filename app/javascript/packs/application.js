@@ -130,6 +130,3 @@ dependencies:
 $('.carousel').carousel({
   interval: false
 });
-
-
-
