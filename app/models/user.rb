@@ -48,10 +48,23 @@ class User < ApplicationRecord
         @completed_tasks += 1
       end
     end
-    if @completed_tasks == @accessable_tasks.count && self.access < 6
+    if @completed_tasks == @accessable_tasks.count && self.access < 4
       self.access += 1
       self.save
     end
+    # Intermediate Position: Employment
+    @french_class = Task.where(title: "Learn French")
+    if @french_class[0].status == "completed" && self.access < 5
+      self.access += 1
+      self.save
+    end
+
+    # # Intermediate Position: Financial Aid
+    # @open_bank_account = Task.where(title: "Open a bank account")
+    # if @open_bank_account.status == "completed" && self.access < 6
+    #   self.access += 1
+    #   self.save
+    # end
   end
 end
 
