@@ -39,8 +39,8 @@ ActiveRecord::Schema.define(version: 20180228175417) do
     t.integer "periodicity"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "category_id"
     t.integer "position"
+    t.bigint "category_id"
     t.index ["category_id"], name: "index_tasks_on_category_id"
   end
 

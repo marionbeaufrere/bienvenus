@@ -1,6 +1,9 @@
 .to-do{
-text-align: left;
-font-size: 30px;
+  text-align: left;
+  font-size: 30px;
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
 }
 
 .checkbox{
