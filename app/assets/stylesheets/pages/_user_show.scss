@@ -1,0 +1,37 @@
+.user-show {
+  height: 85%;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  text-align: center;
+}
+
+.user-details {
+  text-align: left;
+  color:$grey-text;
+}
+
+.user-profile-name h3 {
+  font-size: 20px;
+}
+
+.user-show-photo {
+  top: 30px;
+  left: 10px;
+  border-radius: 50%;
+  margin-top: 20px;
+}
+
+.user-show-details p {
+  font-size: 15px;
+}
+
+.user-button {
+  margin-top: 15px;
+}
+
+.user-show-details {
+  padding-top: 10px;
+  padding-bottom:10px;
+  padding-left: 10px;
+}

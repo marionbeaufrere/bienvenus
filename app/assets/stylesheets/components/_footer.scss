@@ -1,6 +1,6 @@
 .footer{
   height: 50px;
-  background-color: white;
+  background-color: transparent;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -18,11 +18,14 @@
   font-size:14px;
   color:$grey-text;
   opacity: 0.7;
-  &:hover{
-    color: $yellow-bienvenus;
+  a {
+    &:hover{
+      color: $dark-yellow;
+    }
   }
-  &:active{
-    color: $yellow-bienvenus;
+  .active{
+    color: $black;
+    opacity: none;
   }
 }
 .fas {
