@@ -10,5 +10,12 @@ clickAbstract.addEventListener("click", (event) => {
 
 }
 
+if ( document.querySelector(".wrap-show-task") ) {
+  changeToActive();
+};
+
+
+
+
 export { changeToActive };
 

@@ -1,8 +1,8 @@
 import "bootstrap";
 import { loadDynamicBannerText } from '../components/banner';
-loadDynamicBannerText();
 import { changeToActive } from '../tasks/show_tasks';
-changeToActive();
+import { hideNextButton } from '../pages/signup';
+// import { hidePreviousButton } from '../pages/signup';
 
 //// JS for onboarding
 

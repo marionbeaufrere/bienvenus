@@ -30,5 +30,34 @@
   color: $grey-text;
 }
 
-.optional {
+.tel {
+  text-align: center;
+  width: 50vh;
+  margin-left: 49px;
+}
+
+.user_language {
+  text-align: center;
+  width: 50vh;
+  margin-left: 96px;
+}
+
+#user_photo {
+  margin-left: 95px;
+}
+
+.signup-control-position-right {
+  top: 80%;
+  right: 30% !important;
+}
+
+.signup-control-position-left {
+  top: 80%;
+  left: 12% !important;
+}
+
+.button-next {
+  padding-left: 35px;
+  padding-right: 35px;
+  text-align: center;
 }
