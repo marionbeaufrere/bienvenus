@@ -1,7 +1,7 @@
 <div class = "welcome-container">
-    <h1> BIENVENUS </h1>
+  <h1> BIENVENUS </h1>
 <!--     <h4><em> An app to help refugees with their paperwork </em></h4>
-    <h5><em> (Currently only available for French paperwork) </em> </h5> -->
+  <h5><em> (Currently only available for French paperwork) </em> </h5> -->
   <%= image_tag 'medium_fox.png', id: "fox-image" %>
   <h2>
     <span id="banner-typed-text"></span>
@@ -11,6 +11,12 @@
     setTimeout(function () {
     window.location.href= 'localhost:3000/onboarding'},5000);
   </script> -->
-
-  <%= link_to 'Get started', onboarding_path, class: 'button-rounded' %>
+<!--   <div class="buttons-welcome"> -->
+    <span>
+      <%= link_to 'Get started', onboarding_path, class: 'button-rounded' %>
+    </span>
+    <span>
+      <%= link_to 'Sign in', new_user_session_path, class: 'button-rounded' %>
+    </span>
+<!--   </div> -->
 </div>
