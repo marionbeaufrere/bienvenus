@@ -14,6 +14,15 @@ class TasksController < ApplicationController
   def index
     current_user.update_user_access
     @tasks = current_user.visible_tasks
+    @tasks_completed = []
+    @tasks_in_progress = []
+    @tasks.each do |task|
+      if task.status == "in progress"
+        @tasks_in_progress << task
+      else task.status == "completed"
+        @tasks_completed << task
+      end
+    end
   end
 
   def show

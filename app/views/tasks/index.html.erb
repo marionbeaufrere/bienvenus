@@ -2,39 +2,40 @@
   <div class="my-container">
     <h1>My Tasks</h1>
     <div class="to-do">
-      <h2>TO DO (<%= @tasks.count %>)</h2>
+      <h2>TO DO (<%= @tasks_in_progress.count %>)</h2>
     </div>
-    <% if @tasks %>
-      <% @tasks.each do |task| %>
-    <div class="card-container-task">
-      <div class="category">
-          <div class="category-color", style= "background-color:<%= task.category.color%>"></div>
-          <div class="task-text">
+      <% @tasks_in_progress.each do |task| %>
+        <div class="card-container-task">
+          <div class="category">
+            <div class="category-color", style= "background-color:<%= task.category.color%>">
+            </div>
+            <div class="task-text">
             <p style= "color:<%= task.category.color%>">
               <%= task.category.name.upcase %>
             </p>
             <%= link_to task.title, task_path(task) %>
+            </div>
           </div>
         </div>
-    </div>
-    <% end %>
       <% end %>
 
-    <!-- <h2>DONE (2)</h2>
-    <div class="card-container-task">
+    <h2>DONE (<%= @tasks_completed.count %>)</h2>
+    <% @tasks_completed.each do |task| %>
+    <div class="card-container-task completed-tasks">
       <div class="category">
-        <div class="category-color"></div>
-        <div class="category-text"> <p>Social Security</p></div>
-        <div class="checkbox-done"></div>
+        <div class="category-color", style= "background-color:<%= task.category.color%>">
+        </div>
+        <div class="task-text">
+          <p style= "color:<%= task.category.color%>">
+            <%= task.category.name.upcase %>
+          </p>
+            <%= link_to task.title, task_path(task) %>
+        </div>
+        <div class="checkbox-done">
+        </div>
       </div>
     </div>
-    <div class="card-container-task">
-      <div class="category">
-        <div class="category-color"></div>
-        <div class="category-text"> <p>Employment</p></div>
-        <div class="checkbox-done"></div>
-      </div>
-    </div> -->
+  <% end %>
   </div>
 </div>
 <%= render 'shared/footer' %>
