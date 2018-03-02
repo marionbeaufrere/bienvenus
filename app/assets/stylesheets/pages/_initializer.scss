@@ -7,10 +7,10 @@
     align-items: center;
     min-height: calc(100vh - 120px);
     flex-direction: column;
-    padding: 0 30px;
+    margin: 0 30px;
 }
 
-.card-initalizer {
+.card-initializer {
   background-color: #fff !important;
   display: flex;
   align-items: center;
@@ -22,7 +22,7 @@
   margin-left: 0 !important;
   margin-bottom: 5px;
   border-radius: 10px;
-  width: 120% !important;
+  width: 100%;
   // margin-bottom: 15px;
   // border-left: 10px solid red;
   // position: relative;
@@ -46,7 +46,7 @@
 }
 
 .button-redirect-index {
-  margin-top: 10px;
+  margin-top: 50px;
   margin-bottom: 10px;
   width: 130px !important;
 }
