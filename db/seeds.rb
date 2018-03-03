@@ -13,7 +13,7 @@ cat_a = Category.create!(
 )
 cat_b = Category.create!(
   name: "Housing",
-  color: "#FFF8201"
+  color: "#76b39d"
 )
 cat_c = Category.create!(
   name: "Language",
@@ -41,7 +41,7 @@ cat_h = Category.create!(
 )
 cat_i = Category.create!(
   name: "Employment",
-  color: "#02B5AO"
+  color: "#ec7700"
 )
 cat_j = Category.create!(
   name: "Family Unit",
@@ -73,7 +73,7 @@ Getting the refugee status means that from now, you will be a French citizen and
 - Why is it important ? This is the beginning of your new life. You will have new rights and new obligations.
 - What's next ? Once you have the refugee status, the receipt (récépissé) of the international protection or of the application for a residence permit allows
 you to work and entitles you to civil and social rights."
-
+)
 
 b = Task.create!(
 title: "Obtain a residence permit",
@@ -85,7 +85,7 @@ description:
 - What for ? You will be able to open a bank account, change your driver’s licence, have access to social homing and request travel documents
 - When can I ask for it ? depending on the prefecture your belong, you can ask for it as soon as you sign the CIR or sometime you will
 have to wait for the Ofpra to put together and send your civil status documents
-- How long does it take ? Delays can vary depending on the prefecture"
+- How long does it take ? Delays can vary depending on the prefecture."
 )
 
 c = Task.create!(
@@ -94,9 +94,9 @@ category: cat_a,
 position: 2,
 status: "done",
 description:
-"- What are the civil status certificates? birth certificate, marriage certificate, death certificate, family record book for marriages that took place abroad and
+"What are the civil status certificates? birth certificate, marriage certificate, death certificate, family record book for marriages that took place abroad and
 for minors born outside France, 'certificat administratif' for protected minors & 'certificat de coutume' if you want to get married or having a civil partnership.
-- Who delivers them ? The OFPRA"
+Who delivers them ? The OFPRA."
 )
 
 d = Task.create!(
@@ -110,8 +110,6 @@ its role is to stimulate the integration of refugees, in particular by learning 
 use French at every opportunity."
 )
 
-
-
 e = Task.create!(
 title: "Apply for Social Housing",
 category: cat_b,
@@ -122,6 +120,33 @@ There are 3 entities that exist specifically to help refugees to find housing: �
 ‘Centres Provisoires d’Hébergement’ (CPH) but please keep in mind that finding accommodation is really difficult."
 )
 
+f = Task.create!(
+title: "Open a bank account",
+category: cat_d,
+position: 3,
+status: "in progress",
+description: "French law guarantees what we call the ‘droit au compte’ (the right to a bank account):
+every person that lives in France, including refugees, has the right to open a ‘compte courant’ (current account) and not just a ‘Livret A’ (savings account)."
+)
+
+g = Task.create!(
+title: "Get your driver's license",
+category: cat_e,
+position: 3,
+status: "in progress",
+description: "If you have driver’s licence, you can exchange it the first year of your residence permit, even if it has expired.
+Mobility – the possibility of travelling in France and abroad – is essential for refugee integration, be it for work, housing or in order to do what you would like to do.
+A majority of refugees live in the Paris area, when better living conditions may exist elsewhere in France. You need courage to move around once you have received your refugee status – curiosity too - but it can be beneficial."
+)
+
+h = Task.create!(
+title: "Find a job",
+category: cat_i,
+position: 4,
+status: "in progress",
+description: "As soon as you receive the ‘récépissé’ (receipt) for your residence permit (on which is written “autorise son titulaire à travailler” (authorizes its holder to work)), you can work and register at ‘Pôle emploi’ (job centre).
+Registering with Pôle emploi can be difficult, so ask for help from a Pôle emploi advisor, an association or a service such as Emmaüs Connect."
+)
 
 ################### TASK 1 - SUBTASKS ######################################################################
 

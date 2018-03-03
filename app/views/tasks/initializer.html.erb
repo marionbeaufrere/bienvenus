@@ -1,6 +1,7 @@
 <div class="initializer-container">
     <div class="to-do">
-      <h2>Please tell us if you've already done these, and click 'I'm ready!'</h1>
+      <h1>Did you do this?</h1>
+      <h2>Please tell us if you've already done these, and click 'I'm ready!'</h2>
     </div>
     <% @tasks.each do |task| %>
     <div class="card-initializer">
@@ -18,6 +19,7 @@
     <% end %>
     <%= link_to "I'm ready!", tasks_path, class: "button-rounded button-redirect-index" %>
 </div>
+
 <%= render 'shared/footer' %>
 
 

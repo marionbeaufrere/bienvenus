@@ -1,6 +1,10 @@
 import "bootstrap";
 import { loadDynamicBannerText } from '../components/banner';
 import { changeToActive } from '../tasks/show_tasks';
+changeToActive();
+import { intializeButton } from "../components/initialize";
+intializeButton();
+console.log("supp")
 import { hideNextButton } from '../pages/signup';
 // import { hidePreviousButton } from '../pages/signup';
 
