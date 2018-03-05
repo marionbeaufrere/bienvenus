@@ -1,19 +1,22 @@
 class UserSubtasksController < ApplicationController
 
-################# DELETE THIS ONCE PUNDIT HAS BEEN IMPLEMENTED ###############
-  skip_before_action :authenticate_user!, only: [:show, :index, :new, :create, :destroy]
-  skip_after_action :verify_authorized, only: [:show, :index, :new, :create, :destroy]
-  skip_after_action :verify_policy_scoped, only: [:show, :index, :new, :create, :destroy]
-#########################################################################
+
+# ################# DELETE THIS ONCE PUNDIT HAS BEEN IMPLEMENTED ###############
+#   skip_before_action :authenticate_user!, only: [:show, :index, :new, :create, :destroy]
+#   skip_after_action :verify_authorized, only: [:show, :index, :new, :create, :destroy]
+#   skip_after_action :verify_policy_scoped, only: [:show, :index, :new, :create, :destroy]
+# #########################################################################
 
 def new
   @user_subtask = UserSubtask.new
+  autorize @user_subtask
 
 end
 
 def create
   @user_subtask = UserSubtask.new(user_subtask_params)
   @user_subtask.user = current_user
+  authorize @user_subtask
   @user_subtask.save
   @subtask = @user_subtask.subtask
   @subtask_id = @user_subtask.subtask_id
@@ -22,6 +25,7 @@ def create
   respond_to do |format|
     format.html { redirect_to task_path(@user_subtask.subtask.task) }
     format.js  # <-- will render `app/views/user_subtask/create.js.erb`
+
   end
 end
 
@@ -30,7 +34,9 @@ def destroy
   task = @user_subtask.subtask.task
   @subtask = @user_subtask.subtask
   @subtask_id = @user_subtask.subtask_id
+  authorize @user_subtask
   @user_subtask.destroy
+
     respond_to do |format|
       format.html { redirect_to task_path(task) }
       format.js  # <-- will render `app/views/user_subtask/destroy.js.erb`

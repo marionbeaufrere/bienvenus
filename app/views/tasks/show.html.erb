@@ -8,7 +8,7 @@
       </h3>
       <span class="glyphicon glyphicon-menu-down"></span>
     </div>
-    <div class="details card-content">
+    <div class="details card-content", style= "background-color:<%= @task.category.color%>" >
       <div class="details__inner">
         <%= @task.description %>
       </div>
@@ -21,7 +21,7 @@
 <% end %>
 </div>
 
-<%= link_to "Back to the list of tasks", tasks_path, class:"button-rounded", id:"back_to_tasks_button" %>
+<%= link_to "Back to the list of tasks", tasks_path, class:"button-rounded back-button", id:"back_to_tasks_button" %>
 </div>
 <%= render 'shared/footer' %>
 

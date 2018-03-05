@@ -1,7 +1,11 @@
 import "bootstrap";
 import { loadDynamicBannerText } from '../components/banner';
 import { changeToActive } from '../tasks/show_tasks';
-changeToActive();
+
+if ( document.querySelector(".wrap-show-task") ) {
+  changeToActive();
+};
+
 import { intializeButton } from "../components/initialize";
 intializeButton();
 console.log("supp")
