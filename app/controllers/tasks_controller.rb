@@ -17,10 +17,10 @@ class TasksController < ApplicationController
     @tasks_completed = []
     @tasks_in_progress = []
     @tasks.each do |task|
-      if task.status == "in progress"
-        @tasks_in_progress << task
-      else task.status == "completed"
+      if task.completed?(current_user)
         @tasks_completed << task
+      else
+        @tasks_in_progress << task
       end
     end
   end
@@ -34,7 +34,7 @@ class TasksController < ApplicationController
 # Initializer Task Updater
   def update
     @task = Task.find(params[:id])
-    @task.status = "completed"
+    @task.completed?(current_user) == true
     @task.save
     redirect_to initialize_path
   end

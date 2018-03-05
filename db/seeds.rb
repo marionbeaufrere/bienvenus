@@ -68,11 +68,10 @@ category: cat_a,
 position: 1,
 status: "in progress",
 description:
-"- What does that mean ?
-Getting the refugee status means that from now, you will be a French citizen and won't belong admninitratively and legally to your country of origin.
-- Why is it important ? This is the beginning of your new life. You will have new rights and new obligations.
-- What's next ? Once you have the refugee status, the receipt (récépissé) of the international protection or of the application for a residence permit allows
-you to work and entitles you to civil and social rights."
+"Obtaining the status of refugee, beneficiary of subsidiary protection or stateless person is the start of a new life with rights and obligations. It is a real entry into French society and an administrative and legal break with your country of origin. You need to be prepared for it, as it is a long and di cult process with administrative steps and concrete procedures to follow.
+
+Once you have refugee status, the ‘récépissé’ (receipt) of international protection or of the application for a residence permit allows you to work and entitles you to civil and social rights (except for social housing, the residence permit is obligatory).
+"
 )
 
 b = Task.create!(
@@ -92,7 +91,7 @@ c = Task.create!(
 title: "Obtain your civil status certificates",
 category: cat_a,
 position: 2,
-status: "done",
+status: "in progress",
 description:
 "What are the civil status certificates? birth certificate, marriage certificate, death certificate, family record book for marriages that took place abroad and
 for minors born outside France, 'certificat administratif' for protected minors & 'certificat de coutume' if you want to get married or having a civil partnership.
@@ -149,6 +148,21 @@ Registering with Pôle emploi can be difficult, so ask for help from a Pôle emp
 )
 
 ################### TASK 1 - SUBTASKS ######################################################################
+
+
+Subtask.create!(
+title: "Change your receipt",
+description: "Change your receipt from asylum seeker to refugee with the mention “reconnu réfugié ;
+autorise son titulaire à travailler” (recognised as a refugee; authorises the holder to work).",
+task: a
+)
+
+Subtask.create!(
+title: "Complete the fiche familiale de référence",
+description: "You must complete and return it to the Ofpra along with all of your original documents (ID card, passport, birth certi cate, marriage certificate
+(including religious or traditional marriages in the country of origin)) by registered mail with con rmation of receipt.",
+task: a
+)
 
 Subtask.create!(
 title: "Confirm a personal address",
@@ -236,6 +250,7 @@ or in a tenant’s home (certificate from the landlord, ID, copy of a gas or ele
 Domiciliation through an association is recognised but is more difficult.",
 task: e
 )
+
 
 
 
