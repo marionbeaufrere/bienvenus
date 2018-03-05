@@ -243,6 +243,22 @@ Domiciliation through an association is recognised but is more difficult.",
 task: e
 )
 
+Subtask.create!(
+title: "Medical visit",
+description: "When you receive the protection ‘récépissé’ (receipt), the prefecture will inform the Ofii who
+will then call you in for a medical visit (checkup, chest x-ray, vaccinations) and the signature of the CIR.
+It is recommended that you bring copies of any examinations that you may have with you.",
+task: f
+)
+
+Subtask.create!(
+title: "Medical visit",
+description: "When you receive the protection ‘récépissé’ (receipt), the prefecture will inform the Ofii who
+will then call you in for a medical visit (checkup, chest x-ray, vaccinations) and the signature of the CIR.
+It is recommended that you bring copies of any examinations that you may have with you.",
+task: g
+)
+
 
 
 

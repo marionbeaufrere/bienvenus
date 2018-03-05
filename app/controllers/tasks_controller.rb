@@ -2,9 +2,9 @@ class TasksController < ApplicationController
 
 
 ######### DELETE THIS ONCE PUNDIT HAS BEEN IMPLEMENTED ###################
-  skip_before_action :authenticate_user!, only: [:show, :index, :completed_task, :initializer, :update]
-  skip_after_action :verify_authorized, only: [:show, :index, :completed_task, :initializer, :update]
-  skip_after_action :verify_policy_scoped, only: [:show, :index, :completed_task, :initializer, :update]
+  skip_before_action :authenticate_user!, only: [:show, :index, :completed_task, :initializer, :update, :complete_subtasks]
+  skip_after_action :verify_authorized, only: [:show, :index, :completed_task, :initializer, :update, :complete_subtasks]
+  skip_after_action :verify_policy_scoped, only: [:show, :index, :completed_task, :initializer, :update, :complete_subtasks]
 #########################################################################
 
   def initializer
@@ -38,7 +38,15 @@ class TasksController < ApplicationController
 
   def complete_subtasks
     @task = Task.find(params[:id])
-    #todo create all user_subtasks as needed
+    @total_subtasks = @task.subtasks.count
+    @total_subtasks.times do
+      @user_subtask = UserSubtask.new
+      @user_subtask.user = current_user
+      @user_subtask.subtask_id = @task.subtasks.first.id
+      @user_subtask.save
+      raise
+    end
     redirect_to initialize_path
   end
+
 end

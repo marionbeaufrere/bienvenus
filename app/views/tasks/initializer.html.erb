@@ -8,7 +8,7 @@
       <div class="initializer-text">
         <p><%= task.title %></p>
       </div>
-    <%= simple_form_for task, url: complete_subtasks_task_path(task) do |f| %>
+    <%= simple_form_for task, url: complete_subtasks_task_path(task), method: :post do |f| %>
       <div class="card-btn">
         <%= button_tag class: "initialize-btn" do %>
         <i class="far fa-circle" style="color: #BB6BD9;"></i>
