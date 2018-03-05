@@ -38,11 +38,10 @@ class TasksController < ApplicationController
 
   def complete_subtasks
     @task = Task.find(params[:id])
-    @total_subtasks = @task.subtasks.count
-    @total_subtasks.times do
+    @task.subtasks.each do |subtask|
       @user_subtask = UserSubtask.new
       @user_subtask.user = current_user
-      @user_subtask.subtask_id = @task.subtasks.first.id
+      @user_subtask.subtask_id = subtask.id
       @user_subtask.save
     end
     redirect_to initialize_path

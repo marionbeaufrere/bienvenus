@@ -9,8 +9,8 @@ function sweetAlertReturn() {
       if (e.target.classList.contains('show-subtask-btn') && unmarkedSubtasksCount == 1) {
       // if (e.target.classList.contains('toto')) {
         swal({
-          title: "A nice alert",
-          text: "This is a great alert, isn't it?",
+          title: "Congrats!",
+          text: "You're all done here, let's move on.",
           icon: "success",
         }).then((value) => {
           window.location = '/tasks';
