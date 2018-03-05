@@ -59,12 +59,12 @@ class User < ApplicationRecord
       self.save
     end
 
-    # # Intermediate Position: Financial Aid
-    # @open_bank_account = Task.where(title: "Open a bank account")
-    # if @open_bank_account.status == "completed" && self.access < 6
-    #   self.access += 1
-    #   self.save
-    # end
+    # Intermediate Position: Financial Aid
+    @open_bank_account = Task.where(title: "Open a bank account")
+    if @open_bank_account.status == "completed" && self.access < 6
+      self.access += 1
+      self.save
+    end
   end
 end
 

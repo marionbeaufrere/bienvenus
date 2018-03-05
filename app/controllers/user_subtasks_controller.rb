@@ -17,7 +17,9 @@ def create
   @user_subtask.save
   @subtask = @user_subtask.subtask
   @subtask_id = @user_subtask.subtask_id
-
+  # if @user_subtask.count == @subtask.last
+  #   sweetAlertReturn
+  # end
   check_task_status
   respond_to do |format|
     format.html { redirect_to task_path(@user_subtask.subtask.task) }
@@ -49,7 +51,11 @@ def check_task_status
   if @task.subtasks.count <= @task.user_subtasks.count
     @task.status = "completed"
     @task.save!
-  else
+    respond_to do |format|
+    format.html { render :js => "sweetAlertReturn();" }
+    format.js
+    end
+  else @task.subtasks.count <= @task.user_subtasks.count
     @task.status = "in progress"
     @task.save!
   end

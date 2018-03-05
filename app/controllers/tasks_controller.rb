@@ -31,6 +31,7 @@ class TasksController < ApplicationController
     @user_subtask = UserSubtask.new
   end
 
+# Initializer Task Updater
   def update
     @task = Task.find(params[:id])
     @task.status = "completed"
