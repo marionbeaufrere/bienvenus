@@ -34,8 +34,11 @@ class TasksController < ApplicationController
 # Initializer Task Updater
   def update
     @task = Task.find(params[:id])
-    @task.completed?(current_user) == true
-    @task.save
+  end
+
+  def complete_subtasks
+    @task = Task.find(params[:id])
+    #todo create all user_subtasks as needed
     redirect_to initialize_path
   end
 end

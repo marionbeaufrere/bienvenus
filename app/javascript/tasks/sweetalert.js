@@ -9,12 +9,12 @@ function sweetAlertReturn() {
       swal({
         title: "A nice alert",
         text: "This is a great alert, isn't it?",
-        icon: "success"
-        function() {
-            window.location = "bienvenus.org/tasks";
-        };
-        // redirect_to tasks_path
-      });
+        icon: "success",
+      },
+      function(){
+            window.location.href = 'bienvenus.org/tasks';
+        }
+      );
     }
   });
 };
