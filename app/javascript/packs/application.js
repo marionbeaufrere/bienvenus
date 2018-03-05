@@ -6,6 +6,8 @@ import { intializeButton } from "../components/initialize";
 intializeButton();
 console.log("supp")
 import { hideNextButton } from '../pages/signup';
+import { getEmail } from '../components/crisp';
+getEmail();
 // import { hidePreviousButton } from '../pages/signup';
 
 //// JS for onboarding
