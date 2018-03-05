@@ -259,6 +259,15 @@ It is recommended that you bring copies of any examinations that you may have wi
 task: g
 )
 
+Subtask.create!(
+title: "Medical visit",
+description: "When you receive the protection ‘récépissé’ (receipt), the prefecture will inform the Ofii who
+will then call you in for a medical visit (checkup, chest x-ray, vaccinations) and the signature of the CIR.
+It is recommended that you bring copies of any examinations that you may have with you.",
+task: h
+)
+
+
 
 
 

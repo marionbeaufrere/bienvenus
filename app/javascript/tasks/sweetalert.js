@@ -10,11 +10,7 @@ function sweetAlertReturn() {
         title: "A nice alert",
         text: "This is a great alert, isn't it?",
         icon: "success",
-      },
-      function(){
-            window.location.href = 'bienvenus.org/tasks';
-        }
-      );
+      });
     }
   });
 };
@@ -23,3 +19,6 @@ export { sweetAlertReturn };
 
 
 // document.getElementById('last-subtask').addEventListener('click', () => {
+// function(){
+        //     window.location.href = 'bienvenus.org/tasks';
+        // }

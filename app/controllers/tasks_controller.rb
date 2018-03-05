@@ -44,7 +44,6 @@ class TasksController < ApplicationController
       @user_subtask.user = current_user
       @user_subtask.subtask_id = @task.subtasks.first.id
       @user_subtask.save
-      raise
     end
     redirect_to initialize_path
   end
