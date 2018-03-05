@@ -6,6 +6,10 @@
     <link rel="stylesheet" media="screen" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600" />
     <link rel="stylesheet" media="screen" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
 
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.2/moment.min.js"></script>
+      <script src="https://cdn.statuspage.io/vendor/moment-timezone-with-data.js"></script>
+      <script src="https://cdn.statuspage.io/vendor/jstz.js"></script>
+      <script src="https://cdn.statuspage.io/vendor/localtimes.js"></script>
 
     <style>
      * {
@@ -14,7 +18,7 @@
          box-sizing:border-box;
      }
 
-     html, body, span, object, iframe, h1, h2, h3, h4, h5, h6, blockquote, pre,
+     html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre,
      abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp,
      small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li,
      fieldset, form, label, legend, caption, article, aside, canvas, details, figcaption, figure,  footer, header, hgroup,
@@ -24,7 +28,7 @@
          border:0;
          outline:0;
          vertical-align:baseline;
-         background: linear-gradient(135deg, #FFEA78 0%, #FFEA78 50%, #FFFFFF 50%, #FFFFFF 100%);
+         background:transparent;
      }
 
      article, aside, details, figcaption, figure, footer, header, hgroup, nav, section {
@@ -56,15 +60,15 @@
      }
 
      .clearfix {
-         clear:both;
-         zoom: 1;
+	       clear:both;
+	       zoom: 1;
      }
      .clearfix:before, .clearfix:after {
          content: "\0020";
          display: block;
          height: 0;
          visibility: hidden;
-     }
+     } 
      .clearfix:after {
          clear: both;
      }
@@ -72,7 +76,7 @@
     <style>
   .plain.error-page-wrapper {
     font-family: 'Source Sans Pro', sans-serif;
-    background-color: linear-gradient(135deg, #FFEA78 0%, #FFEA78 50%, #FFFFFF 50%, #FFFFFF 100%);
+    background-color:#6355bc;
     padding:0 5%;
     position:relative;
   }
@@ -195,7 +199,7 @@
     }
 
     .secondary-text-color {
-      color: #FFFFFF !important;
+      color: rgba(0, 0, 0, 1) !important;
     }
 
     .sign-text-color {
@@ -229,25 +233,18 @@
   <body class="plain error-page-wrapper background-color background-image">
     <div class="content-container">
   <div class="head-line secondary-text-color">
-    500
+    Maintenance
   </div>
   <div class="subheader primary-text-color">
-    Looks like we're having <br>
-    some server issues.
+    We're undergoing a bit of<br>
+    scheduled maintenance.
   </div>
-    <hr>
-    <div class="clearfix"></div>
-    <div class="context primary-text-color">
+  <hr>
+  <div class="clearfix"></div>
+  <div class="context primary-text-color">
+    
+    <p>Sorry for the inconvenience. We'll be back up and running as fast as possible.</p>
 
-    <p>
-      Go back to the previous page and try again.
-      If you think something is broken, report a problem.
-    </p>
-
-
-    </div>
-  <div class="buttons-container">
-    <a class="border-button" href="mailto:contact@bienvenus.org" target="_blank">Report A Problem</a>
   </div>
 </div>
 
@@ -356,7 +353,7 @@
        });
 
      };
-     var ep = new ErrorPage('body', "503", "plain");
+     var ep = new ErrorPage('body', "maintenance", "plain");
      ep.initialize();
 
      // hack to make sure content stays centered >_<
@@ -366,6 +363,6 @@
 
     </script>
 
-
+    
   </body>
 </html>
