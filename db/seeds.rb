@@ -66,7 +66,6 @@ a = Task.create!(
 title: "Update your status from Asylum Seeker to Refugee",
 category: cat_a,
 position: 1,
-status: "in progress",
 description:
 "Obtaining the status of refugee, beneficiary of subsidiary protection or stateless person is the start of a new life with rights and obligations. It is a real entry into French society and an administrative and legal break with your country of origin. You need to be prepared for it, as it is a long and di cult process with administrative steps and concrete procedures to follow.
 
@@ -78,7 +77,6 @@ b = Task.create!(
 title: "Obtain a residence permit",
 category: cat_a,
 position: 2,
-status: "in progress",
 description:
 "As a refugee, you are entitled to a resident card valid 10 years, automatically recreateable.
 - What for ? You will be able to open a bank account, change your driver’s licence, have access to social homing and request travel documents
@@ -91,7 +89,6 @@ c = Task.create!(
 title: "Obtain your civil status certificates",
 category: cat_a,
 position: 2,
-status: "in progress",
 description:
 "What are the civil status certificates? birth certificate, marriage certificate, death certificate, family record book for marriages that took place abroad and
 for minors born outside France, 'certificat administratif' for protected minors & 'certificat de coutume' if you want to get married or having a civil partnership.
@@ -102,7 +99,6 @@ d = Task.create!(
 title: "Learn French",
 category: cat_c,
 position: 3,
-status: "in progress",
 description: "Learning French is essential in everyday life in order to better understand administrative procedures, and a job and
 housing, defend your rights and make your start in society easier. It is also a right that France must repect: as a host country,
 its role is to stimulate the integration of refugees, in particular by learning French. It is vital for all refugees to speak and
@@ -113,7 +109,6 @@ e = Task.create!(
 title: "Apply for Social Housing",
 category: cat_b,
 position: 3,
-status: "in progress",
 description: "As a refugee you are entitled to the same access to housing as French citizens.
 There are 3 entities that exist specifically to help refugees to find housing: ‘Dispositif d’Accueil National’ (DNA), ‘Centres d’accueil pour demandeurs d’asile’ (CADA),
 ‘Centres Provisoires d’Hébergement’ (CPH) but please keep in mind that finding accommodation is really difficult."
@@ -123,7 +118,6 @@ f = Task.create!(
 title: "Open a bank account",
 category: cat_d,
 position: 3,
-status: "in progress",
 description: "French law guarantees what we call the ‘droit au compte’ (the right to a bank account):
 every person that lives in France, including refugees, has the right to open a ‘compte courant’ (current account) and not just a ‘Livret A’ (savings account)."
 )
@@ -132,7 +126,6 @@ g = Task.create!(
 title: "Get your driver's license",
 category: cat_e,
 position: 3,
-status: "in progress",
 description: "If you have driver’s licence, you can exchange it the first year of your residence permit, even if it has expired.
 Mobility – the possibility of travelling in France and abroad – is essential for refugee integration, be it for work, housing or in order to do what you would like to do.
 A majority of refugees live in the Paris area, when better living conditions may exist elsewhere in France. You need courage to move around once you have received your refugee status – curiosity too - but it can be beneficial."
@@ -142,7 +135,6 @@ h = Task.create!(
 title: "Find a job",
 category: cat_i,
 position: 4,
-status: "in progress",
 description: "As soon as you receive the ‘récépissé’ (receipt) for your residence permit (on which is written “autorise son titulaire à travailler” (authorizes its holder to work)), you can work and register at ‘Pôle emploi’ (job centre).
 Registering with Pôle emploi can be difficult, so ask for help from a Pôle emploi advisor, an association or a service such as Emmaüs Connect."
 )

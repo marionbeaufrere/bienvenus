@@ -18,7 +18,6 @@ class UserSubtasksController < ApplicationController
     @subtask = @user_subtask.subtask
     @subtask_id = @user_subtask.subtask_id
     @task = @user_subtask.subtask.task
-    @task.completed?
     respond_to do |format|
       format.html { redirect_to task_path(@user_subtask.subtask.task) }
       format.js  # <-- will render `app/views/user_subtask/create.js.erb`
@@ -31,7 +30,6 @@ class UserSubtasksController < ApplicationController
     @subtask = @user_subtask.subtask
     @subtask_id = @user_subtask.subtask_id
     @user_subtask.destroy
-    check_task_status
     respond_to do |format|
       format.html { redirect_to task_path(@task) }
         format.js  # <-- will render `app/views/user_subtask/destroy.js.erb`
