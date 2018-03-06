@@ -23,8 +23,6 @@ function hideNextButton(){
 }
 
 
-
-
 if ( document.getElementById("signup-carousel") ) {
   hideNextButton();
 };

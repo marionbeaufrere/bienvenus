@@ -1,23 +1,22 @@
 <div class = "content-wrapper">
   <div class="my-container">
-    <h1>Hello <%=current_user.first_name %> !</h1>
-
+    <h1><%= t('.hello') %> <%= current_user.first_name.capitalize %></h1>
+    <h2><%= t('.question') %></h2>
     <div class = "date">
     <%= Time.now.strftime("%A").upcase %>
     <%= Time.now.strftime("%B, %d %Y") %>
     </div>
 
-    <h2>Latest News</h2>
+    <h2><%= t('.title-news') %></h2>
 
     <div class = "card card-content" style= "margin-left: 37px">
-          <p>Your CPAM is closed today. If you need help please talk to someone </p>
-           <p>Today is Demo Day!</p>
+          <p> <%= t('.news') %></p>
 
     </div>
-<!--
-    <h2>Today, your to-do list</h2> -->
 
-   <!--  <div class="card-container">
+    <h2><%= t('.to-do') %></h2>
+
+    <div class="card-container">
       <div class="card-home">
         <div class="category">
           <div class="category-color"></div>
@@ -27,7 +26,7 @@
           <p>90%</p>
         </div>
       </div>
-    </div> -->
+    </div>
   </div>
   <%= render 'shared/footer' %>
 
