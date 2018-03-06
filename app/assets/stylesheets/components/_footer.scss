@@ -21,6 +21,9 @@
     &:hover{
       color: $dark-yellow;
     }
+    &:focus{
+      color: $dark-yellow;
+    }
   }
   .active{
     color: $black;

@@ -1,15 +1,15 @@
   <div class="show-subtask-line" id="subtask_<%= subtask.id %>"><%= subtask.title %>
     <% if subtask.user_subtasks.where(user: current_user).empty? %>
-    <%= simple_form_for @user_subtask, remote: true do |f| %>
-    <%= f.hidden_field :subtask_id, value: subtask.id %>
-    <%= button_tag class: "show-subtask-btn" do %>
-    <i class="far fa-circle" style="color: #BB6BD9;"></i>
-    <% end %>
-    <% end %>
+      <%= simple_form_for @user_subtask, remote: true do |f| %>
+        <%= f.hidden_field :subtask_id, value: subtask.id %>
+        <%= button_tag class: "show-subtask-btn #{'toto' if task.user_subtasks.count == task.subtasks.count - 1 }" do %>
+          <i class="far fa-circle" style="color: #BB6BD9;"></i>
+        <% end %>
+      <% end %>
     <% else %>
-    <% ust = subtask.user_subtasks.where(user: current_user).first %>
-    <%= link_to user_subtask_path(ust), method: :delete, remote: true, class: "show-subtask-line" do %>
-    <i class="fas fa-check-circle show-subtask-circle" id="show-subtask-btn-marked-<%= subtask.id %>" style="color: #BB6BD9;"></i>
-    <% end %>
+      <% ust = subtask.user_subtasks.where(user: current_user).first %>
+      <%= link_to user_subtask_path(ust), method: :delete, remote: true, class: "show-subtask-line" do %>
+        <i class="fas fa-check-circle show-subtask-circle" id="show-subtask-btn-marked-<%= subtask.id %>" style="color: #BB6BD9;"></i>
+      <% end %>
     <% end %>
   </div>

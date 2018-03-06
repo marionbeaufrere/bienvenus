@@ -12,4 +12,5 @@
 class UserSubtask < ApplicationRecord
   belongs_to :user
   belongs_to :subtask
+  #TODO add unicity validation on user and subtask couple
 end

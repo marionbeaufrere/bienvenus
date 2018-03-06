@@ -2,7 +2,11 @@ Rails.application.routes.draw do
   devise_for :users, controllers: { registrations: "registrations" }
   root to: 'pages#welcome_screen'
   resources :users, only: [:edit, :update, :show]
-  resources :tasks, only: [:index, :show, :update]
+  resources :tasks, only: [:index, :show, :update] do
+    member do
+      post 'complete_subtasks'
+    end
+  end
   resources :substasks, only: [:show]
   resources :user_subtasks
   get 'initialize', to: 'tasks#initializer', as: :initialize

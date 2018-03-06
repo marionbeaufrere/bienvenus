@@ -2,9 +2,9 @@ class TasksController < ApplicationController
 
 
 ######### DELETE THIS ONCE PUNDIT HAS BEEN IMPLEMENTED ###################
-  skip_before_action :authenticate_user!, only: [:show, :index, :completed_task, :initializer, :update]
-  skip_after_action :verify_authorized, only: [:show, :index, :completed_task, :initializer, :update]
-  skip_after_action :verify_policy_scoped, only: [:show, :index, :completed_task, :initializer, :update]
+  skip_before_action :authenticate_user!, only: [:show, :index, :completed_task, :initializer, :update, :complete_subtasks]
+  skip_after_action :verify_authorized, only: [:show, :index, :completed_task, :initializer, :update, :complete_subtasks]
+  skip_after_action :verify_policy_scoped, only: [:show, :index, :completed_task, :initializer, :update, :complete_subtasks]
 #########################################################################
 
   def initializer
@@ -17,10 +17,10 @@ class TasksController < ApplicationController
     @tasks_completed = []
     @tasks_in_progress = []
     @tasks.each do |task|
-      if task.status == "in progress"
-        @tasks_in_progress << task
-      else task.status == "completed"
+      if task.completed?(current_user)
         @tasks_completed << task
+      else
+        @tasks_in_progress << task
       end
     end
   end
@@ -31,10 +31,20 @@ class TasksController < ApplicationController
     @user_subtask = UserSubtask.new
   end
 
+# Initializer Task Updater
   def update
     @task = Task.find(params[:id])
-    @task.status = "completed"
-    @task.save
+  end
+
+  def complete_subtasks
+    @task = Task.find(params[:id])
+    @task.subtasks.each do |subtask|
+      @user_subtask = UserSubtask.new
+      @user_subtask.user = current_user
+      @user_subtask.subtask_id = subtask.id
+      @user_subtask.save
+    end
     redirect_to initialize_path
   end
+
 end

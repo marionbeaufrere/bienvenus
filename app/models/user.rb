@@ -44,7 +44,7 @@ class User < ApplicationRecord
     @accessable_tasks = self.visible_tasks
     @completed_tasks = 0
     @accessable_tasks.each do |task|
-      if task.status == "completed"
+      if task.completed?(self) == true
         @completed_tasks += 1
       end
     end
@@ -54,12 +54,12 @@ class User < ApplicationRecord
     end
     # Intermediate Position: Employment
     @french_class = Task.where(title: "Learn French")
-    if @french_class[0].status == "completed" && self.access < 5
+    if @french_class[0].completed?(self) && self.access < 5
       self.access += 1
       self.save
     end
 
-    # # Intermediate Position: Financial Aid
+    # Intermediate Position: Financial Aid
     # @open_bank_account = Task.where(title: "Open a bank account")
     # if @open_bank_account.status == "completed" && self.access < 6
     #   self.access += 1
