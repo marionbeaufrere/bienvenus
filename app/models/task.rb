@@ -17,6 +17,7 @@ class Task < ApplicationRecord
   has_many :subtasks, dependent: :destroy
   has_many :user_subtasks, through: :subtasks
   belongs_to :category
+  translates :title, :description
 
   def completed?(user)
     user.user_subtasks.where(subtask_id: subtasks.pluck(:id)).count == subtasks.count

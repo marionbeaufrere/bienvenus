@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180305142739) do
+ActiveRecord::Schema.define(version: 20180306141805) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,12 +22,33 @@ ActiveRecord::Schema.define(version: 20180305142739) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "category_translations", force: :cascade do |t|
+    t.integer "category_id", null: false
+    t.string "locale", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "name"
+    t.index ["category_id"], name: "index_category_translations_on_category_id"
+    t.index ["locale"], name: "index_category_translations_on_locale"
+  end
+
   create_table "links", force: :cascade do |t|
     t.string "link"
     t.bigint "tasks_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["tasks_id"], name: "index_links_on_tasks_id"
+  end
+
+  create_table "subtask_translations", force: :cascade do |t|
+    t.integer "subtask_id", null: false
+    t.string "locale", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "title"
+    t.string "description"
+    t.index ["locale"], name: "index_subtask_translations_on_locale"
+    t.index ["subtask_id"], name: "index_subtask_translations_on_subtask_id"
   end
 
   create_table "subtasks", force: :cascade do |t|
@@ -37,6 +58,17 @@ ActiveRecord::Schema.define(version: 20180305142739) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["task_id"], name: "index_subtasks_on_task_id"
+  end
+
+  create_table "task_translations", force: :cascade do |t|
+    t.integer "task_id", null: false
+    t.string "locale", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "title"
+    t.string "description"
+    t.index ["locale"], name: "index_task_translations_on_locale"
+    t.index ["task_id"], name: "index_task_translations_on_task_id"
   end
 
   create_table "tasks", force: :cascade do |t|

@@ -57,10 +57,11 @@ fr:
       sorry: "Désolé"
       text: " Nous sommes désolés. Notre service n'est malheureusement disponible aujourd'hui qu'aux détenteurs du statut
       de réfugié. Pour plus d'informations, n'hésitez pas à nous envoyer un mail à: contact@bienvenus.org"
-    resources: "Ajouter du contenu"
-      home:
-        hello: "Bonjour"
-        question: "Comment allez-vous ?"
-        title-news: "Les dernières nouvelles"
-        news: "Votre CPAM est fermée aujourd'hui. Pour connaître la CPAM la plus proche, rendez-vous dans l'onglet Ressources"
-        to-do: "A faire pour aujourd'hui"
+    resources:
+      map: "Ajouter du contenu"
+    home:
+      hello: "Bonjour"
+      question: "Comment allez-vous ?"
+      title-news: "Les dernières nouvelles"
+      news: "Votre CPAM est fermée aujourd'hui. Pour connaître la CPAM la plus proche, rendez-vous dans l'onglet Ressources"
+      to-do: "A faire pour aujourd'hui"

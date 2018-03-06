@@ -14,6 +14,6 @@ class Subtask < ApplicationRecord
   belongs_to :task
   has_many :user_subtasks, dependent: :destroy
   has_many :users, through: :user_subtasks
-
+  translates :title, :description
 
 end
