@@ -1,5 +1,5 @@
 function renderSubtask(){
-  let newSubtask = document.getElementById('subtask_<%= @subtask_id %>');
-  newSubtask.innerHTML = '<%= j render "tasks/subtask", subtask: @subtask, task: @task %>';
+  const subtask = document.getElementById('subtask_<%= @subtask_id %>');
+  subtask.innerHTML = '<%= j render "tasks/subtask_form", subtask: @subtask, task: @task %>';
 }
 renderSubtask();

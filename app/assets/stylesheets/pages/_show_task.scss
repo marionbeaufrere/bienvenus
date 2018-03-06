@@ -11,6 +11,10 @@ h3 {
   align-items: center;
 }
 
+.task-show-container {
+  min-height: calc(100vh - 75px);
+}
+
 .card-header {
   overflow: scroll;
 }
@@ -37,15 +41,11 @@ h3 {
 
 .show-subtask-circle, .show-subtask-btn {
   border: 0px;
-  position: absolute;
-  right: 20px;
   background-color: transparent;
 }
 
 .show-subtask-btn-marked {
   border: 0px;
-  position: absolute;
-  right: 20px;
   background-color: transparent;
 }
 
@@ -131,4 +131,9 @@ h3 {
 }
 .container{
   height: 85%;
+}
+
+.subtask-flexbox {
+  display: flex;
+  justify-content: space-between;
 }

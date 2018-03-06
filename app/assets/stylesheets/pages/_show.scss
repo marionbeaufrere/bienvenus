@@ -19,8 +19,6 @@ h3 {
 .show-subtask-circle, .show-subtask-btn {
   border: 0px;
   padding: 0 !important;
-  position: absolute;
-  right: 20px;
   vertical-align: center;
   line-height: inherit !important;
 }
@@ -104,10 +102,3 @@ h3 {
   text-decoration: none;
 }
 
-// .container{
-//   height: 85%;
-// }
-
-.task-show-container{
-  height: 85%;
-}

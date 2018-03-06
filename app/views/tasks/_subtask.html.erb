@@ -1,22 +1,6 @@
 <div class="card-header" id="heading<%= subtask.id %>">
-  <div id="subtask_<%= subtask.id %>">
-    <div class="btn btn-link" data-toggle="collapse" data-target="#collapse<%= subtask.id %>" aria-expanded="true" aria-controls="collapse<%= subtask.id %>">
-      <span class="glyphicon glyphicon-menu-down" id="subtasks-arrow-down"></span>
-    </div>
-    <%= subtask.title %>
-    <% if subtask.user_subtasks.where(user: current_user).empty? %>
-      <%= simple_form_for @user_subtask, remote: true do |f| %>
-        <%= f.hidden_field :subtask_id, value: subtask.id %>
-        <%= button_tag class: "show-subtask-btn" do %>
-          <i class="far fa-circle" style="color: #BB6BD9;"></i>
-        <% end %>
-      <% end %>
-    <% else %>
-      <% ust = subtask.user_subtasks.where(user: current_user).first %>
-      <%= link_to user_subtask_path(ust), method: :delete, remote: true, class:"show-subtask-btn-marked" do %>
-        <i class="fas fa-check-circle" style="color: #BB6BD9;"></i>
-      <% end %>
-    <% end %>
+  <div id="subtask_<%= subtask.id %>" class="subtask-flexbox">
+    <%= render 'subtask_form', subtask: subtask %>
   </div>
 </div>
 
