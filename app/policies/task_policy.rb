@@ -6,11 +6,19 @@ class TaskPolicy < ApplicationPolicy
     end
   end
 
+  def index?
+    @user.user_type == "refugee"
+  end
+
+  def show?
+    @user.user_type == "refugee"
+  end
+
   def initializer?
-    true
+    @user.user_type == "refugee"
   end
 
   def complete_subtasks?
-    true
+    @user.user_type == "refugee"
   end
 end

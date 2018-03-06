@@ -7,6 +7,7 @@ class UserSubtaskPolicy < ApplicationPolicy
 
   def create?
 #le user de la tâche peut créer la user_subtask
+
     record.user == user
   end
 

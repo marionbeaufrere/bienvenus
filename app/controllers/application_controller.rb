@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
   include Pundit
 
   #### DO NOT FORGET TO UNCOMMENT THE TWO LINES BELOW ONCE PUNDIT IS FULLY SET UP!!!!!!!!!!!!!!
-  after_action :verify_authorized, except: :index, unless: :skip_pundit?
+  after_action :verify_authorized, unless: :skip_pundit?
   after_action :verify_policy_scoped, only: :index, unless: :skip_pundit?
 
  # Uncomment when you *really understand* Pundit!
@@ -43,7 +43,8 @@ end
   end
 
   def after_sign_in_path_for(resource)
-    tasks_path
+    @user = current_user
+    @user.user_type == "refugee" ? tasks_path : user_path(@user)
   end
 
   def get_crisp
