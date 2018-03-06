@@ -1,10 +1,10 @@
 <div class= "are-you-container">
-  <h1> Are you...? </h1>
+  <h1> <%= t('.title') %> </h1>
   <br>
-  <%= link_to "A refugee", new_user_registration_path, class: "button-normal" %>
+  <%= link_to t('.refugee'), new_user_registration_path, class: "button-normal" %>
   <br>
-  <%= link_to "A volunteer", new_user_registration_path, class: "button-normal" %>
+  <%= link_to t('.volunteer'), new_user_registration_path, class: "button-normal" %>
   <br>
   <br>
-<%= link_to "I am an asylum seeker", asylum_seeker_path %>
+<%= link_to t('.asyleum'), asylum_seeker_path %>
 </div>
