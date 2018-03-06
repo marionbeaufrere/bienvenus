@@ -43,7 +43,7 @@ end
   end
 
   def after_sign_in_path_for(resource)
-    tasks_path(resource)
+    tasks_path
   end
 
   def get_crisp
