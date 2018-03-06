@@ -1,33 +1,59 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   'true': 'foo'
-#
-# To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
-
 en:
-  hello: "Hello world"
+  activerecord:
+    models:
+      user: "User"
+    attributes:
+      user:
+        first_name: "First Name"
+        last_name: "Last Name"
+
+  tasks:
+    index:
+    initializer:
+      button: "I'm ready"
+
+  user:
+    show:
+
+  devise:
+  registrations:
+    new:
+      first_name: "Your first name"
+
+  shared:
+    footer:
+
+  pages:
+    are_you:
+      title: "Are you?"
+      refugee: "A refugee"
+      volunteer: "A volunteer"
+      asyleum: "An asyleum seeker"
+    asylum_seeker:
+      sorry: "Sorry"
+      text: "We are so sorry. At this time, our service is only available to those who already received the refugee status.
+      If you have any questions, please send us an email at contact@bienvenus.org"
+      resources: "Add some resources here"
+    home:
+      hello: "Hello"
+      question: "How are you today ?"
+      title-news: "Latest news"
+      news: "Your CPAM is closed today. To know where is the closest one visit the resources page"
+      to-do: "Your to-do list for today"
+    onboarding:
+      title-1-1: "Paperwork Made Easy"
+      title-1-2: "For Refugees"
+      text-1:
+      title-2-1:
+      title-2-2:
+      text-2:
+      title-3-1:
+      text-3-2:
+      sign-up: "SIGN ME UP"
+      previous: "Previous"
+      next: "Next"
+    resources:
+      map: "Map of services"
+
+
+
