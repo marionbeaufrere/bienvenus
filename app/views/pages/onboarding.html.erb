@@ -9,8 +9,8 @@
   <!-- Wrapper for slides -->
   <div class="carousel-inner">
     <div class="item active">
-      <h3>Paperwork Made Easy
-        <br>For Refugees</br>
+      <h3><%= t('.title-1-1') %>
+        <br><%= t('.title-1-2') %></br>
       </h3>
         <div class='media logo'>
           <%= image_tag 'analytics.png', class: 'logo' %>
@@ -19,32 +19,31 @@
           <img class='icon' src='https://s3.amazonaws.com/jebbles-codepen/file_icon_3.png'>
           <img class='icon' src='https://s3.amazonaws.com/jebbles-codepen/file_icon_4.png'> -->
         </div>
-        <p>French administration can be complicated, especially if you just arrived in our beautiful country. We provide you with <strong> simple tasks to complete </strong> in order to make sure you can benefit from everything you are entitled to.</p>
+        <p><!-- French administration can be complicated, especially if you just arrived in our beautiful country. We provide you with <strong> simple tasks to complete </strong> in order to make sure you can benefit from everything you are entitled to. --> <%= t('.text-1') %></p>
     </div>
 
     <div class="item">
       <h3>
-          Know Exactly What
-          <br>You Need To Do Next</br>
+          <%= t('.title-2-1') %>
+          <br><%= t('.title-2-2') %></br>
         </h3>
         <div class='media logo'>
           <%= image_tag 'placeholder.png', class: 'logo'%>
           <!-- <img class='logo' src='https://s3.amazonaws.com/jebbles-codepen/icon.png'> -->
         </div>
-        <p>We provide help <strong> every step of the way </strong>. We help you understand what you need to do and what is coming next.
-        You will never be lost again.</p>
+        <p><%= t('.text-2') %></p>
     </div>
 
     <div class="item">
       <h3>
-         Ask For Help
-          <br>Any Time</br>
+         <%= t('.title-3-1') %>
+          <br><%= t('.title-3-2') %></br>
         </h3>
         <div class='media logo'>
           <%= image_tag 'networking.png', class: 'logo' %>
         </div>
-        <p>In case you have an issue with something, you can <strong> get in touch with someone to get help </strong>. Our awesome volunteers will do their best to help you with your specific issue. </p>
-        <%= link_to 'SIGN ME UP!', are_you_path, class: 'button-rounded' %>
+        <p><%= t('.text-3') %> </p>
+        <%= link_to t('.sign-up'), are_you_path, class: 'button-rounded' %>
     </div>
   </div>
 
@@ -55,6 +54,6 @@
   </a>
   <a class="right carousel-control" href="#myCarousel" data-slide="next">
     <span class="glyphicon glyphicon-chevron-right"></span>
-    <span class="sr-only">Next</span>
+    <span class="sr-only"><%= t('.next') %></span>
   </a>
 </div>

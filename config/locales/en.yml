@@ -9,11 +9,18 @@ en:
 
   tasks:
     index:
+      title: "My Tasks"
+      header: "TO DO"
+      sub-header: "DONE"
     initializer:
+      header: "Have you done these ?"
+      sub-header: "Please tell us if you've already completed these then click on 'I'm ready!"
       button: "I'm ready"
 
-  user:
+  users:
     show:
+      email: "Email"
+      phone_number: "Phone Number"
 
   devise:
   registrations:
@@ -22,6 +29,10 @@ en:
 
   shared:
     footer:
+      home: "HOME"
+      user: "MY PROFILE"
+      task: "MY TASKS"
+      resources: "MORE"
 
   pages:
     are_you:
@@ -43,12 +54,16 @@ en:
     onboarding:
       title-1-1: "Paperwork Made Easy"
       title-1-2: "For Refugees"
-      text-1:
-      title-2-1:
-      title-2-2:
-      text-2:
-      title-3-1:
-      text-3-2:
+      text-1: "French administration can be complicated, especially if you just arrived in our beautiful country.
+      We provide you with simple tasks to complete in order to make sure you can benefit from everything you are entitled to."
+      title-2-1: "Know Exactly What"
+      title-2-2: "You Need To Do Next"
+      text-2: "We provide help every step of the way. We help you understand what you need to do and what is coming next.
+      You will never be lost again."
+      title-3-1: "Ask For Help"
+      title-3-2: "Any Time"
+      text-3: "In case you have an issue with something, you can get in touch with someone to get help.
+      Our awesome volunteers will do their best to help you with your specific issue."
       sign-up: "SIGN ME UP"
       previous: "Previous"
       next: "Next"
