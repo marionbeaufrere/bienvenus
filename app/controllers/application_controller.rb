@@ -2,8 +2,8 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   before_action :configure_permitted_parameters, if: :devise_controller?
   before_action :authenticate_user!
+  before_action :get_crisp
   before_action :set_locale
-
 
   include Pundit
 
@@ -12,31 +12,29 @@ class ApplicationController < ActionController::Base
   after_action :verify_policy_scoped, only: :index, unless: :skip_pundit?
 
  # Uncomment when you *really understand* Pundit!
-  # rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
-  # def user_not_authorized
-  #   flash[:alert] = "You are not authorized to perform this action."
-  #   redirect_to(root_path)
-  # end
+  rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
+  def user_not_authorized
+    flash[:alert] = "You are not authorized to perform this action."
+    redirect_to(root_path)
+  end
 
 def set_locale
   I18n.locale = params.fetch(:locale, I18n.default_locale).to_sym
 end
 
-# def default_url_options
-#   { locale: I18n.locale == I18n.default_locale ? nil : I18n.locale }
-# end
-
 def configure_permitted_parameters
     # For additional fields in app/views/devise/registrations/new.html.erb
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:first_name, :last_name, :phone_number, :language, :photo])
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:first_name, :last_name, :phone_number, :language, :photo, :user_type])
 
     # For additional in app/views/devise/registrations/edit.html.erb
     devise_parameter_sanitizer.permit(:account_update, keys: [:username])
 end
 
 def default_url_options
-  { host: ENV["HOST"] || "localhost:3000",
-  locale: I18n.locale == I18n.default_locale ? nil : I18n.locale }
+  { 
+    host: ENV["HOST"] || "localhost:3000",
+    locale: I18n.locale == I18n.default_locale ? nil : I18n.locale 
+   }
 end
 
   private
@@ -46,6 +44,13 @@ end
   end
 
   def after_sign_in_path_for(resource)
-    tasks_path(resource)
+    tasks_path
+  end
+
+  def get_crisp
+    unless @crisp_client
+      @crisp_client = Crisp::Client.new
+      @crisp_client.authenticate(ENV['CRISP_IDENTIFIER'],ENV['CRISP_KEY'])
+    end
   end
 end

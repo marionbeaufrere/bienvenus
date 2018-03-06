@@ -112,6 +112,7 @@ ActiveRecord::Schema.define(version: 20180306141805) do
     t.string "user_type"
     t.string "photo"
     t.integer "access", default: 1
+    t.boolean "admin"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

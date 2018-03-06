@@ -19,6 +19,8 @@ class Task < ApplicationRecord
   belongs_to :category
   translates :title, :description
 
+  accepts_nested_attributes_for :subtasks
+
   def completed?(user)
     user.user_subtasks.where(subtask_id: subtasks.pluck(:id)).count == subtasks.count
   end

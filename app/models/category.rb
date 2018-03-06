@@ -1,4 +1,6 @@
 class Category < ApplicationRecord
-  has_many :tasks
   translates :name
+  
+  has_many :tasks
+  accepts_nested_attributes_for :tasks
 end

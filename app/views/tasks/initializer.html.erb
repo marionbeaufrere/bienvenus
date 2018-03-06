@@ -1,7 +1,7 @@
-<div class="initializer-container">
+<div class="initializer-container" id="id-for-chat-welcome">
     <div class="to-do">
-      <h1>Did you do this?</h1>
-      <h2>Please tell us if you've already done these, and click 'I'm ready!'</h2>
+      <h1><%= t('.header')%></h1>
+      <h2><%= t('.sub-header') %></h2>
     </div>
     <% @tasks.each do |task| %>
     <div class="card-initializer">
