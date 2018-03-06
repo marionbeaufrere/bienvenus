@@ -22,6 +22,10 @@
       color: $white;
       background: #42D4B9;
     }
+    &:focus {
+      color: $white;
+      background: #42D4B9;
+    }
   }
 
 .button-normal {
@@ -41,6 +45,10 @@
   transition: opacity 0.4s $bezier, background 0.4s $bezier;
   cursor: pointer;
     &:hover {
+      color: #42D4B9;
+      background: $white;
+    }
+    &:focus {
       color: #42D4B9;
       background: $white;
     }
