@@ -32,9 +32,9 @@ class TasksController < ApplicationController
   end
 
 # Initializer Task Updater
-  def update
-    @task = Task.find(params[:id])
-  end
+  # def update
+  #   @task = Task.find(params[:id])
+  # end
 
   def complete_subtasks
     @task = Task.find(params[:id])
