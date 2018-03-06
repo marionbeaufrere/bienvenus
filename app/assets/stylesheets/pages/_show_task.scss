@@ -1,0 +1,121 @@
+h3 {
+      font-size: 24px;
+      font-weight: bold;
+      line-height: 1.4em;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      text-align: center;
+    }
+
+.card-subtasks {
+  align-items: center;
+}
+
+.card-header {
+  overflow: scroll;
+}
+
+.subtasks-arrow-down {
+  padding-left: 10px;
+  color: #FFF;
+  &:hover {
+    color: $grey-text;
+  }
+}
+
+.show-subtask-circle, .show-subtask-btn {
+  border: 0px;
+  position: absolute;
+  right: 20px;
+  background-color: transparent;
+}
+
+
+.subtask-list {
+  color: $grey-text;
+  margin-left: 25px;
+  margin-right: 25px;
+  margin-top: 15px;
+  line-height: 2em;
+  height: 50%;
+  overflow: scroll;
+}
+
+.task {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  perspective: 800px;
+  transform-style: preserve-3d;
+}
+
+.abstract,
+.details {
+  width: 100%;
+  padding: 15px 30px;
+  position: relative;
+  background: $yellow-bienvenus;
+
+  // .task:hover & {
+  //   background: darken($, 2%);
+  // }
+}
+
+.abstract {
+  //z-index: 10;
+  transition: .3s ease all;
+  background: $yellow-bienvenus;
+  text-align: center;
+  p {
+    opacity: 0.7;
+  }
+}
+
+.details {
+  max-height: 0;
+  padding: 0;
+
+  overflow: hidden;
+  visibility: hidden;
+
+  transform: rotateX(-180deg);
+  transform-origin: top center;
+  backface-visibility: hidden;
+  transition: .3s transform ease;
+
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 10%;
+    right: 10%;
+    height: 1px;
+  }
+
+  &.active {
+    max-height: none;
+    overflow: visible;
+    visibility: visible;
+    transform: rotateX(0deg);
+  }
+}
+
+.details__inner {
+  padding: 15px 30px;
+}
+
+#back_to_tasks_button {
+  text-decoration: none;
+  position: absolute;
+  bottom: 5px;
+  margin-left: 30px;
+}
+.container{
+  height: 85%;
+}
+.task-show-container{
+  height: 100%;
+  position: absolute;
+  bottom: 5px;
+}
