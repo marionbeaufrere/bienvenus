@@ -1,50 +1,13 @@
 .sign-up-container {
   padding: 20px;
-}
+  width: 315px;
 
-.button-rounded-signup {
-  height: 50px;
-  width: 110px;
-  border: 0;
-  background: $white;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 0.15em;
-  border-radius: 0;
-  color: #42D4B9;
-  border: 2px solid #42D4B9;
-  border-radius: 40px;
-  font-size: 16px;
-  outline: 0;
-  padding: 12px;
-  margin-top: 30px;
-  transition: opacity 0.4s $bezier, background 0.4s $bezier;
-  cursor: pointer;
-    &:hover {
-      color: $white;
-      background: #42D4B9;
-    }
-  }
+}
 
 .police {
   color: $grey-text;
 }
 
-.tel {
-  text-align: center;
-  width: 50vh;
-  margin-left: 49px;
-}
-
-.user_language {
-  text-align: center;
-  width: 50vh;
-  margin-left: 96px;
-}
-
-#user_photo {
-  margin-left: 95px;
-}
 
 .signup-control-position-right {
   top: 80%;
@@ -60,4 +23,11 @@
   padding-left: 35px;
   padding-right: 35px;
   text-align: center;
+}
+
+.help-block {
+  margin-top: 10px !important;
+  padding-top: 0 !important;
+  margin-bottom: 10px !important;
+  padding-bottom: 0 !important;
 }

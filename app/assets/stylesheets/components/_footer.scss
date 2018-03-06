@@ -8,7 +8,7 @@
   bottom: 100px;
   a {
     text-decoration: none;
-    color: $grey-text;
+    color:rgb(200,200,200);
     font-size: 12px
   }
 }
@@ -16,16 +16,18 @@
 .footer-content{
   width: 50px;
   font-size:14px;
-  color:$grey-text;
-  opacity: 0.7;
+  opacity: 1;
   a {
     &:hover{
+      color: $dark-yellow;
+    }
+    &:focus{
       color: $dark-yellow;
     }
   }
   .active{
     color: $black;
-    opacity: none;
+    opacity: none !important;
   }
 }
 .fas {

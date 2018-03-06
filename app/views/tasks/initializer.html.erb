@@ -1,13 +1,14 @@
 <div class="initializer-container">
     <div class="to-do">
-      <h2>Please tell us if you've already done these, and click 'I'm ready!'</h1>
+      <h1>Did you do this?</h1>
+      <h2>Please tell us if you've already done these, and click 'I'm ready!'</h2>
     </div>
     <% @tasks.each do |task| %>
     <div class="card-initializer">
       <div class="initializer-text">
         <p><%= task.title %></p>
       </div>
-    <%= simple_form_for task do |f| %>
+    <%= simple_form_for task, url: complete_subtasks_task_path(task), method: :post do |f| %>
       <div class="card-btn">
         <%= button_tag class: "initialize-btn" do %>
         <i class="far fa-circle" style="color: #BB6BD9;"></i>
@@ -18,6 +19,7 @@
     <% end %>
     <%= link_to t(".button"), tasks_path, class: "button-rounded button-redirect-index" %>
 </div>
+
 <%= render 'shared/footer' %>
 
 

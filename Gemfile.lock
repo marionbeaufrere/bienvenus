@@ -62,6 +62,8 @@ GEM
     coderay (1.1.2)
     concurrent-ruby (1.0.5)
     crass (1.0.3)
+    crisp-api (1.0.3)
+      rest-client (~> 2.0.0)
     devise (4.4.1)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
@@ -219,6 +221,7 @@ DEPENDENCIES
   bootstrap-sass
   carrierwave (~> 1.2)
   cloudinary
+  crisp-api (~> 1.0)
   devise
   figaro
   font-awesome-sass

@@ -2,7 +2,6 @@
   <div class="my-container">
     <h1><%= t('.hello') current_user.first_name.capitalize %></h1>
     <h2><%= t('.question') %></h2>
-
     <div class = "date">
     <%= Time.now.strftime("%A").upcase %>
     <%= Time.now.strftime("%B, %d %Y") %>
