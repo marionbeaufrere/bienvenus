@@ -1,0 +1,24 @@
+<!-- ajouter l'affichage de la catégorie (là je n'arrive à mettre que catégorie id) -->
+<p><%= @task.category.name %> </p>
+<p><%= @task.title %></p>
+<p><%= @task.description %></p>
+
+<ul>
+<% @subtasks.each do |st| %>
+  <li>
+    <%= st.title %> - <%= st.description %>
+  </li>
+<% end %>
+</ul>
+
+<h2>Add a new subtask</h2>
+<%= simple_form_for @subtask, url: admin_task_subtasks_path([@task, @subtask]) do |s| %>
+  <%= s.input :title, label: "Subtask" %>
+  <%= s.input :description, label: "Description" %>
+  <%= s.button :submit, "Add a subtask", class: "button-rounded" %>
+<% end %>
+
+
+<%= link_to "Add another task", new_admin_task_path %>
+
+

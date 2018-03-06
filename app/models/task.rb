@@ -18,4 +18,6 @@ class Task < ApplicationRecord
   has_many :subtasks, dependent: :destroy
   has_many :user_subtasks, through: :subtasks
   belongs_to :category
+
+  accepts_nested_attributes_for :subtasks
 end
