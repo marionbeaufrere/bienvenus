@@ -1,30 +1,39 @@
-<div class = "task-show-container">
-<div class="wrap-show-task">
-  <div class="task">
-    <div class="abstract", style= "background-color:<%= @task.category.color%>">
-      <p> <%= @task.category.name %> </p>
-      <h3>
-        <%= @task.title %>
-      </h3>
-      <span class="glyphicon glyphicon-menu-down"></span>
-    </div>
-    <div class="details card-content", style= "background-color:<%= @task.category.color%>" >
-      <div class="details__inner">
-        <%= @task.description %>
+<div class="content-wrapper">
+  <div class="wrap-show-task">
+    <div class="task">
+      <div class="abstract", style= "background-color:<%= @task.category.color%>">
+        <p> <%= @task.category.name %> </p>
+        <h3>
+          <%= @task.title %>
+        </h3>
+        <span class="glyphicon glyphicon-menu-down"></span>
+      </div>
+      <div class="details card-content">
+        <div class="details__inner">
+          <%= @task.description %>
+        </div>
       </div>
     </div>
   </div>
-</div>
-<div class="subtask-list">
-<% @subtasks.each do |subtask| %>
-  <%= render 'subtask', subtask: subtask, task: @task %>
-<% end %>
-</div>
 
-<%= link_to "Back to the list of tasks", tasks_path, class:"button-rounded back-button", id:"back_to_tasks_button" %>
+  <div class="subtask-list">
+    <% @subtasks.each do |subtask| %>
+      <%= render 'subtask', subtask: subtask, task: @task %>
+    <% end %>
+  </div>
+
+  <% unless @links.nil? %>
+  <div class="useful-links-box">
+    <ul class="useful-links-list">
+      <%# @links.each do |l| %>
+      <!-- <a><%#= l.link %></a> -->
+      <%# end %>
+    </ul>
+  </div>
+  <% end %>
 </div>
 <%= render 'shared/footer' %>
-
+</div>
 <!-- <i class="fas fa-circle show-subtask-circle" style="color: #BB6BD9;"></i> -->
 
 
