@@ -1,17 +1,18 @@
 class TasksController < ApplicationController
 
-
-######### DELETE THIS ONCE PUNDIT HAS BEEN IMPLEMENTED ###################
-  skip_before_action :authenticate_user!, only: [:show, :index, :completed_task, :initializer, :update, :complete_subtasks]
-  skip_after_action :verify_authorized, only: [:show, :index, :completed_task, :initializer, :update, :complete_subtasks]
-  skip_after_action :verify_policy_scoped, only: [:show, :index, :completed_task, :initializer, :update, :complete_subtasks]
-#########################################################################
+# ######### DELETE THIS ONCE PUNDIT HAS BEEN IMPLEMENTED ###################
+#   skip_before_action :authenticate_user!, only: [:show, :index, :completed_task, :initializer, :update]
+#   skip_after_action :verify_authorized, only: [:show, :index, :completed_task, :initializer, :update]
+#   skip_after_action :verify_policy_scoped, only: [:show, :index, :completed_task, :initializer, :update]
+# #########################################################################
 
   def initializer
     @tasks = Task.where(position: 1..2).order('position ASC, id DESC')
+    authorize :task
   end
 
   def index
+    @tasks = policy_scope(Task)
     current_user.update_user_access
     @tasks = current_user.visible_tasks
     @tasks_completed = []
@@ -23,18 +24,15 @@ class TasksController < ApplicationController
         @tasks_in_progress << task
       end
     end
+
   end
 
   def show
     @task = Task.find(params[:id])
     @subtasks = @task.subtasks
     @user_subtask = UserSubtask.new
+    authorize @task
   end
-
-# Initializer Task Updater
-  # def update
-  #   @task = Task.find(params[:id])
-  # end
 
   def complete_subtasks
     @task = Task.find(params[:id])
