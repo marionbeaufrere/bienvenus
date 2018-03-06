@@ -6,13 +6,24 @@ if ( document.querySelector(".wrap-show-task") ) {
   changeToActive();
 };
 
-import { intializeButton } from "../components/initialize";
+import { intializeButton } from '../components/initialize';
 intializeButton();
-console.log("supp")
+console.log("we love you")
+
 import { hideNextButton } from '../pages/signup';
-import { getEmail, getNickname } from '../components/crisp';
-getEmail();
-getNickname();
+
+import { getEmail, getNickname, getPhoto } from '../components/crisp';
+if (document.getElementById("user-email-crisp")) {
+  getEmail();
+  getNickname();
+  getPhoto();
+}
+
+import { sendWelcomeMessage } from '../components/crisp';
+if (document.getElementById("id-for-chat-welcome")) {
+  sendWelcomeMessage();
+}
+
 import { hidePreviousButton } from '../pages/signup';
 import { sweetAlertReturn } from '../tasks/sweetalert';
 sweetAlertReturn();

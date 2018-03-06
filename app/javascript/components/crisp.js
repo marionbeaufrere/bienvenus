@@ -13,7 +13,20 @@ function getNickname() {
   $crisp.push(["set", "user:nickname", `${firstName} ${lastName}`]);
 };
 
-export { getNickname, getEmail };
+function getPhoto() {
+  const photo = document.getElementById("user-email-crisp").getAttribute("data-photo")
+  console.log(photo);
+  $crisp.push(["set", "user:avatar", photo]);
+};
+
+function sendWelcomeMessage() {
+  const firstName = document.getElementById("user-email-crisp").getAttribute("data-first-name").charAt(0).toUpperCase() + document.getElementById("user-email-crisp").getAttribute("data-first-name").slice(1);
+  const message = "Welcome to Bienvenus, " + firstName + " 🤗 Let us know if you need help!";
+  console.log(message);
+  $crisp.push(["do", "message:show", ["text",message]])
+};
+
+export { getNickname, getEmail, getPhoto, sendWelcomeMessage};
 
 //SAME FOR USER DATA
 // $crisp.push(["set", "session:data", [[["order_id", "3535353214"],["address", "1 Market Street"]]]]);
