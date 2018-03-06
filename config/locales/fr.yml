@@ -52,6 +52,7 @@ fr:
     show:
       email: "Email"
       phone_number: "N° de téléphone"
+      sign_out: "Déconnexion"
 
   devise:
     registrations:
@@ -99,3 +100,6 @@ fr:
       next: "Suivant"
     resources:
       map: "Carte des services"
+    welcome_screen:
+      get_started: "Débuter"
+      sign_in: "Connexion"

@@ -21,11 +21,12 @@ en:
     show:
       email: "Email"
       phone_number: "Phone Number"
+      sign_out: "Sign out"
 
   devise:
-  registrations:
-    new:
-      first_name: "Your first name"
+    registrations:
+      new:
+        first_name: "Your first name"
 
   shared:
     footer:
@@ -69,6 +70,9 @@ en:
       next: "Next"
     resources:
       map: "Map of services"
+    welcome_screen:
+      get_started: "Get Started"
+      sign_in: "Sign in"
 
 
 
