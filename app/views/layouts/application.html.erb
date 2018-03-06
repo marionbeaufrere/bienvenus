@@ -30,8 +30,8 @@
     <script type="text/javascript"> window.$crisp=[];window.CRISP_WEBSITE_ID="697c7692-c8e1-46a8-b080-94bc635691cb";(function(){ d=document;s=d.createElement("script"); s.src="https://client.crisp.chat/l.js"; s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})(); </script>
   </head>
   <body>
-    <% if current_user %>
-      <div class="background_skew" id="user-email-crisp" data-email= "<%= current_user.email %>">
+    <% if user_signed_in? %>
+      <div class="background_skew" id="user-email-crisp" data-email="<%= current_user.email %>" data-first-name="<%= current_user.first_name %>" data-last-name="<%= current_user.last_name %>" >
     <% else %>
       <div class="background_skew">
     <% end %>
