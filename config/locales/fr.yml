@@ -58,6 +58,15 @@ fr:
     registrations:
       new:
         first_name: "Votre prénom"
+        last_name: "Votre nom de famille"
+        sign-up: "S'inscrire"
+        email: "Votre e-mail"
+        password: "Votre mot de passe"
+        confirm-password: "Confirmez votre mot de passe"
+        phone: "Votre numéro de téléphone"
+        photo: "Ajouter une photo de profil (optionnel)"
+        previous: "Précédent"
+        next: "Suivant"
 
   shared:
     footer:

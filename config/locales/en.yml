@@ -27,6 +27,16 @@ en:
     registrations:
       new:
         first_name: "Your first name"
+        last_name: "Your last name"
+        sign-up: "Sign Up"
+        email: "Your e-mail"
+        password: "Your password"
+        confirm-password: "Please, confirm your password"
+        phone: "Your phone number"
+        photo: "Upload a profile photo (optional)"
+        previous: "Previous"
+        next: "Next"
+
 
   shared:
     footer:
