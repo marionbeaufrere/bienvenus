@@ -12,7 +12,6 @@
 #  updated_at      :datetime         not null
 #  category        :string
 #  position        :integer
-#
 
 class Task < ApplicationRecord
   has_many :subtasks, dependent: :destroy
@@ -20,4 +19,8 @@ class Task < ApplicationRecord
   belongs_to :category
 
   accepts_nested_attributes_for :subtasks
+
+  def completed?(user)
+    user.user_subtasks.where(subtask_id: subtasks.pluck(:id)).count == subtasks.count
+  end
 end

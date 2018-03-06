@@ -12,6 +12,7 @@
 
 ActiveRecord::Schema.define(version: 20180305153046) do
 
+
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -20,6 +21,14 @@ ActiveRecord::Schema.define(version: 20180305153046) do
     t.string "color"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "links", force: :cascade do |t|
+    t.string "link"
+    t.bigint "tasks_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["tasks_id"], name: "index_links_on_tasks_id"
   end
 
   create_table "subtasks", force: :cascade do |t|
@@ -34,7 +43,6 @@ ActiveRecord::Schema.define(version: 20180305153046) do
   create_table "tasks", force: :cascade do |t|
     t.string "title"
     t.string "description"
-    t.string "status"
     t.date "next_occurrence"
     t.integer "periodicity"
     t.datetime "created_at", null: false
@@ -78,6 +86,7 @@ ActiveRecord::Schema.define(version: 20180305153046) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "links", "tasks", column: "tasks_id"
   add_foreign_key "subtasks", "tasks"
   add_foreign_key "tasks", "categories"
   add_foreign_key "user_subtasks", "subtasks"

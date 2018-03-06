@@ -22,6 +22,10 @@
       color: $white;
       background: #42D4B9;
     }
+    &:focus {
+      color: $white;
+      background: #42D4B9;
+    }
   }
 
 .button-normal {
@@ -43,8 +47,10 @@
     &:hover {
       color: #42D4B9;
       background: $white;
+      text-decoration: none;
     }
-  a{
-    text-decoration: none;
-  }
+    &:focus {
+      color: #42D4B9;
+      background: $white;
+    }
   }

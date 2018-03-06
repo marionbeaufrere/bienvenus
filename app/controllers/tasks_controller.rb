@@ -1,6 +1,5 @@
 class TasksController < ApplicationController
 
-
 # ######### DELETE THIS ONCE PUNDIT HAS BEEN IMPLEMENTED ###################
 #   skip_before_action :authenticate_user!, only: [:show, :index, :completed_task, :initializer, :update]
 #   skip_after_action :verify_authorized, only: [:show, :index, :completed_task, :initializer, :update]
@@ -19,10 +18,10 @@ class TasksController < ApplicationController
     @tasks_completed = []
     @tasks_in_progress = []
     @tasks.each do |task|
-      if task.status == "in progress"
-        @tasks_in_progress << task
-      else task.status == "completed"
+      if task.completed?(current_user)
         @tasks_completed << task
+      else
+        @tasks_in_progress << task
       end
     end
 
@@ -35,11 +34,16 @@ class TasksController < ApplicationController
     authorize @task
   end
 
-  def update
+# Initializer Task Updater
+  def complete_subtasks
     @task = Task.find(params[:id])
-    @task.status = "completed"
-    authorize @task
-    @task.save
+    @task.subtasks.each do |subtask|
+      @user_subtask = UserSubtask.new
+      @user_subtask.user = current_user
+      @user_subtask.subtask_id = subtask.id
+      @user_subtask.save
+    end
     redirect_to initialize_path
   end
+
 end

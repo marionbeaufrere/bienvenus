@@ -85,7 +85,8 @@ body {
       z-index: 1000;
 
       &:hover,
-      &:active {
+      &:active,
+      &:focus {
         color: #42D4B9;
         transform-origin: center;
         transform: scale(1.25);
@@ -192,7 +193,8 @@ body {
       padding: 12px;
       transition: opacity 0.4s $bezier, background 0.4s $bezier;
       cursor: pointer;
-        &:hover {
+        &:hover,
+        &:focus {
           color: $white;
           background: #42D4B9;
         }
@@ -213,7 +215,8 @@ body {
         transform: scale(0, 1);
         transform-origin: center;
         transition: opacity 0.4s $bezier, background 0.4s $bezier, transform 0.4s $bezier;
-          &:hover {
+          &:hover,
+          &:focus {
             color: $white;
             background: #42D4B9;
           }

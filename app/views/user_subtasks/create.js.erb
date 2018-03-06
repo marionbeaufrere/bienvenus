@@ -1,5 +1,9 @@
 function renderSubtask(){
   let newSubtask = document.getElementById('subtask_<%= @subtask_id %>');
-  newSubtask.innerHTML = '<%= j render "tasks/subtask", subtask: @subtask %>';
+  newSubtask.innerHTML = '<%= j render "tasks/subtask", subtask: @subtask, task: @task %>';
 }
 renderSubtask();
+<% if @task.user_subtasks.count == @task.subtasks.count - 1 %>
+  const button = document.querySelector('button.show-subtask-btn');
+  console.log(button);
+<% end %>

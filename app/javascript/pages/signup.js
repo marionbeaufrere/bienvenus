@@ -11,15 +11,16 @@ function hideNextButton(){
     if( lastItem.classList.contains("active")) {
       nextButton.classList.toggle('hidden');
     }
+    previousButton.classList.remove('hidden')
   });
 
   previousButton.addEventListener("click", (event) => {
       nextButton.classList.remove('hidden');
+      if (lastItem.classList.contains("active")) {
+        previousButton.classList.add("hidden");
+      }
   });
 }
-
-
-
 
 
 if ( document.getElementById("signup-carousel") ) {
