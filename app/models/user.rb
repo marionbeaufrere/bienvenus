@@ -52,8 +52,12 @@ class User < ApplicationRecord
       self.access += 1
       self.save
     end
+
     # Intermediate Position: Employment
-    @french_class = Task.where(title: "Learn French")
+    Globalize.with_locale(:en) do
+      @french_class = Task.where(title: "Learn French")
+    end
+
     if @french_class[0].completed?(self) && self.access < 5
       self.access += 1
       self.save
