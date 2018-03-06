@@ -12,11 +12,12 @@ console.log("we love you")
 
 import { hideNextButton } from '../pages/signup';
 
-import { getEmail, getNickname, getPhoto } from '../components/crisp';
+import { getEmail, getNickname, getPhoto, defineUserAsAdmin} from '../components/crisp';
 if (document.getElementById("user-email-crisp")) {
   getEmail();
   getNickname();
   getPhoto();
+  defineUserAsAdmin();
 };
 
 import { sendWelcomeMessage } from '../components/crisp';

@@ -59,6 +59,15 @@ class User < ApplicationRecord
       self.save
     end
 
+    def grant_crisp_admin_access
+      url = "https://api.crisp.chat/v1/website/697c7692-c8e1-46a8-b080-94bc635691cb/operator"
+      response = RestClient.post(url,
+        {email: current_user.email,
+         role: "member"}.to_json,
+         {content_type: "application/json",
+          Authorization: "Basic YjI0YWFjYzYtOTk1MC00NDFkLWJmMTYtYTVlYzJhNWYwYTc0Ojk1NWEyNzY5ODczZTA4MjUwMzFjYTk1OTMwZjM3NTEzNmU0ZmQ2N2U1ZTY1MmNjYjJhYzA1YTdkZmFhODhiZmY="}
+      )
+    end
     # Intermediate Position: Financial Aid
     # @open_bank_account = Task.where(title: "Open a bank account")
     # if @open_bank_account.status == "completed" && self.access < 6
