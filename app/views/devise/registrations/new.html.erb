@@ -17,6 +17,7 @@
         <div class="form-inputs">
           <%= f.input :first_name, label: t(".first_name"), required: true %>
           <%= f.input :last_name, label: "Your last name", required: true %>
+          <%= f.input :user_type, as: :hidden, input_html: { value: params[:user_type]} %>
         </div>
       </div>
       <div id="last-item" class="item">

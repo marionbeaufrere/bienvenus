@@ -3,7 +3,3 @@ function renderSubtask(){
   newSubtask.innerHTML = '<%= j render "tasks/subtask", subtask: @subtask, task: @task %>';
 }
 renderSubtask();
-<% if @task.user_subtasks.count == @task.subtasks.count - 1 %>
-  const button = document.querySelector('button.show-subtask-btn');
-  console.log(button);
-<% end %>
