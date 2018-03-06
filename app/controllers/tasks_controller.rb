@@ -34,7 +34,6 @@ class TasksController < ApplicationController
     authorize @task
   end
 
-# Initializer Task Updater
   def complete_subtasks
     @task = Task.find(params[:id])
     @task.subtasks.each do |subtask|
