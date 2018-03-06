@@ -17,7 +17,7 @@
 </div>
 <div class="subtask-list">
 <% @subtasks.each do |subtask| %>
-  <%= render 'subtask', subtask: subtask %>
+  <%= render 'subtask', subtask: subtask, task: @task %>
 <% end %>
 </div>
 

@@ -9,7 +9,9 @@ import { hideNextButton } from '../pages/signup';
 import { getEmail, getNickname } from '../components/crisp';
 getEmail();
 getNickname();
-// import { hidePreviousButton } from '../pages/signup';
+import { hidePreviousButton } from '../pages/signup';
+import { sweetAlertReturn } from '../tasks/sweetalert';
+sweetAlertReturn();
 
 //// JS for onboarding
 
