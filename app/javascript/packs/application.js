@@ -17,12 +17,12 @@ if (document.getElementById("user-email-crisp")) {
   getEmail();
   getNickname();
   getPhoto();
-}
+};
 
 import { sendWelcomeMessage } from '../components/crisp';
 if (document.getElementById("id-for-chat-welcome")) {
   sendWelcomeMessage();
-}
+};
 
 import { hidePreviousButton } from '../pages/signup';
 import { sweetAlertReturn } from '../tasks/sweetalert';
