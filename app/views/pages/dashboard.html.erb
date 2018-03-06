@@ -1,0 +1,25 @@
+<h1> All conversations </h1>
+<p class="text-center"> <strong> <%= @crisp_users.count %> refugees have been helped! </strong></p>
+<div class="my-container">
+  <div class = "row">
+  <% @crisp_conversations.each do |conversation| %>
+    <div class="col-xs-12 col-sm-6 col-md-4">
+      <div class="card task-text" id="dashboard-card">
+        <h2>
+          Conversation avec <%= conversation["meta"]["nickname"] %>
+        </h2>
+        <p>  <strong> 💌 Email: </strong>
+          <%  if conversation["meta"]["email"]=='' %>
+            <em> unspecified </em>
+          <% else %>
+            <%= conversation["meta"]["email"] %></p>
+          <% end %>
+        <p>  🕑 <strong> Début de la conversation: </strong> <%= Time.at(conversation["created_at"]).strftime("%A %B, %d at %Hh%M") %></p>
+        <p>  🕝 <strong> Fin de la conversation: </strong> <%= Time.at(conversation["updated_at"]).strftime("%A %B, %d at %Hh%M") %></p>
+        <p>  📬 <strong> Dernier message de la conversation: </strong> <%= conversation["last_message"] %></p>
+      </div>
+      </div>
+    <% end %>
+</div>
+</div>
+

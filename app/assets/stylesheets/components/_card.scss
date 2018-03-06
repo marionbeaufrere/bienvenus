@@ -89,3 +89,13 @@ align-item: center;
   }
 }
 
+#dashboard-card{
+  background: $white;
+  margin: 20px;
+  width: 100%;
+  padding-left: 10px;
+  cursor: none;
+  h2 {
+    margin-top: 0px;
+  }
+}

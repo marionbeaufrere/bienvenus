@@ -1,0 +1,45 @@
+"session_id"=>"session_fb8de91e-e70f-4ff1-9c41-12ce8e84258a",
+  "website_id"=>"697c7692-c8e1-46a8-b080-94bc635691cb",
+  "created_at"=>1520250485588,
+  "updated_at"=>1520250684211,
+  "status"=>2,
+  "state"=>"resolved",
+  "availability"=>"offline",
+  "is_blocked"=>false,
+  "meta"=>
+   {"nickname"=>"Thanh1606",
+    "email"=>"thanh1606@gmail.com",
+    "phone"=>"",
+    "avatar"=>"https://image.enrichdata.com/person/avatar/84fd80b89a0200fe9012594670cafc13c8748f90.jpg",
+    "ip"=>"89.3.76.191",
+    "data"=>{},
+    "device"=>
+     {"geolocation"=>{"country"=>"FR", "region"=>"IDF", "city"=>"Paris", "coordinates"=>{"latitude"=>48.8628, "longitude"=>2.3292}},
+      "capabilities"=>["browsing"],
+      "locales"=>["fr-FR", "fr", "en-US", "en"],
+      "timezone"=>-60,
+      "system"=>
+       {"os"=>{"name"=>"Android", "version"=>"6.0"},
+        "engine"=>{"version"=>"537.36", "name"=>"WebKit"},
+        "browser"=>{"name"=>"Chrome", "version"=>"64.0.3282.186", "major"=>"64"},
+        "useragent"=>
+         "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Mobile Safari/537.36"}},
+    "segments"=>["chat"]},
+  "active"=>{"last"=>1520251454306, "now"=>false},
+  "last_message"=>"You're useless",
+  "unread"=>{"operator"=>0, "visitor"=>1},
+  "people_id"=>"f00be8d9-bcfa-40c8-b0f7-3378cd3d16d3",
+  "compose"=>
+   {"operator"=>
+     {"8d9f4975-240e-4a3d-8bc2-e2020f858bcd"=>
+       {"type"=>"stop",
+        "timestamp"=>1520250653118,
+        "excerpt"=>nil,
+        "user"=>{"nickname"=>"Marion Beaufrere", "user_id"=>"8d9f4975-240e-4a3d-8bc2-e2020f858bcd"}},
+      "413646c1-89c0-4021-8978-6ebf310b8683"=>
+       {"type"=>"stop",
+        "timestamp"=>1520252520825,
+        "excerpt"=>nil,
+        "user"=>{"nickname"=>"Tom Vaillant", "user_id"=>"413646c1-89c0-4021-8978-6ebf310b8683"}}},
+    "visitor"=>{"type"=>"stop", "timestamp"=>1520250684190, "excerpt"=>nil}},
+  "assigned"=>nil}

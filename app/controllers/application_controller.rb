@@ -2,8 +2,8 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   before_action :configure_permitted_parameters, if: :devise_controller?
   before_action :authenticate_user!
+  before_action :get_crisp
   before_action :set_locale
-
 
   include Pundit
 
@@ -46,5 +46,12 @@ end
 
   def after_sign_in_path_for(resource)
     tasks_path(resource)
+  end
+
+  def get_crisp
+    unless @crisp_client
+      @crisp_client = Crisp::Client.new
+      @crisp_client.authenticate(ENV['CRISP_IDENTIFIER'],ENV['CRISP_KEY'])
+    end
   end
 end

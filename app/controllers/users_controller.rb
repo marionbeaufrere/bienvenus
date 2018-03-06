@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   # skip_after_action :verify_authorized ##comment out when you want to reintroduce Pundit policies
   def show
     @user = current_user
-  authorize @user
+    authorize @user
   end
 
   def edit
