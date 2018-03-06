@@ -10,8 +10,7 @@ class TaskPolicy < ApplicationPolicy
     true
   end
 
-
-  def show
-
+  def complete_subtasks?
+    true
   end
 end

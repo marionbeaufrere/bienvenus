@@ -6,10 +6,10 @@
     <% end %>
   </div>
   <div class="footer-content">
-    <%= link_to user_path(current_user), class: current_class?(user_path(current_user)) do %>
+    <%#= link_to user_path(current_user), class: current_class?(user_path(current_user)) do %>
       <i class="fas fa-user fas-footer"></i>
       <p> USER </p>
-     <% end %>
+     <%# end %>
   </div>
   <div class="footer-content">
     <%= link_to tasks_path, class: current_class?(tasks_path) do %>

@@ -36,6 +36,7 @@ class TasksController < ApplicationController
 
   def complete_subtasks
     @task = Task.find(params[:id])
+    authorize @task
     @task.subtasks.each do |subtask|
       @user_subtask = UserSubtask.new
       @user_subtask.user = current_user
