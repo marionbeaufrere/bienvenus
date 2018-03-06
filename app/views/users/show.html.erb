@@ -1,16 +1,23 @@
 <div class="my-container">
   <div class="user-show">
     <div class="user-profile-name">
-        <h1><%= @user.first_name %> <%= @user.last_name %></h1>
-      </div>
+      <h1><%= @user.first_name %> <%= @user.last_name %></h1>
+    </div>
     <div>
       <%= cl_image_tag current_user.photo, height: 200, width: 200, crop: :fill, class: "user-show-photo" %>
     </div>
-     <div class="user-details">
+    <div class="user-details">
       <br><br>
-      <p>Email: <%= current_user.email %></p>
-      <p>Phone number: <%= current_user.phone_number%></p>
-      </div>
+      <p><%= t('.email') %>: <%= current_user.email %></p>
+      <br><br>
+      <p><%= t('.phone_number') %>: <%= current_user.phone_number%></p>
+      <br><br><br>
+    </div>
+    <div class="user-signout">
+      <%= link_to destroy_user_session_path, method: :delete do %>
+      <p> <%= t(".sign_out") %></p>
+      <% end %>
+    </div>
   </div>
 </div>
 <%= render 'shared/footer' %>
