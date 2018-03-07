@@ -2,12 +2,15 @@ import swal from 'sweetalert';
 
 function sweetAlertReturn() {
   const subtaskList = document.querySelector('.subtask-list');
+
   if (subtaskList) {
     subtaskList.addEventListener('click', (e) => {
       const unmarkedSubtasksCount = document.querySelectorAll(".show-subtask-btn").length;
 
-      if (e.target.classList.contains('show-subtask-btn') && unmarkedSubtasksCount == 1) {
-      // if (e.target.classList.contains('toto')) {
+      if (
+          unmarkedSubtasksCount == 1 &&
+          (e.target.classList.contains('show-subtask-btn') || e.target.classList.contains('fa-check'))
+        ) {
         swal({
           title: "Congrats!",
           text: "You're all done here, let's move on.",
@@ -21,6 +24,5 @@ function sweetAlertReturn() {
 }
 
 export { sweetAlertReturn };
-
 
 // document.getElementById('last-subtask').addEventListener('click', () => {
