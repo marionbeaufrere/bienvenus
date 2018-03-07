@@ -50,6 +50,7 @@ class TasksController < ApplicationController
       format.html { redirect_to initialize_path }
       format.js
     end
+    current_user.update_user_access
   end
 
 end
