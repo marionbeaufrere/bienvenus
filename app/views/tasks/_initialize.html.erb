@@ -1,0 +1,14 @@
+<div class="initialize-buttons">
+<% if task.user_subtasks.where(user: current_user).empty? %>
+  <%= simple_form_for task, remote: true, url: complete_subtasks_task_path(task), method: :post do |f| %>
+    <%= f.hidden_field :task_id, value: task.id %>
+    <%= button_tag class: "initialize-btn" do %>
+    <i class="far fa-circle" style="color: #BB6BD9;"></i>
+    <% end %>
+  <% end %>
+<% else %>
+  <%= link_to destroy_subtasks_task_path(task), remote: true do %>
+    <i class="fas fa-check-circle" style="color: #BB6BD9;"></i>
+  <% end %>
+<% end %>
+</div>

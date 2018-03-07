@@ -31,7 +31,8 @@ class TasksController < ApplicationController
   def show
     @task = Task.find(params[:id])
     @subtasks = @task.subtasks
-    # @links = @task.links
+    raise
+    @links = @task.links
     @user_subtask = UserSubtask.new
     authorize @task
     @links
@@ -45,6 +46,19 @@ class TasksController < ApplicationController
       @user_subtask.user = current_user
       @user_subtask.subtask_id = subtask.id
       @user_subtask.save
+    end
+    respond_to do |format|
+      format.html { redirect_to initialize_path }
+      format.js
+    end
+    current_user.update_user_access
+  end
+
+  def destroy_subtasks
+    @task = Task.find(params[:id])
+    authorize @task
+    @task.user_subtasks.each do |ust|
+      ust.destroy
     end
     respond_to do |format|
       format.html { redirect_to initialize_path }
