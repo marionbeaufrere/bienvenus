@@ -29,7 +29,9 @@ import { sweetAlertReturn } from '../tasks/sweetalert';
 sweetAlertReturn();
 
 import { userToggleEdit } from '../components/user_edit';
-userToggleEdit();
+if ( document.getElementById('edit-user-btn') ) {
+  userToggleEdit();
+};
 
 //// JS for onboarding
 
