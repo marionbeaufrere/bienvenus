@@ -11,8 +11,17 @@
       <p><%= t('.email') %>: <%= current_user.email %></p>
       <br><br>
       <p><%= t('.phone_number') %>: <%= current_user.phone_number%></p>
+      <!-- FORM BUTTON -->
+       <div class="edit-user-btn">
+        <i class="far fa-edit"></i>
+      </div>
       <br><br><br>
     </div>
+    <!-- HIDDEN FORM -->
+    <div class="edit-user-details hidden" id="edit_user_<%= @user.id %>">
+    <%= render 'edit', user: @user %>
+    </div>
+
     <div class="user-signout">
       <%= link_to destroy_user_session_path, method: :delete do %>
       <p> <%= t(".sign_out") %></p>
@@ -24,3 +33,6 @@
   <% end %>
 </div>
 <%= render 'shared/footer' %>
+
+
+
