@@ -6,6 +6,8 @@ class RegistrationsController < Devise::RegistrationsController
     if @user.user_type == "refugee"
       :initialize
     else
+      @stuff = ""
+      flash[:alert] = "Thanks a lot for signing up! You will receive an email with Crisp access any time soon 🤗"
       user_path(@user)
     end
   end
@@ -14,3 +16,7 @@ end
 
 
 
+# view
+# <%= if @stuff %>
+# div id="trigger"
+# <% end %>
