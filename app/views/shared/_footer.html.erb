@@ -3,7 +3,7 @@
     <div class="footer-content">
       <%= link_to home_path, class: current_class?(home_path) do %>
         <i class="fas fa-home fas-footer"></i>
-        <p> HOME </p>
+        <p> <%= t('.home') %> </p>
       <% end %>
     </div>
 
@@ -12,15 +12,16 @@
     <!-- <div class="footer-content"> -->
       <%#= link_to root_path, class: current_class?(root_path) do %>
         <!-- <i class="fas fa-home fas-footer"></i> -->
-        <!-- <p> HOME </p> -->
+        <!-- <p> <%= t('.home') %> </p> -->
       <%# end %>
     <!-- </div> -->
 
   <% end %>
+
   <div class="footer-content">
     <%= link_to user_path(current_user), class: current_class?(user_path(current_user)) do %>
       <i class="fas fa-user fas-footer"></i>
-      <p> USER </p>
+      <p> <%= t('.user') %> </p>
      <% end %>
   </div>
 
@@ -28,14 +29,15 @@
     <div class="footer-content">
       <%= link_to tasks_path, class: current_class?(tasks_path) do %>
         <i class="fas fa-tasks fas-footer"></i>
-        <p> TASKS </p>
+        <p> <%= t('.task') %> </p>
       <% end %>
     </div>
   <% end %>
+
   <div class="footer-content">
     <%= link_to resources_path, class: current_class?(resources_path) do %>
       <i class="fas fa-rocket fas-footer"></i>
-      <p> RESOURCES </p>
+      <p> <%= t('.resources') %> </p>
      <% end %>
   </div>
 </div>

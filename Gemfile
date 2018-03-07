@@ -19,6 +19,7 @@ gem 'uglifier'
 gem 'webpacker'
 gem 'pundit'
 gem 'crisp-api', '~> 1.0'
+gem 'globalize', '~> 5.1.0.beta2'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
