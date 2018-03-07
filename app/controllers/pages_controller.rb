@@ -4,6 +4,7 @@ class PagesController < ApplicationController
   # skip_after_action :verify_authorized, only: [:home, :onboarding, :welcome_screen, :are_you, :asylum_seeker, :resources, :dashboard]
 
   def home
+    authorize :pages, :home?
   end
 
   def onboarding
