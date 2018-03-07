@@ -11,6 +11,7 @@ class PagesController < ApplicationController
   end
 
   def welcome_screen
+    redirect_to home_path if user_signed_in?
   end
 
   def are_you

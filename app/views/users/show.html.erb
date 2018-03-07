@@ -1,15 +1,18 @@
 <div class="my-container">
   <div class="user-show">
     <div class="user-profile-name">
-      <h1><%= @user.first_name %> <%= @user.last_name %></h1>
+      <h1><%= @user.first_name.capitalize %> <%= @user.last_name.capitalize %></h1>
     </div>
     <div>
-      <%= cl_image_tag current_user.photo, height: 200, width: 200, crop: :fill, class: "user-show-photo" %>
+      <% if current_user.photo.file.nil?  %>
+        <%= image_tag 'medium_fox.png', height: 150, width: 150 %>
+      <% else %>
+        <%= cl_image_tag current_user.photo, height: 150, width: 150, crop: :fill, class: "user-show-photo" %>
+      <% end %>
     </div>
     <div class="user-details">
       <br><br>
       <p><%= t('.email') %>: <%= current_user.email %></p>
-      <br><br>
       <p><%= t('.phone_number') %>: <%= current_user.phone_number%></p>
       <!-- FORM BUTTON -->
        <div class="edit-user-btn">
