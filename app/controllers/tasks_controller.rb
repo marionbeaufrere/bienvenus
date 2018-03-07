@@ -8,10 +8,6 @@ class TasksController < ApplicationController
 
   def initializer
     @tasks = Task.where(position: 1..2).order('position ASC, id DESC')
-      respond_to do |format|
-        format.html { redirect_to initialize_path }
-        format.js
-      end
     authorize :task
   end
 
@@ -50,7 +46,10 @@ class TasksController < ApplicationController
       @user_subtask.subtask_id = subtask.id
       @user_subtask.save
     end
-    redirect_to initialize_path
+    respond_to do |format|
+      format.html { redirect_to initialize_path }
+      format.js
+    end
   end
 
 end

@@ -4,8 +4,3 @@ function renderSubtask(){
 }
 renderSubtask();
 
-function refreshInitializer(innerHTML) {
-  const initialTasks = document.getElementById('task_<%= task_id %>');
-  initialTasks.innerHTML = '<%= j render "tasks/initializer", task: @task %>';
-}
-refreshInitializer();

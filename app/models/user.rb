@@ -33,6 +33,7 @@ class User < ApplicationRecord
   has_many :user_subtasks
   has_many :subtasks, through: :user_subtasks
   validates :first_name, :last_name, presence: true
+  validates :email, uniqueness: true
 
   mount_uploader :photo, PhotoUploader
 
