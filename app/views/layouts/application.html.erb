@@ -32,8 +32,16 @@
   <body>
     <%= render 'shared/flashes' %>
     <% if current_user %>
-      <div class="background_skew" id="user-email-crisp" data-email="<%= current_user.email %>" data-first-name="<%= current_user.first_name %>" data-last-name="<%= current_user.last_name %>" data-photo="<% if current_user.photo.file.nil?  %><%= image_tag 'medium_fox.png' %><% else %><%= current_user.photo %><% end %>"
-        data-user-type="<%= current_user.user_type %>">
+      <div class="background_skew" id="user-email-crisp"
+        data-email="<%= current_user.email %>"
+        data-first-name="<%= current_user.first_name %>"
+        data-last-name="<%= current_user.last_name %>"
+        data-photo=
+        <% if current_user.photo.file.nil? %>
+          <%= image_tag 'medium_fox.png' %>
+            <% else %>
+          <%= current_user.photo %>
+          <% end %>
     <% else %>
       <div class="background_skew">
     <% end %>
