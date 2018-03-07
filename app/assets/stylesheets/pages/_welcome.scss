@@ -4,6 +4,7 @@
   justify-content: space-around;
   flex-direction: column;
   text-align: center;
+  padding: 0 30px;
   h1 {
     font-weight: lighter;
   }
@@ -24,10 +25,6 @@
     font-size: 10px;
     color: $grey-text;
     opacity: 0.6;
-  }
-  .button-rounded {
-    width: 200px;
-    margin: 0% 25%;
   }
 }
 

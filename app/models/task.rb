@@ -18,7 +18,6 @@ class Task < ApplicationRecord
   has_many :user_subtasks, through: :subtasks
   belongs_to :category
   translates :title, :description
-
   accepts_nested_attributes_for :subtasks
 
   def completed?(user)

@@ -2,4 +2,5 @@ function renderSubtask(){
   const subtask = ('subtask_<%= @subtask_id %>');
   subtask.innerHTML = '<%= j render "tasks/subtask_form", subtask: @subtask, task: @task %>';
 }
+
 renderSubtask();

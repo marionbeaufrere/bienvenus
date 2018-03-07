@@ -34,10 +34,10 @@ ActiveRecord::Schema.define(version: 20180306141805) do
 
   create_table "links", force: :cascade do |t|
     t.string "link"
-    t.bigint "tasks_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["tasks_id"], name: "index_links_on_tasks_id"
+    t.bigint "task_id"
+    t.index ["task_id"], name: "index_links_on_task_id"
   end
 
   create_table "subtask_translations", force: :cascade do |t|
@@ -117,7 +117,7 @@ ActiveRecord::Schema.define(version: 20180306141805) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "links", "tasks", column: "tasks_id"
+  add_foreign_key "links", "tasks"
   add_foreign_key "subtasks", "tasks"
   add_foreign_key "tasks", "categories"
   add_foreign_key "user_subtasks", "subtasks"
