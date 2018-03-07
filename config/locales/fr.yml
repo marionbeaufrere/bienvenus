@@ -80,7 +80,7 @@ fr:
       title: "Etes-vous?"
       refugee: "Un réfugié"
       volunteer: "Un bénévole"
-      asyleum: "Un demandeur d'asile"
+      asylum: "Un demandeur d'asile"
     asylum_seeker:
       sorry: "Désolé"
       text: " Nous sommes désolés. Notre service n'est malheureusement disponible aujourd'hui qu'aux détenteurs du statut

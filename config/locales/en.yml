@@ -50,7 +50,7 @@ en:
       title: "Are you?"
       refugee: "A refugee"
       volunteer: "A volunteer"
-      asyleum: "An asyleum seeker"
+      asylum: "An asylum seeker"
     asylum_seeker:
       sorry: "Sorry"
       text: "We are so sorry. At this time, our service is only available to those who already received the refugee status.
