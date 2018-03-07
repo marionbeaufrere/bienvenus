@@ -25,8 +25,10 @@ if (document.getElementById("id-for-chat-welcome")) {
 };
 
 import { hidePreviousButton } from '../pages/signup';
+// import { validateForm } from '../pages/signup';
 import { sweetAlertReturn } from '../tasks/sweetalert';
 sweetAlertReturn();
+
 
 //// JS for onboarding
 
