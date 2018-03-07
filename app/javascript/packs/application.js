@@ -28,6 +28,9 @@ import { hidePreviousButton } from '../pages/signup';
 import { sweetAlertReturn } from '../tasks/sweetalert';
 sweetAlertReturn();
 
+import { userToggleEdit } from '../components/user_edit';
+userToggleEdit();
+
 //// JS for onboarding
 
 (function() {
