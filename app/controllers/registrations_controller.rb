@@ -14,9 +14,7 @@ class RegistrationsController < Devise::RegistrationsController
 end
 
 
-
-
-# view
-# <%= if @stuff %>
-# div id="trigger"
-# <% end %>
+#### if you want to replace the flash alert with a JS alert, you can call @stuff in the users/show/view
+#### <%= if @stuff %>
+#### div id="trigger"
+#### <% end %>
