@@ -6,7 +6,6 @@
       <%= select_tag :query_task, options_for_select(["All", "To do", "Done", "Essentials", "Housing", "Language", "Finance", "Education", "Mobility", "Healthcare", "Financial Aid", "Employment", "Family Unit", "Naturalisation", "Integration"], params[:query_task]), class: 'search-dropdown', include_blank: "Filter"%>
     </div>
 
-
       <% @tasks_in_progress.each do |task| %>
         <div class="card-container-task">
           <div class="category">

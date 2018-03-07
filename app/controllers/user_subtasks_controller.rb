@@ -34,7 +34,7 @@ class UserSubtasksController < ApplicationController
     @user_subtask.destroy
     respond_to do |format|
       format.html { redirect_to task_path(@task) }
-      format.js
+      format.js { render :create }
     end
   end
 
