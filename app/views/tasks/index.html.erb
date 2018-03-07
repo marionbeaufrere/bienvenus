@@ -2,8 +2,7 @@
   <div class="my-container">
     <h1> <%= t('.title') %> </h1>
     <div class="to-do">
-      <h2><%= t('.header')%>(<%= @tasks_in_progress.count %>)</h2>
-      <%= select_tag :query_task, options_for_select(["All", "To do", "Done", "Essentials", "Housing", "Language", "Finance", "Education", "Mobility", "Healthcare", "Financial Aid", "Employment", "Family Unit", "Naturalisation", "Integration"], params[:query_task]), class: 'search-dropdown', include_blank: "Filter"%>
+      <h2><%= t('.header')%> (<%= @tasks_in_progress.count %>)</h2>
     </div>
 
       <% @tasks_in_progress.each do |task| %>

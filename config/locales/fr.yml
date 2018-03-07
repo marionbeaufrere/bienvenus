@@ -71,9 +71,9 @@ fr:
   shared:
     footer:
       home: "ACCUEIL"
-      user: "MON PROFIL"
-      task: "MES TACHES"
-      resources: "PLUS D'INFOS"
+      user: "PROFIL"
+      task: "TACHES"
+      resources: "PLUS"
 
   pages:
     are_you:
@@ -109,7 +109,7 @@ fr:
       previous: "Précédent"
       next: "Suivant"
     resources:
-      map: "Carte des services"
+      map: "Plus d'informations"
     welcome_screen:
       get_started: "Débuter"
       sign_in: "Connexion"

@@ -1,5 +1,13 @@
 <div class = "welcome-container">
-  <h1> BIENVENUS </h1>
+  <div class="navbar">
+   <div class="language">
+    <% if I18n.locale == I18n.default_locale %>
+      <%= link_to "French", { :locale=>'fr' } %>
+    <% else %>
+      <%= link_to "English", { :locale=> nil } %>
+    <%end%>
+   </div>
+  </div>
 <!--     <h4><em> An app to help refugees with their paperwork </em></h4>
   <h5><em> (Currently only available for French paperwork) </em> </h5> -->
   <%= image_tag 'medium_fox.png', id: "fox-image" %>
@@ -16,7 +24,9 @@
       <%= link_to t(".get_started"), onboarding_path, class: 'button-rounded' %>
     </span>
     <span>
-      <%= link_to t(".sign_in"), new_user_session_path, class: 'button-rounded' %>
+      <div class="a">
+      <%= link_to t(".sign_in"), new_user_session_path %>
+      </div>
     </span>
 <!--   </div> -->
 </div>
