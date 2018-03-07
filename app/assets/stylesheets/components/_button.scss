@@ -1,6 +1,7 @@
 .button-rounded {
   height: 50px;
   width: 100%;
+  max-width: 400px;
   border: 0;
   background: $green-button;
   text-transform: uppercase;
@@ -29,12 +30,12 @@
   height: 50px;
   width: 200px;
   border: 0;
-  background: #42D4B9;
+  background: $grey-button;
   text-transform: uppercase;
   letter-spacing: 0.15em;
   color: $white;
   top: 500px;
-  border: 2px solid #42D4B9;
+  border: 2px solid $grey-button;
   border-radius: 5px;
   font-size: 16px;
   outline: 0;
@@ -42,12 +43,12 @@
   transition: opacity 0.4s $bezier, background 0.4s $bezier;
   cursor: pointer;
     &:hover {
-      color: #42D4B9;
+      color: $grey-button;
       background: $white;
       text-decoration: none;
     }
     &:focus {
-      color: #42D4B9;
+      color: $grey-button;
       background: $white;
     }
   }
