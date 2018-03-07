@@ -1,8 +1,6 @@
 <div class="initializer-container" id="id-for-chat-welcome">
-    <div class="to-do">
       <h1><%= t('.header')%></h1>
       <h2><%= t('.sub-header') %></h2>
-    </div>
     <% @tasks.each do |task| %>
     <div class="card-initializer">
       <div class="initializer-text">
@@ -20,7 +18,8 @@
     <% end %>
     </div>
     <% end %>
-    <%= link_to t(".button"), tasks_path, class: "button-rounded button-redirect-index" %>
+    <br>
+    <%= link_to t(".button"), tasks_path, class: "button-rounded" %>
 </div>
 
 <%= render 'shared/footer' %>
