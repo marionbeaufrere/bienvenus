@@ -26,6 +26,19 @@
   font-size: 15px;
 }
 
+.edit-user-btn-box {
+  text-align: center;
+}
+
+#edit-user-btn {
+  margin-top: 5px;
+  text-shadow: 1px 1px 1px #ccc;
+  font-size: 1.3em;
+  &:hover {
+    color: $green;
+  }
+}
+
 .user-button {
   margin-top: 15px;
 }
@@ -36,6 +49,12 @@
   padding-left: 10px;
 }
 
+#edit_user_
+
+.simple_form, .edit_user {
+  line-height: 0.8;
+}
+
 #button-admin {
   margin-top: 20px !important;
 }
@@ -44,4 +63,8 @@
   text-align: center;
   font-size: 15px;
   color: $grey-text;
+}
+
+.user-edit-form-field {
+    color: $grey-text;
 }

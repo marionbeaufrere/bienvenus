@@ -1,8 +1,8 @@
 <%= simple_form_for @user do |f| %>
   <%= f.hidden_field :user_id, value: user.id %>
-  <%= f.input :first_name %>
-  <%= f.input :last_name %>
-  <%= f.input :phone_number %>
-  <%= f.input :email %>
+  <%= f.input :first_name, label_html: {class: "police user-edit-form-field"} %>
+  <%= f.input :last_name, label_html: {class: "police user-edit-form-field"} %>
+  <%= f.input :phone_number, label_html: {class: "police user-edit-form-field"} %>
+  <%= f.input :email, label_html: {class: "police user-edit-form-field"} %>
   <%= f.button :submit, class: 'button-rounded user-edit-done' %>
 <% end %>

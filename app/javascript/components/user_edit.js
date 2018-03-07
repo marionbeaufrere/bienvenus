@@ -1,6 +1,6 @@
 function userToggleEdit() {
 
-const userEditButton = document.querySelector('.edit-user-btn');
+const userEditButton = document.getElementById('edit-user-btn');
 const userUpdateButton = document.querySelector('.user-edit-done');
 
   userEditButton.addEventListener("click", (event) => {
