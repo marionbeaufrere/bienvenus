@@ -12,8 +12,8 @@ function sweetAlertReturn() {
           (e.target.classList.contains('show-subtask-btn') || e.target.classList.contains('fa-check'))
         ) {
         swal({
-          title: "Congrats!",
-          text: "You're all done here, let's move on.",
+          title: "Congratulations!",
+          text: "You're all set ☺️, \n you can start your other tasks now",
           icon: "success",
         }).then((value) => {
           window.location = '/tasks';

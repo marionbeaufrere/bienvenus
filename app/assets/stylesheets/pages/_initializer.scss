@@ -8,6 +8,9 @@
     min-height: calc(100vh - 120px);
     flex-direction: column;
     margin: 0 30px;
+    h2 {
+      margin-top: 0px;
+    }
 }
 
 .card-initializer {
@@ -45,13 +48,3 @@
   border: 0px;
 }
 
-.button-redirect-index {
-  display: flex;
-  align-items: center;
-  margin-top: 50px;
-  margin-bottom: 10px;
-  width: 140px !important;
-  &:hover {
-    text-decoration: none;
-  }
-}

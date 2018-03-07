@@ -4,6 +4,7 @@
   max-width: 400px;
   border: 0;
   background: $green-button;
+  text-align: center;
   text-transform: uppercase;
   letter-spacing: 0.15em;
   border-radius: 0;
@@ -19,10 +20,12 @@
     &:hover {
       color: $green-button;
       background: $white;
+      text-decoration: none;
     }
     &:focus {
       color: $green-button;
       background: $white;
+      text-decoration: none;
     }
   }
 
