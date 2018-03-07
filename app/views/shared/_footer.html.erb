@@ -1,5 +1,5 @@
 <div class="footer">
-  <% if current_user.user_type == "refugee" %>
+  <%# if current_user.user_type == "refugee" %>
     <div class="footer-content">
       <%= link_to home_path, class: current_class?(home_path) do %>
         <i class="fas fa-home fas-footer"></i>
@@ -12,11 +12,11 @@
     <!-- <div class="footer-content"> -->
       <%#= link_to root_path, class: current_class?(root_path) do %>
         <!-- <i class="fas fa-home fas-footer"></i> -->
-        <!-- <p> <%= t('.home') %> </p> -->
+        <!-- <p> <%#= t('.home') %> </p> -->
       <%# end %>
     <!-- </div> -->
 
-  <% end %>
+  <%# end %>
 
   <div class="footer-content">
     <%= link_to user_path(current_user), class: current_class?(user_path(current_user)) do %>

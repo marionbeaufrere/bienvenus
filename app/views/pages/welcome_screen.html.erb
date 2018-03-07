@@ -12,11 +12,13 @@
     window.location.href= 'localhost:3000/onboarding'},5000);
   </script> -->
 <!--   <div class="buttons-welcome"> -->
-    <span>
-      <%= link_to t(".get_started"), onboarding_path, class: 'button-rounded' %>
-    </span>
-    <span>
-      <%= link_to t(".sign_in"), new_user_session_path, class: 'button-rounded' %>
+      <% if user_signed_in? %>
+        <p style="color: grey"><em> Welcome Back <%= current_user.first_name %> ❤️ </em></p>
+        <%= render 'shared/footer' %>
+      <% else %>
+        <%= link_to t(".get_started"), onboarding_path, class: 'button-rounded' %>
+        <%= link_to t(".sign_in"), new_user_session_path %>
+      <% end %>
     </span>
 <!--   </div> -->
 </div>
