@@ -19,5 +19,8 @@
       <% end %>
     </div>
   </div>
+  <% if current_user.admin %>
+    <%= link_to "Add a task", new_admin_task_path, class: "button-normal text-center", id:"button-admin" %>
+  <% end %>
 </div>
 <%= render 'shared/footer' %>

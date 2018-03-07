@@ -17,6 +17,7 @@ class TasksController < ApplicationController
     @tasks = current_user.visible_tasks
     @tasks_completed = []
     @tasks_in_progress = []
+    authorize :task
     @tasks.each do |task|
       if task.completed?(current_user)
         @tasks_completed << task
