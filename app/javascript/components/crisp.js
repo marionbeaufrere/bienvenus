@@ -26,6 +26,15 @@ function sendWelcomeMessage() {
   $crisp.push(["do", "message:show", ["text",message]])
 };
 
+function defineUserAsAdmin() {
+  const email = document.getElementById("user-email-crisp").getAttribute("data-email");
+  const userType = document.getElementById("user-email-crisp").getAttribute("data-user-type");
+  console.log(userType);
+  if (userType === "volunteer") {
+    $crisp.push(["set", "user:role", [email, "member"]]) ;
+  };
+};
+
 export { getNickname, getEmail, getPhoto, sendWelcomeMessage};
 
 //SAME FOR USER DATA
