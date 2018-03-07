@@ -12,11 +12,12 @@
             <div class="category-color", style= "background-color:<%= task.category.color%>">
             </div>
             <div class="task-text">
-            <p style= "color:<%= task.category.color%>">
-              <%= task.category.name.upcase %>
-            </p>
-            <%= link_to task.title, task_path(task) %>
-            <!-- <a class="card-link"><%# link_to task_path(task) %></a> -->
+              <p style= "color:<%= task.category.color%>">
+                <%= task.category.name.upcase %>
+              </p>
+              <div class="card-title police">
+                <%= link_to task.title, task_path(task) %>
+              </div>
             </div>
           </div>
         </div>
