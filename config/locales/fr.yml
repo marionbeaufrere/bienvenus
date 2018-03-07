@@ -71,8 +71,8 @@ fr:
   shared:
     footer:
       home: "ACCUEIL"
-      user: "MON PROFIL"
-      task: "MES TACHES"
+      user: "PROFIL"
+      task: "TACHES"
       resources: "RESSOURCES"
 
   pages:

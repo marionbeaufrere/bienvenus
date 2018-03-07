@@ -13,7 +13,7 @@ function sweetAlertReturn() {
         ) {
         swal({
           title: "Congratulations!",
-          text: "You're all set ☺️, \n you can start your other tasks now",
+          text: "You're all set, \n you can start your other tasks now 🤗",
           icon: "success",
         }).then((value) => {
           window.location = '/tasks';

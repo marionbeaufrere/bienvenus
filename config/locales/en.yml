@@ -41,8 +41,8 @@ en:
   shared:
     footer:
       home: "HOME"
-      user: "MY PROFILE"
-      task: "MY TASKS"
+      user: "PROFILE"
+      task: "TASKS"
       resources: "RESOURCES"
 
   pages:
