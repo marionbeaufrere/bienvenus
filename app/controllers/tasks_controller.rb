@@ -31,11 +31,9 @@ class TasksController < ApplicationController
   def show
     @task = Task.find(params[:id])
     @subtasks = @task.subtasks
-    raise
     @links = @task.links
     @user_subtask = UserSubtask.new
     authorize @task
-    @links
   end
 
   def complete_subtasks

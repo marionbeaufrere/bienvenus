@@ -15,6 +15,10 @@ h3 {
   min-height: calc(100vh - 75px);
 }
 
+.task-show-links {
+  text-decoration: none;
+}
+
 .show-subtask-line {
   display: flex;
 }
@@ -33,14 +37,17 @@ h3 {
 .useful-links-box {
   background-color: #fafafa;
   border-radius: 5px;
+  width: 500px;
   min-height: 30px;
-  margin-left: 15px;
-  margin-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 15px;
+  padding: 10px 0px 10px 0px;
 }
 
 .useful-links-list {
   color: $grey-text;
+
 }
 
 .show-subtask-circle, .show-subtask-btn {
