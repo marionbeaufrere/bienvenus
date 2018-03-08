@@ -11,7 +11,13 @@ class PagesController < ApplicationController
   end
 
   def welcome_screen
-    redirect_to home_path if user_signed_in?
+    if user_signed_in?
+      if current_user.user_type == "refugee"
+        redirect_to tasks_path
+      else
+        redirect_to user_path(current_user)
+      end
+    end
   end
 
   def are_you
@@ -27,4 +33,9 @@ class PagesController < ApplicationController
     @crisp_users = @crisp_client.website.list_people_profiles("697c7692-c8e1-46a8-b080-94bc635691cb",1)
     @crisp_conversations = @crisp_client.website.list_conversations("697c7692-c8e1-46a8-b080-94bc635691cb", 1)
   end
+
+  def map
+  end
+
+
 end

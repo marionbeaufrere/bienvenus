@@ -3,13 +3,14 @@ UserSubtask.destroy_all
 Subtask.destroy_all
 Task.destroy_all
 Category.destroy_all
+Link.destroy_all
 puts 'Creating tasks and associated subtasks...'
 
 ################ CATEGORIES ######################################################################################
 
 cat_a = Category.create!(
   name: "Essentials",
-  color: "#FFD35C"
+  color: "#BFD641"
 )
 cat_a.attributes = { name: "Essentiels", locale: :fr }
 cat_a.save
@@ -23,7 +24,7 @@ cat_b.save
 
 cat_c = Category.create!(
   name: "Language",
-  color: "#F37252"
+  color: "#EDCDC2"
 )
 cat_c.attributes = { name: "Langue", locale: :fr }
 cat_c.save
@@ -404,3 +405,18 @@ oo.save
 ##########################################################################################################################
 
 puts 'Finished!'
+
+
+##################### LINKS ###################################################################################
+
+##########################################################################################################################
+
+link_a = Link.create!(
+  link: "http://lewagon.org",
+  task: d
+)
+
+link_b = Link.create!(
+  link: "http://lewagon.org",
+  task: d
+)

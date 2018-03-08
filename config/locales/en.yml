@@ -16,6 +16,10 @@ en:
       header: "Have you done these ?"
       sub-header: "Please tell us if you've already completed these then click on 'I'm ready!"
       button: "I'm ready"
+    show:
+      alert_title: "Congratulations!"
+      alert_description: "You’re all set, \n you can start your other tasks now 🤗"
+      alert_success: "icon: success"
 
   users:
     show:
@@ -41,8 +45,8 @@ en:
   shared:
     footer:
       home: "HOME"
-      user: "MY PROFILE"
-      task: "MY TASKS"
+      user: "PROFILE"
+      task: "TASKS"
       resources: "RESOURCES"
 
   pages:
@@ -79,7 +83,7 @@ en:
       previous: "Previous"
       next: "Next"
     resources:
-      map: "Map of services"
+      map: "More info"
     welcome_screen:
       get_started: "Get Started"
       sign_in: "Sign in"

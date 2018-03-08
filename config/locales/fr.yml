@@ -47,6 +47,11 @@ fr:
       header: "Avez-vous terminé un de ces éléments ?"
       sub-header: "Spécifiez-nous si vous avez accompli une de ses tâches puis cliquez sur 'Je suis prêt' "
       button: "Je suis prêt"
+    show:
+      alert_title: "Bravo!"
+      alert_description: "Vous pouvez désormais \n passer aux autres tâches 🤗"
+      alert_success: "icon: success"
+
 
   users:
     show:
@@ -71,8 +76,8 @@ fr:
   shared:
     footer:
       home: "ACCUEIL"
-      user: "MON PROFIL"
-      task: "MES TACHES"
+      user: "PROFIL"
+      task: "TÂCHES"
       resources: "RESSOURCES"
 
   pages:
@@ -109,7 +114,7 @@ fr:
       previous: "Précédent"
       next: "Suivant"
     resources:
-      map: "Carte des services"
+      map: "Plus d'informations"
     welcome_screen:
       get_started: "Débuter"
       sign_in: "Connexion"
