@@ -1,4 +1,4 @@
-<div id="signup-carousel" class="carousel slide" data-ride="carousel" date-interval="false" data-keyboard="false" data-interval="false">
+<div id="signup-carousel" class="carousel slide" data-ride="carousel" data-interval="false" data-keyboard="false" data-wrap="false">
   <!-- Indicators -->
   <ol class="carousel-indicators">
     <li data-target="#signup-carousel" data-slide-to="0" class="active"></li>
@@ -15,12 +15,12 @@
         <%= f.error_notification %>
 
         <div class="form-inputs">
-          <%= f.input :first_name, label: t(".first_name"), required: true %>
-          <%= f.input :last_name, label: t(".last_name"), required: true %>
+          <%= f.input :first_name, label: t(".first_name"), required: true, input_html: { class: "first-item-input"} %>
+          <%= f.input :last_name, label: t(".last_name"), required: true, input_html: { class: "first-item-input"} %>
           <%= f.input :user_type, as: :hidden, input_html: { value: params[:user_type]} %>
         </div>
       </div>
-      <div id="last-item" class="item">
+      <div id="middle-item" class="item">
          <h3><%= t(".sign-up") %></h3>
         <div class="form-inputs">
           <%= f.input :email, label: t(".email"), required: true, autofocus: true %>
@@ -28,7 +28,7 @@
           <%= f.input :password_confirmation, label: t(".confirm-password"), label_html: {class: "police"}, required: true %>
         </div>
       </div>
-      <div class="item">
+      <div id="last-item" class="item">
          <h3><%= t(".sign-up") %></h3>
         <div class="form-inputs">
           <%= f.input :phone_number, label: t(".phone"), required: true, :input_html => {:style => 'width: 250px margin: 0'} %>
@@ -39,7 +39,7 @@
           </div>
         </div>
         <div class="form-actions">
-          <%= f.button :submit, t(".sign-up"), class: "button-rounded" %>
+          <%= f.button :submit, t(".sign-up"), class: "button-rounded hidden", id: 'button-signup' %>
         </div>
         <%#= render "devise/shared/links" %>
         <% end %>
@@ -48,11 +48,11 @@
    <!-- Left and right controls -->
 
   <a class="left carousel-control signup-control-position-left hidden" href="#signup-carousel" data-slide="prev">
-      <span class="button-rounded" id="button-signup"> <%= t(".previous") %></span>
+      <span id="previous"> <%= t(".previous") %></span>
     <span class="sr-only"><%= t(".previous") %></span>
   </a>
-  <a class="right carousel-control signup-control-position-right" href="#signup-carousel" data-slide="next">
-    <span class="button-rounded button-next" id="button-signup"><%= t(".next") %></span>
+  <a class="right carousel-control signup-control-position-right hidden" href="#signup-carousel" data-slide="next">
+    <span id="next"><%= t(".next") %></span>
     <span class="sr-only"><%= t(".next") %></span>
   </a>
 </div>

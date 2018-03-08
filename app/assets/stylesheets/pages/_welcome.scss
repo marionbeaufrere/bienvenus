@@ -6,7 +6,8 @@
   text-align: center;
   padding: 0 30px;
   h1 {
-    font-weight: lighter;
+    font-weight: bold;
+    font-size: 20px;
   }
   h2 {
     font-weight: normal;
@@ -15,6 +16,7 @@
   }
   a {
     text-decoration: none;
+    font-size: 15px;
   }
   h4 {
     font-size: 12px;
@@ -27,6 +29,22 @@
     opacity: 0.6;
   }
 }
+
+.navbar{
+  display: flex;
+  text-align: right;
+  width: 100%;
+}
+
+.language{
+  color: black;
+  display: flex;
+  font-size: 12px;
+  align-items: center;
+  justify-content: center;
+  text-decoration: underline;
+}
+
 
 #fox-image {
   width: 150px;

@@ -29,6 +29,7 @@ if (document.querySelectorAll("edit-user-btn")) {
 };
 
 import { hidePreviousButton } from '../pages/signup';
+// import { validateForm } from '../pages/signup';
 import { sweetAlertReturn } from '../tasks/sweetalert';
 sweetAlertReturn();
 

@@ -27,4 +27,9 @@ class PagesController < ApplicationController
     @crisp_users = @crisp_client.website.list_people_profiles("697c7692-c8e1-46a8-b080-94bc635691cb",1)
     @crisp_conversations = @crisp_client.website.list_conversations("697c7692-c8e1-46a8-b080-94bc635691cb", 1)
   end
+
+  def map
+  end
+
+
 end
