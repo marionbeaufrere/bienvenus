@@ -10,7 +10,7 @@ puts 'Creating tasks and associated subtasks...'
 
 cat_a = Category.create!(
   name: "Essentials",
-  color: "#FFD35C"
+  color: "#BFD641"
 )
 cat_a.attributes = { name: "Essentiels", locale: :fr }
 cat_a.save
@@ -24,7 +24,7 @@ cat_b.save
 
 cat_c = Category.create!(
   name: "Language",
-  color: "#F37252"
+  color: "#EDCDC2"
 )
 cat_c.attributes = { name: "Langue", locale: :fr }
 cat_c.save
