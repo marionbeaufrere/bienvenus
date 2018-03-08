@@ -3,6 +3,7 @@ font-family: $headings-font-family;
 font-weight: bold;
 font-size: 40px;
 text-align: center;
+color: $grey-text;
 }
 
 h2{
@@ -22,7 +23,7 @@ padding: 10px 0;
 .my-container{
   display:flex;
   align-items: center;
-  min-height: calc(100vh - 75px);
+  min-height: calc(100vh - 100px);
   flex-direction: column;
   padding: 0 30px;
 }

@@ -16,8 +16,8 @@ function sweetAlertReturn() {
         ) {
 
         swal({
-          title: alertTitle,
-          text: alertDescription,
+          title: "Congratulations!",
+          text: "You're all set, \n you can start your other tasks now 🤗",
           icon: "success",
         }).then((value) => {
           window.location = redirectionUrl;

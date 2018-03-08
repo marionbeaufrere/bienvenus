@@ -1,11 +1,11 @@
 <div class="footer">
   <%# if current_user.user_type == "refugee" %>
-    <div class="footer-content">
-      <%= link_to home_path, class: current_class?(home_path) do %>
+   <!--  <div class="footer-content">
+      <%#= link_to home_path, class: current_class?(home_path) do %>
         <i class="fas fa-home fas-footer"></i>
-        <p> <%= t('.home') %> </p>
-      <% end %>
-    </div>
+        <p> <%#= t('.home') %> </p>
+      <%# end %>
+    </div> -->
 
   <!-- SI TU VEUX QUE L'ICONE HOME APPARAISSE QUAND MÊME ET REDIRIGE VERS LE WELCOME SCREEN UNCOMMENT -->
   <%# else %>
@@ -39,5 +39,11 @@
       <i class="fas fa-rocket fas-footer"></i>
       <p> <%= t('.resources') %> </p>
      <% end %>
+  </div>
+
+  <div class="footer-content" id="sert-a-rien">
+    rien
+      <i>rien</i>
+      <p> rien </p>
   </div>
 </div>
