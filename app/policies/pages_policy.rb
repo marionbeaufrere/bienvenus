@@ -6,6 +6,6 @@ class PagesPolicy < ApplicationPolicy
   end
 
   def home?
-    @user.user_type == "refugee"
+    true
   end
 end

@@ -25,8 +25,14 @@ if (document.getElementById("id-for-chat-welcome")) {
 };
 
 import { hidePreviousButton } from '../pages/signup';
+// import { validateForm } from '../pages/signup';
 import { sweetAlertReturn } from '../tasks/sweetalert';
 sweetAlertReturn();
+
+import { userToggleEdit } from '../components/user_edit';
+if ( document.getElementById('edit-user-btn') ) {
+  userToggleEdit();
+};
 
 //// JS for onboarding
 
