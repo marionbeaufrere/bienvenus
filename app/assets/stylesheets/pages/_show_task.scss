@@ -15,6 +15,10 @@ h3 {
   min-height: calc(100vh - 75px);
 }
 
+.task-show-links {
+  text-decoration: none;
+}
+
 .show-subtask-line {
   display: flex;
 }
@@ -23,20 +27,32 @@ h3 {
   overflow: scroll;
 }
 
-#subtasks-arrow-down {
+.subtasks-arrow-down {
   color: $grey-text !important;
+  transition: transform 0.4s;
   &:hover {
     color: #FFF;
   }
 }
 
+.rotator {
+  transform: rotate(-90deg);
+  transition: transform 0.4s;
+}
+
+.rotater {
+  transform: rotate(90deg);
+  transition: transform 0.6s;
+}
+
 .useful-links-box {
   background-color: #fafafa;
   border-radius: 5px;
-  min-height: 30px;
-  margin-left: 15px;
-  margin-right: 15px;
-  margin-top: 15px;
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  // padding: 10px 0px 10px 0px;
 }
 
 .useful-links-list {

@@ -8,7 +8,6 @@ if ( document.querySelector(".wrap-show-task") ) {
 
 import { intializeButton } from '../components/initialize';
 intializeButton();
-console.log("we love you")
 
 import { hideNextButton } from '../pages/signup';
 
@@ -22,6 +21,11 @@ if (document.getElementById("user-email-crisp")) {
 import { sendWelcomeMessage } from '../components/crisp';
 if (document.getElementById("id-for-chat-welcome")) {
   sendWelcomeMessage();
+};
+
+import { taskToggleArrow } from '../components/subtask_arrow';
+if (document.querySelectorAll("edit-user-btn")) {
+  taskToggleArrow();
 };
 
 import { hidePreviousButton } from '../pages/signup';

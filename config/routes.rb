@@ -6,6 +6,7 @@ Rails.application.routes.draw do
     resources :tasks, only: [:index, :show, :update] do
       member do
         post 'complete_subtasks'
+        get 'destroy_subtasks'
       end
     end
     resources :substasks, only: [:show]

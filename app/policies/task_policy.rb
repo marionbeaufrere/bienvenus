@@ -21,4 +21,8 @@ class TaskPolicy < ApplicationPolicy
   def complete_subtasks?
     @user.user_type == "refugee"
   end
+
+  def destroy_subtasks?
+    @user.user_type == "refugee"
+  end
 end
