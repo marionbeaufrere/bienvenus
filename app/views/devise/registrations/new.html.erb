@@ -21,38 +21,38 @@
         </div>
       </div>
       <div id="middle-item" class="item">
-         <h3><%= t(".sign-up") %></h3>
+        <h3><%= t(".sign-up") %></h3>
         <div class="form-inputs">
-          <%= f.input :email, label: t(".email"), required: true, autofocus: true %>
-          <%= f.input :password, label: t(".password"), required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
-          <%= f.input :password_confirmation, label: t(".confirm-password"), label_html: {class: "police"}, required: true %>
+        <%= f.input :email, label: t(".email"), required: true, autofocus: true %>
+        <%= f.input :password, label: t(".password"), required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
+        <%= f.input :password_confirmation, label: t(".confirm-password"), label_html: {class: "police"}, required: true %>
         </div>
       </div>
-      <div id="last-item" class="item">
-         <h3><%= t(".sign-up") %></h3>
-        <div class="form-inputs">
-          <%= f.input :phone_number, label: t(".phone"), required: true, :input_html => {:style => 'width: 250px margin: 0'} %>
-          <%#= f.input :language, label: "Your preferred language (optional)", required: false %>
-          <br><br>
-          <div class="police largeur">
-            <%= f.input :photo, label: t(".photo"), label_html: {class: "police"} %>
-          </div>
+    <div id="last-item" class="item">
+     <h3><%= t(".sign-up") %></h3>
+      <div class="form-inputs">
+        <%= f.input :phone_number, label: t(".phone"), required: true, :input_html => {:style => 'width: 250px margin: 0'} %>
+      <%#= f.input :language, label: "Your preferred language (optional)", required: false %>
+        <br><br>
+        <div class="police largeur">
+          <%= f.input :photo, label: t(".photo"), label_html: {class: "police"} %>
         </div>
-        <div class="form-actions">
-          <%= f.button :submit, t(".sign-up"), class: "button-rounded hidden", id: 'button-signup' %>
-        </div>
-        <%#= render "devise/shared/links" %>
-        <% end %>
       </div>
+      <div class="form-actions">
+        <%= f.button :submit, t(".sign-up"), class: "button-rounded hidden", id: 'button-signup' %>
+      </div>
+      <%#= render "devise/shared/links" %>
+      <% end %>
     </div>
-   <!-- Left and right controls -->
+  </div>
+<!-- Left and right controls -->
 
-  <a class="left carousel-control signup-control-position-left hidden" href="#signup-carousel" data-slide="prev">
-      <span id="previous"> <%= t(".previous") %></span>
-    <span class="sr-only"><%= t(".previous") %></span>
-  </a>
-  <a class="right carousel-control signup-control-position-right hidden" href="#signup-carousel" data-slide="next">
-    <span id="next"><%= t(".next") %></span>
-    <span class="sr-only"><%= t(".next") %></span>
-  </a>
+<a class="left carousel-control signup-control-position-left hidden signup-control" href="#signup-carousel" data-slide="prev">
+  <span id="previous"> <%= t(".previous") %></span>
+  <span class="sr-only"><%= t(".previous") %></span>
+</a>
+<a class="right carousel-control signup-control-position-right hidden signup-control" href="#signup-carousel" data-slide="next">
+  <span id="next"><%= t(".next") %></span>
+  <span class="sr-only"><%= t(".next") %></span>
+</a>
 </div>
