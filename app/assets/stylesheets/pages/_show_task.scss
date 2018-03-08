@@ -29,6 +29,7 @@ h3 {
 
 .subtasks-arrow-down {
   color: $grey-text !important;
+  transition: transform 0.4s;
   &:hover {
     color: #FFF;
   }
