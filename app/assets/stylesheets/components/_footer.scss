@@ -1,5 +1,7 @@
 .footer{
-  height: 100px;
+  position: sticky;
+  bottom: 0px;
+  height: 70px;
   background-color: $white;
   display: flex;
   justify-content: space-around;
@@ -10,7 +12,7 @@
     color:rgb(200,200,200);
     font-size: 12px
   }
-  margin-top: 30px;
+  padding-top: 15px;
 }
 
 .footer-content{
@@ -19,14 +21,14 @@
   opacity: 1;
   a {
     &:hover{
-      color: $dark-yellow;
+      color: $grey-text;
     }
     &:focus{
-      color: $dark-yellow;
+      color: $grey-text;
     }
   }
   .active{
-    color: $black;
+    color: $grey-text;
     opacity: none !important;
   }
 }
