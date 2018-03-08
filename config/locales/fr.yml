@@ -72,6 +72,9 @@ fr:
         photo: "Ajouter une photo de profil (optionnel)"
         previous: "Précédent"
         next: "Suivant"
+    passwords:
+      edit:
+        characters: "caractères minimum"
 
   shared:
     footer:
@@ -102,7 +105,7 @@ fr:
       title-1-1: "Simplifier les démarches administratives"
       title-1-2: "Pour les réfugiés"
       text-1: "L'administration française peut parfois être difficilement compréhensible. Ainsi, nous vous mettons à disposition
-      un outil vous permettant de suivre et de savoir quuoi faire afin de profiter au maximum de vos droits."
+      un outil vous permettant de suivre et de savoir quoi faire afin de profiter au maximum de vos droits."
       title-2-1: "Sachez exactement"
       title-2-2: "Où vous en êtes"
       text-2: "Nous sommes à votre disposition à chaque étape du processus afin de vous aider à comprendre ce qui est requis.

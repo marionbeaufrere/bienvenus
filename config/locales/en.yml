@@ -40,6 +40,10 @@ en:
         photo: "Upload a profile photo (optional)"
         previous: "Previous"
         next: "Next"
+    passwords:
+      edit:
+        characters: "characters minimum"
+
 
 
   shared:
