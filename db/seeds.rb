@@ -169,12 +169,12 @@ title: "Apply for Social Housing",
 category: cat_b,
 position: 3,
 description: "As a refugee you are entitled to the same access to housing as French citizens.
-There are 3 entities that exist specifically to help refugees to find housing: ‘Dispositif d’Accueil National’ (DNA), ‘Centres d’accueil pour demandeurs d’asile’ (CADA),
-‘Centres Provisoires d’Hébergement’ (CPH) but please keep in mind that finding accommodation is really difficult."
+Three types of shelters are dedicated to refugees, ‘Dispositif d’Accueil National’ (DNA), ‘Centres d’accueil pour demandeurs d’asile’ (CADA),
+‘Centres Provisoires d’Hébergement’ (CPH) but they are often full and access to social housing is really difficult."
 )
 
 e.attributes = { title: "Demander une place en logement social" , description: "Les réfugiés ont les mêmes droits d’accès au logement que les Français. Si le Dispositif National d’Accueil (DNA) leur est réservé, avec les Centres d’accueil pour demandeurs d’asile (CADA) et les Centres Provisoires d’Hébergement (CPH),
-le nombre de places est très insu sant. Dans les faits, se loger est di cile. Les délais sont longs pour un logement social (Habitation à Loyer Modéré, HLM) et le logement privé est souvent inaccessible malgré les aides et des soutiens.", locale: :fr }
+le nombre de places est très insuffisant. Dans les faits, se loger est difficile. Les délais sont longs pour un logement social (Habitation à Loyer Modéré, HLM) et le logement privé est souvent inaccessible malgré les aides et des soutiens.", locale: :fr }
 e.save
 
 f = Task.create!(
@@ -347,19 +347,71 @@ kk.attributes = { title: "Timbre fiscal", description:"Timbre fiscal et Taxe : l
 de 19 euros pour leur premier titre de séjour mais, à la différence des autres étrangers, ils ne paient pas la taxe sur le premier titre de séjour." , locale: :fr }
 kk.save
 
-
 ll = Subtask.create!(
 title: "Confirm a personal address",
-description: "You must have a personal address either at a hotel
-(with a certificate from the hotel and an invoice for the last month),
+description: "You must have a personal address either at a hotel (with a certificate from the hotel and an invoice for the last month),
 at a private property (certificate from the owner, copy of their ID, copy of their property tax document)
 or in a tenant’s home (certificate from the landlord, ID, copy of a gas or electricity bill or other bill).
 Domiciliation through an association is recognised but is more difficult.",
 task: e
 )
-ll.attributes = { title: "Confirmer son adresse personnelle", description: "Vous devez avoir une adresse personnelle à l’hôtel (attestation de l’hôtel et facture du dernier mois), chez un propriétaire (attestation, copie de la carte d’identité, copie de la taxe foncière)
+ll.attributes = { title: "Confirmer votre adresse", description: "Vous devez avoir une adresse personnelle à l’hôtel (attestation de l’hôtel et facture du dernier mois), chez un propriétaire (attestation, copie de la carte d’identité, copie de la taxe foncière)
 ou chez un locataire (attestation, carte d’identité, copie de la facture de gaz ou autre...). La domiciliation par une association est reconnue mais avec plus de dfficultés." , locale: :fr }
 ll.save
+
+aaa = Subtask.create!(
+title: "Register for social housing",
+description: "You can do this as soon as you have your residence permit application ‘récépissé’ (receipt) by sending by post the social housing form Cerfa 14069*02 (with a copy of your receipt)
+to an HLM organisation (list provided by your town hall) or the website Demande de logement social
+(https://www.demande-logement-social.gouv.fr/).",
+task: e
+)
+aaa.attributes = { title: "Demander un logement social", description: "Vous pouvez le faire dès que vous avez votre récépissé de
+demande de titre de séjour. Par courrier, en envoyant le formulaire Cerfa 14069*02 (avec
+la copie de votre récépissé) à un organisme HLM (liste fournie par les mairies) ou sur le site Internet de
+Demande de logement social (https://www.demande-logement-social.gouv.fr/)." , locale: :fr }
+aaa.save
+
+lll = Subtask.create!(
+title: "Prepare your documents",
+description: "Once you have your actual residence permit, prepare a dossier with a copy of the permit, the decision from the Ofpra or the CNDA,
+proof of your income (RSA, CAF, salary...) and form Cerfa 14069*02.",
+task: e
+)
+lll.attributes = { title: "Préparer vos documents", description: "Dès que vous aurez votre titre de séjour, préparer un dossier avec : une copie de votre titre de séjour, de la décision de l'Ofpra ou du CNDA,
+  du justificatif de vos ressources (RSA, CAF, salaires...) et du formulaire Cerfa 14069*02." , locale: :fr }
+lll.save
+
+llll = Subtask.create!(
+title: "Wait for an answer",
+description: "A 'numéro unique départemental pour le logement social' (departmental personal number for social housing) will be sent to you whether you registered by post or on the website.
+From then, a ‘commission d’attribution’ (awarding committee) will examine your dossier.",
+task: e
+)
+llll.attributes = { title: "Attendez une réponse", description: "Votre numéro unique départemental pour le logement social vous sera envoyé à réception de votre dossier
+  que vous vous soyez inscrit par courrier ou sur le site internet. À partir de ce moment, une commission d’attribution examinera votre dossier.", locale: :fr }
+llll.save
+
+bbb = Subtask.create!(
+title: "Accept an offer",
+description: "Once an offer of housing is made to you, you have 10 days to accept or decline it.
+Given the shortage of accommodation in large cities, it is recommended not to refuse HLM housing (social housing) without justified reasons (insalubrity, distance...).",
+task: e
+)
+bbb.attributes = { title: "Accepter une offre", description: "Lorsqu'une proposition de logement vous est faite,
+  vous avez dix jours pour l'accepter ou la refuser. Compte tenu du manque de logements dans les grandes
+villes, il est conseillé de ne pas refuser un logement HLM sans raisons justifiées (insalubrité, isolement...)." , locale: :fr }
+bbb.save
+
+ccc = Subtask.create!(
+title: "Deposit and insurance",
+description: "When you get somewhere to live, you will need to pay a deposit (1 month’s rent excluding charges),
+possibly agency fees, and take out home insurance. Housing insurance is mandatory and must be provided when you sign the lease (rental contract).",
+task: e
+)
+ccc.attributes = { title: "Caution et assurance", description: "Quand vous obtenez un logement, il faut verser une
+caution (1 mois du loyer sans les charges), éventuellement des frais d’agence et prendre une assurance habitation.", locale: :fr }
+ccc.save
 
 
 mm = Subtask.create!(

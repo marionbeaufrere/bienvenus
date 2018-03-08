@@ -3,11 +3,6 @@
   let previousButton = document.querySelector(".signup-control-position-left")
   let firstItem = document.getElementById('first-item');
 
-  let photo = document.getElementById('user_photo')
-  if (signupInputs) {
-     photo.classList.add("hidden");
-   };
-
 function hideNextButton(){
 
   nextButton.addEventListener("click", (event) => {
@@ -37,7 +32,11 @@ const signupInputs = document.querySelectorAll(".first-item-input");
 let emailInputs = document.querySelectorAll("#middle-item input");
 let phoneInput = document.getElementById("user_phone_number");
 let buttonSignup = document.getElementById("button-signup");
+let photo = document.getElementById('user_photo')
 
+  if (photo) {
+    photo.classList.add("hidden");
+  };
 
   if (signupInputs) {
     signupInputs.forEach((input) => {
