@@ -355,7 +355,7 @@ or in a tenant’s home (certificate from the landlord, ID, copy of a gas or ele
 Domiciliation through an association is recognised but is more difficult.",
 task: e
 )
-ll.attributes = { title: "Confirmer son adresse personnelle", description: "Vous devez avoir une adresse personnelle à l’hôtel (attestation de l’hôtel et facture du dernier mois), chez un propriétaire (attestation, copie de la carte d’identité, copie de la taxe foncière)
+ll.attributes = { title: "Confirmer votre adresse", description: "Vous devez avoir une adresse personnelle à l’hôtel (attestation de l’hôtel et facture du dernier mois), chez un propriétaire (attestation, copie de la carte d’identité, copie de la taxe foncière)
 ou chez un locataire (attestation, carte d’identité, copie de la facture de gaz ou autre...). La domiciliation par une association est reconnue mais avec plus de dfficultés." , locale: :fr }
 ll.save
 
@@ -366,7 +366,7 @@ to an HLM organisation (list provided by your town hall) or the website Demande 
 (https://www.demande-logement-social.gouv.fr/).",
 task: e
 )
-aaa.attributes = { title: "S'inscrire pour un logement social", description: "Vous pouvez le faire dès que vous avez votre récépissé de
+aaa.attributes = { title: "Demander un logement social", description: "Vous pouvez le faire dès que vous avez votre récépissé de
 demande de titre de séjour. Par courrier, en envoyant le formulaire Cerfa 14069*02 (avec
 la copie de votre récépissé) à un organisme HLM (liste fournie par les mairies) ou sur le site Internet de
 Demande de logement social (https://www.demande-logement-social.gouv.fr/)." , locale: :fr }
@@ -388,7 +388,7 @@ description: "A 'numéro unique départemental pour le logement social' (departm
 From then, a ‘commission d’attribution’ (awarding committee) will examine your dossier.",
 task: e
 )
-llll.attributes = { title: "Wait for answer", description: "Votre numéro unique départemental pour le logement social vous sera envoyé à réception de votre dossier
+llll.attributes = { title: "Attendez une réponse", description: "Votre numéro unique départemental pour le logement social vous sera envoyé à réception de votre dossier
   que vous vous soyez inscrit par courrier ou sur le site internet. À partir de ce moment, une commission d’attribution examinera votre dossier.", locale: :fr }
 llll.save
 
