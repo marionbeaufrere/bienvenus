@@ -4,35 +4,34 @@
   let firstItem = document.getElementById('first-item');
 
 function hideNextButton(){
+    nextButton.addEventListener("click", (event) => {
+      if( middleItem.classList.contains("active")) {
+        nextButton.classList.add('hidden');
+      }
+      previousButton.classList.remove('hidden');
+    });
 
-  nextButton.addEventListener("click", (event) => {
-    if( middleItem.classList.contains("active")) {
-      nextButton.classList.add('hidden');
-    }
-    previousButton.classList.remove('hidden');
-  });
-
-  previousButton.addEventListener("click", (event) => {
+    previousButton.addEventListener("click", (event) => {
       nextButton.classList.remove('hidden');
       if (middleItem.classList.contains("active")) {
         previousButton.classList.add("hidden");
       }
-  });
-}
+    });
+  }
 
 
-if ( document.getElementById("signup-carousel") ) {
-  hideNextButton();
-};
+  if ( document.getElementById("signup-carousel") ) {
+    hideNextButton();
+  };
 
 
-export { hideNextButton };
+  export { hideNextButton };
 
-const signupInputs = document.querySelectorAll(".first-item-input");
-let emailInputs = document.querySelectorAll("#middle-item input");
-let phoneInput = document.getElementById("user_phone_number");
-let buttonSignup = document.getElementById("button-signup");
-let photo = document.getElementById('user_photo')
+  const signupInputs = document.querySelectorAll(".first-item-input");
+  let emailInputs = document.querySelectorAll("#middle-item input");
+  let phoneInput = document.getElementById("user_phone_number");
+  let buttonSignup = document.getElementById("button-signup");
+  let photo = document.getElementById('user_photo')
 
   if (photo) {
     photo.classList.add("hidden");
@@ -59,12 +58,12 @@ let photo = document.getElementById('user_photo')
     });
   }
 
-const theNextButton = document.querySelector(".signup-control-position-right");
-if (theNextButton) {
-  theNextButton.addEventListener("click", (event) => {
-    theNextButton.classList.add('hidden');
-  });
-}
+  const theNextButton = document.querySelector(".signup-control-position-right");
+  if (theNextButton) {
+    theNextButton.addEventListener("click", (event) => {
+      theNextButton.classList.add('hidden');
+    });
+  }
 
   if (emailInputs) {
     emailInputs.forEach((input) => {
@@ -96,5 +95,24 @@ if (theNextButton) {
       }
     });
   }
+
+
+
+
+const imageInput = document.getElementById("user_photo")
+
+imageInput.addEventListener("change", (event) => {
+  let preview = document.getElementById('image-preview');
+  var file    = document.querySelector('user_photo').files[0];
+  var reader  = new FileReader();
+
+  reader.addEventListener("load", function () {
+    preview.src = reader.result;
+  }, false);
+
+  if (file) {
+    reader.readAsDataURL(file);
+  }
+});
 
 

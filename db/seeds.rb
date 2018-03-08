@@ -101,19 +101,19 @@ cat_l.save
 #   color: "Red"
 # )
 a = Task.create!(
-title: "Update your status from Asylum Seeker to Refugee",
+title: "Update your status from asylum seeker to refugee",
 category: cat_a,
 position: 1,
 description:
 "Obtaining the status of refugee, beneficiary of subsidiary protection or stateless person is the start of a new life with rights and obligations.
-It is a real entry into French society and an administrative and legal break with your country of origin. You need to be prepared for it, as it is a long and di cult process with administrative steps and concrete procedures to follow.
-Once you have refugee status, the ‘récépissé’ (receipt) of international protection or of the application for a residence permit allows you to work and entitles you to civil and social rights (except for social housing, the residence permit is obligatory)."
+It is a real entry into French society and an administrative and legal break with your country of origin. It is a long and difficult process with administrative steps and concrete procedures to follow.
+Once you have refugee status, the ‘récépissé’ (receipt) of international protection or of the application for a residence permit allows you to work and entitles you to civil and social rights."
 )
 
-a.attributes = { title: "Mettez à jour votre statut de demandeur d'asile", description: "L’obtention du statut de réfugié, de protégé subsidiaire ou d’apatride est le début d’une nouvelle vie avec des droits et des obligations.
-  C’est l’entrée réelle dans la société française et la rupture administrative et juridique avec votre pays d’origine. Il faut s’y préparer, c’est le début d’un long et difficile parcours,
-  fait d’étapes administratives et de démarches concrètes, qui est difficile. Quand vous avez le statut, le récépissé de protection internationale ou de demande de carte de séjour vous autorise à travailler
-  et ouvre vos droits civils et sociaux (sauf pour le logement social, le titre de séjour est obligatoire).", locale: :fr }
+a.attributes = { title: "Passer du statut de demandeur d'asile à celui de réfugié", description: "L’obtention du statut de réfugié, de protégé subsidiaire ou d’apatride est le début d’une nouvelle vie avec des droits et des obligations.
+  C’est l’entrée réelle dans la société française et la rupture administrative et juridique avec votre pays d’origine. C’est le début d’un parcours long et difficile,
+  fait d’étapes administratives et de démarches concrètes. Quand vous avez le statut, le récépissé de protection internationale ou de demande de carte de séjour vous autorise à travailler
+  et ouvre vos droits civils et sociaux.", locale: :fr }
 a.save
 
 b = Task.create!(
@@ -121,17 +121,16 @@ title: "Obtain a residence permit",
 category: cat_a,
 position: 2,
 description:
-"As a refugee, you are entitled to a resident card valid 10 years, automatically recreateable.
-- What for ? You will be able to open a bank account, change your driver’s licence, have access to social homing and request travel documents
-- When can I ask for it ? depending on the prefecture your belong, you can ask for it as soon as you sign the CIR or sometime you will
-have to wait for the Ofpra to put together and send your civil status documents
-- How long does it take ? Delays can vary depending on the prefecture."
+"As a refugee, you are entitled to a resident card valid 10 years, automatically renewable.
+You will then be able to open a bank account, change your driver’s licence, have access to social housing and request travel documents.
+You usually can ask for it as soon as you sign the CIR but, depending on the prefecture your belong to, you might have to wait for the OFPRA to put together and send your civil status documents.
+The time it will take varies depending on the prefecture."
 )
 
-b.attributes = { title: "Obtenir sa carte de séjour", description: "Les réfugiés statutaires ont droit à une carte de résident en France d’une durée de dix ans,
-les protégés subsidiaires et apatrides à une carte de séjour temporaire de un an renouvelable.
-Pour avoir ce titre de séjour, une visite médicale à l’Offi (Office Français de l’Immigration et de l’Intégration) est obligatoire.
-La signature du « Contrat d’Intégration Républicaine » (CIR) ne l’est pas mais elle est fortement conseillée." , locale: :fr }
+b.attributes = { title: "Obtenir sa carte de séjour", description: "Les réfugiés statutaires ont droit à une carte de résident en France d’une durée de dix ans.
+Cette carte vous permettra d'ouvrir un compte en banque, de changer votre permis de conduire, d'avoir accès à un logement social et de demander un titre de voyage.
+En général, vous pouvez la demander dès la signature du CIR, mais certaines préfecture demandent d'attendre d'avoir reçu de l'OFPRA les documents confirmant votre statut.
+Cela peut durer plus ou moins longtemps suivant les préfectures." , locale: :fr }
 b.save
 
 c = Task.create!(
@@ -139,29 +138,28 @@ title: "Obtain your civil status certificates",
 category: cat_a,
 position: 2,
 description:
-"What are the civil status certificates? birth certificate, marriage certificate, death certificate, family record book for marriages that took place abroad and
-for minors born outside France, 'certificat administratif' for protected minors & 'certificat de coutume' if you want to get married or having a civil partnership.
-Who delivers them ? The OFPRA."
+"All the civil status certificates (birth certificate, marriage certificate, death certificate, family record book (for marriages that took place abroad and
+for minors born outside France), 'certificat administratif' for protected minors & 'certificat de coutume' - to get married or have a civil partnership)
+are delivered by the OFPRA."
 )
 
-c.attributes = { title: "Récupérer ses documents d'état civil" , description: " Les documents d’état civil que délivre l’Ofpra sont les actes de naissance, de mariage, de décès et le livret de famille (pour les mariages célébrés à l’étranger et pour les mineurs nés à l’étranger).
-Pour un mariage ou une naissance d’un enfant en France, les mairies qui les ont enregistrés délivrent l’acte de mariage, le livret de famille et l’acte de naissance.
-L’Ofpra établit également le « certi cat administratif » (pour les mineurs protégés) et le « certi cat de coutume » (pour pouvoir se marier ou se pacser). ", locale: :fr }
+c.attributes = { title: "Obtenir des documents d'état civil" , description: "Tous les documents d’état civil (actes de naissance, de mariage, de décès, livret de famille (pour les mariages célébrés à l’étranger et pour les mineurs nés à l’étranger),
+« certificat administratif » (pour les mineurs protégés) et « certificat de coutume » (pour pouvoir se marier ou se pacser) sont délivrés par l'OFPRA. ", locale: :fr }
 c.save
 
 d = Task.create!(
 title: "Learn French",
 category: cat_c,
 position: 3,
-description: "Learning French is essential in everyday life in order to better understand administrative procedures, and a job and
-housing, defend your rights and make your start in society easier. It is also a right that France must repect: as a host country,
+description: "Learning French is essential in everyday life in order to better understand administrative procedures, find a job and
+housing, defend your rights and make your start in society easier. It is also a right that France must respect: as a host country,
 its role is to stimulate the integration of refugees, in particular by learning French. It is vital for all refugees to speak and
 use French at every opportunity."
 )
 
-d.attributes = { title: "Apprendre le français" , description: "Apprendre le français est essentiel dans la vie quotidienne pour mieux comprendre les démarches administratives, avoir un emploi et un logement, défendre ses droits et faciliter son entrée dans la société.
+d.attributes = { title: "Apprendre le français", description: "Apprendre le français est essentiel dans la vie quotidienne pour mieux comprendre les démarches administratives, trouver un emploi et un logement, défendre ses droits et faciliter son entrée dans la société.
 C’est aussi un droit auquel la France doit répondre : son rôle en tant que société d’accueil est de favoriser l’intégration des réfugiés, notamment par l’apprentissage du français.
-Le réfugié doit pro ter de toutes les opportunités pour parler et pratiquer le français, c’est indispensable.", locale: :fr }
+Le réfugié doit profiter de toutes les opportunités pour parler et pratiquer le français.", locale: :fr }
 d.save
 
 e = Task.create!(
@@ -173,7 +171,7 @@ Three types of shelters are dedicated to refugees, ‘Dispositif d’Accueil Nat
 ‘Centres Provisoires d’Hébergement’ (CPH) but they are often full and access to social housing is really difficult."
 )
 
-e.attributes = { title: "Demander une place en logement social" , description: "Les réfugiés ont les mêmes droits d’accès au logement que les Français. Si le Dispositif National d’Accueil (DNA) leur est réservé, avec les Centres d’accueil pour demandeurs d’asile (CADA) et les Centres Provisoires d’Hébergement (CPH),
+e.attributes = { title: "Demander un logement social" , description: "Les réfugiés ont les mêmes droits d’accès au logement que les Français. Si le Dispositif National d’Accueil (DNA) leur est réservé, avec les Centres d’accueil pour demandeurs d’asile (CADA) et les Centres Provisoires d’Hébergement (CPH),
 le nombre de places est très insuffisant. Dans les faits, se loger est difficile. Les délais sont longs pour un logement social (Habitation à Loyer Modéré, HLM) et le logement privé est souvent inaccessible malgré les aides et des soutiens.", locale: :fr }
 e.save
 
@@ -185,21 +183,22 @@ description: "French law guarantees what we call the ‘droit au compte’ (the 
 every person that lives in France, including refugees, has the right to open a ‘compte courant’ (current account) and not just a ‘Livret A’ (savings account)."
 )
 
-f.attributes = { title:"Ouvrir un compte bancaire" , description:"Avoir un compte bancaire est indispensable pour percevoir les prestations sociales, pour l’emploi, le logement et la vie quotidienne.
-La loi française garantit ce que l’on appelle le « droit au compte » : toute personne qui habite en France, dont les réfugiés, a le droit d’ouvrir un compte courant (et pas seulement un livret A)." , locale: :fr }
+f.attributes = { title:"Ouvrir un compte bancaire" , description: "La loi française garantit ce que l’on appelle le « droit au compte » : toute personne qui habite en France, dont les réfugiés, a le droit d’ouvrir un compte courant (et pas seulement un livret A)." , locale: :fr }
 f.save
 
 g = Task.create!(
-title: "Get your driver's license",
+title: "Exchange your driver's license",
 category: cat_e,
 position: 3,
-description: "If you have driver’s licence, you can exchange it the first year of your residence permit, even if it has expired.
-Mobility – the possibility of travelling in France and abroad – is essential for refugee integration, be it for work, housing or in order to do what you would like to do.
-A majority of refugees live in the Paris area, when better living conditions may exist elsewhere in France. You need courage to move around once you have received your refugee status – curiosity too - but it can be beneficial."
+description: "If you have driver’s licence, you can exchange it the first year of your residence permit, even if it has expired. Afterwards, you will have to retake the exam.
+To do that, you will need to provide at the préfecture your original licence translated by a sworn translator (the national licence and not the international licence, which is temporary), the
+3 completed forms (you can get these from the prefecture), the residence permit, proof of ID and a photo. For special licences (C and D), a medical visit to a doctor certified by
+the prefecture is mandatory (you will need to pay for this)."
 )
 
-g.attributes = { title: "Obtenir son permis de conduire", description: " Pour le permis de conduire, les documents à fournir en préfecture sont votre permis original traduit par un traducteur assermenté (permis national et non le permis international qui est provisoire),
-les 3 formulaires remplis (à retirer en préfecture), le titre de séjour, le justi catif d’identité et une photo d’identité. Pour les permis C et D, une visite médicale (payante) chez un médecin agréé par la préfecture est obligatoire.
+g.attributes = { title: "Changer son permis de conduire", description: "Si vous avez le permis de conduire, vous pouvez l'échanger durant la première année de votre titre de séjour après vous devrez le repasser.
+Pour le permis de conduire, les documents à fournir en préfecture sont votre permis original traduit par un traducteur assermenté (permis national et non le permis international qui est provisoire),
+les 3 formulaires remplis (à retirer en préfecture), le titre de séjour, le justificatif d’identité et une photo d’identité. Pour les permis C et D, une visite médicale (payante) chez un médecin agréé par la préfecture est obligatoire.
 " , locale: :fr }
 g.save
 
@@ -211,8 +210,8 @@ description: "As soon as you receive the ‘récépissé’ (receipt) for your r
 Registering with Pôle emploi can be difficult, so ask for help from a Pôle emploi advisor, an association or a service such as Emmaüs Connect."
 )
 
-h.attributes = { title: "Trouver un travail", description: "Dès l’obtention de votre statut (Ofpra ou CNDA), vous allez à la préfecture de votre domicile pour changer votre récépissé de demandeur d’asile en récépissé de réfugié avec la mention « reconnu réfugié ;
-  autorise son titulaire à travailler ». Ou, pour les protégés subsidiaires, avec la mention « décision favorable de l’Ofpra/de la Cnda en date du ..., autorise son titulaire à travailler " , locale: :fr }
+h.attributes = { title: "Trouver un travail", description: "Dès l’obtention de votre récépissé de demande de carte de séjour (sur lequel est inscrit « autorise son titulaire à travailler »), vous pouvez travailler et vous inscrire à « Pôle Emploi ».
+  S'inscire à Pôle Emploi peut être difficile, n'hésitez pas à vous faire aider par un conseiller de Pôle Emploi, une association ou un service comme Emmaüs Connect.", locale: :fr }
 h.save
 
 ################### TASK 1 - SUBTASKS ######################################################################
@@ -220,30 +219,28 @@ h.save
 
 aa = Subtask.create!(
 title: "Change your receipt",
-description: "Change your receipt from asylum seeker to refugee with the mention “reconnu réfugié;
-autorise son titulaire à travailler” (recognised as a refugee; authorises the holder to work).",
+description: "As soon as you obtain your status (Ofpra or CNDA), go to the prefecture in your home town to change your receipt from asylum seeker to refugee with the mention
+“reconnu réfugié ; autorise son titulaire à travailler” (recognised as a refugee; authorises the holder to work).",
 task: a
 )
-aa.attributes = { title: "Modifiez votre récipissé", description:"Dès l’obtention de votre statut (Ofpra ou CNDA),
+aa.attributes = { title: "Échanger son récépissé", description: "Dès l’obtention de votre statut (OFPRA ou CNDA),
 vous allez à la préfecture de votre domicile pour changer votre récépissé de demandeur d’asile en récépissé de réfugié
 avec la mention « reconnu réfugié ; autorise son titulaire à travailler »" , locale: :fr }
 aa.save
 
 bb = Subtask.create!(
 title: "Complete the fiche familiale de référence",
-description: "You must complete and return it to the Ofpra along with all of your original documents (ID card, passport, birth certi cate, marriage certificate
-(including religious or traditional marriages in the country of origin)) by registered mail with con rmation of receipt.",
+description: "It will be sent to you by OFPRA when you get your status. You must complete it and return it to the OFPRA along with all of your original documents (ID card, passport, birth certificate, marriage certificate
+(including religious or traditional marriages in the country of origin)) by registered mail with confirmation of receipt.",
 task: a
 )
-bb.attributes = { title: "Compléter la fiche familiale de référence", description: "La « fiche familiale de référence » est envoyée par l’Ofpra après l’obtention de votre statut.
-  Elle permet de constituer votre état civil complet. Vous devez la renvoyer remplie à l’Ofpra par courrier recommandé avec accusé de réception avec tous vos documents originaux
-  (carte d’identité, passeport, acte de naissance, certi cat de mariage, y compris les mariages religieux et coutumiers dans le pays d’origine...)." , locale: :fr }
+bb.attributes = { title: "Compléter la fiche familiale de référence", description: "Elle vous sera envoyée par l’OFPRA après l’obtention de votre statut. Vous devez la renvoyer remplie à l’OFPRA par courrier recommandé avec accusé de réception avec tous vos documents originaux
+  (carte d’identité, passeport, acte de naissance, certificat de mariage, y compris les mariages religieux et coutumiers dans le pays d’origine...)." , locale: :fr }
 bb.save
 
 cc = Subtask.create!(
 title: "Confirm a personal address",
-description: "You must have a personal address either at a hotel
-(with a certificate from the hotel and an invoice for the last month),
+description: "You must have a personal address either at a hotel (with a certificate from the hotel and an invoice for the last month),
 at a private property (certificate from the owner, copy of their ID, copy of their property tax document)
 or in a tenant’s home (certificate from the landlord, ID, copy of a gas or electricity bill or other bill).
 Domiciliation through an association is recognised but is more difficult.",
@@ -362,8 +359,7 @@ ll.save
 aaa = Subtask.create!(
 title: "Register for social housing",
 description: "You can do this as soon as you have your residence permit application ‘récépissé’ (receipt) by sending by post the social housing form Cerfa 14069*02 (with a copy of your receipt)
-to an HLM organisation (list provided by your town hall) or the website Demande de logement social
-(https://www.demande-logement-social.gouv.fr/).",
+to an HLM organisation (list provided by your town hall) or the website" <%= link_to "Demande de logement social", "https://www.demande-logement-social.gouv.fr/"".",
 task: e
 )
 aaa.attributes = { title: "Demander un logement social", description: "Vous pouvez le faire dès que vous avez votre récépissé de
@@ -374,11 +370,11 @@ aaa.save
 
 lll = Subtask.create!(
 title: "Prepare your documents",
-description: "Once you have your actual residence permit, prepare a dossier with a copy of the permit, the decision from the Ofpra or the CNDA,
+description: "Once you have your actual residence permit, prepare a dossier with a copy of the permit, the decision from the OFPRA or the CNDA,
 proof of your income (RSA, CAF, salary...) and form Cerfa 14069*02.",
 task: e
 )
-lll.attributes = { title: "Préparer vos documents", description: "Dès que vous aurez votre titre de séjour, préparer un dossier avec : une copie de votre titre de séjour, de la décision de l'Ofpra ou du CNDA,
+lll.attributes = { title: "Préparer vos documents", description: "Dès que vous aurez votre titre de séjour, préparer un dossier avec : une copie de votre titre de séjour, de la décision de l'OFPRA ou du CNDA,
   du justificatif de vos ressources (RSA, CAF, salaires...) et du formulaire Cerfa 14069*02." , locale: :fr }
 lll.save
 
