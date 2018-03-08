@@ -17,9 +17,9 @@ en:
       sub-header: "Please tell us if you've already completed these then click on 'I'm ready!"
       button: "I'm ready"
     show:
-      title: "Congratulations!"
-      description: “You’re all set, you can start your other tasks now 🤗“
-      success: ""
+      alert_title: "Congratulations!"
+      alert_description: "You’re all set, \n you can start your other tasks now 🤗"
+      alert_success: "icon: success"
 
   users:
     show:

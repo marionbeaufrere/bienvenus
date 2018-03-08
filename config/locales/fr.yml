@@ -49,8 +49,9 @@ fr:
       button: "Je suis prêt"
     show:
       alert_title: "Bravo!"
-      alert_description: “Vous pouvez désormais passer aux autres tâches 🤗“
-      alert_success: ""
+      alert_description: "Vous pouvez désormais \n passer aux autres tâches 🤗"
+      alert_success: "icon: success"
+
 
   users:
     show:

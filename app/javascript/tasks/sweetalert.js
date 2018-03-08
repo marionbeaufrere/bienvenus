@@ -9,7 +9,6 @@ function sweetAlertReturn() {
       const redirectionUrl = e.currentTarget.dataset.redirectionUrl;
       const alertTitle = e.currentTarget.dataset.alertTitle;
       const alertDescription = e.currentTarget.dataset.alertDescription;
-      const alertSuccess = e.currentTarget.dataset.alertSuccess;
 
       if (
           unmarkedSubtasksCount == 1 &&
@@ -19,7 +18,7 @@ function sweetAlertReturn() {
         swal({
           title: alertTitle,
           text: alertDescription,
-          icon: alertSuccess,
+          icon: "success",
         }).then((value) => {
           window.location = redirectionUrl;
         });
