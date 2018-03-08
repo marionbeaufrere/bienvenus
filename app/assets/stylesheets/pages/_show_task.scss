@@ -27,27 +27,35 @@ h3 {
   overflow: scroll;
 }
 
-#subtasks-arrow-down {
+.subtasks-arrow-down {
   color: $grey-text !important;
   &:hover {
     color: #FFF;
   }
 }
 
+.rotator {
+  transform: rotate(-90deg);
+  transition: transform 0.4s;
+}
+
+.rotater {
+  transform: rotate(90deg);
+  transition: transform 0.6s;
+}
+
 .useful-links-box {
   background-color: #fafafa;
   border-radius: 5px;
   width: 500px;
-  min-height: 30px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 20px;
-  padding: 10px 0px 10px 0px;
+  // padding: 10px 0px 10px 0px;
 }
 
 .useful-links-list {
   color: $grey-text;
-
 }
 
 .show-subtask-circle, .show-subtask-btn {

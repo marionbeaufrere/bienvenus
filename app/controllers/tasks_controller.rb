@@ -47,7 +47,7 @@ class TasksController < ApplicationController
     end
     respond_to do |format|
       format.html { redirect_to initialize_path }
-      format.js
+      format.js { render :create }
     end
     current_user.update_user_access
   end
@@ -60,7 +60,7 @@ class TasksController < ApplicationController
     end
     respond_to do |format|
       format.html { redirect_to initialize_path }
-      format.js
+      format.js { render :create }
     end
     current_user.update_user_access
   end

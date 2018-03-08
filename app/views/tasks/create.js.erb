@@ -1,5 +1,5 @@
 function refreshInitializer(innerHTML) {
   const initialTasks = document.getElementById('task_<%= @task.id %>');
-  initialTasks.innerHTML = '<%= j render "initializer", task: @task %>';
+  initialTasks.innerHTML = '<%= j render "initialize", task: @task %>';
 }
 refreshInitializer();
