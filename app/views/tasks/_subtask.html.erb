@@ -1,11 +1,13 @@
 <div class="card-header" id="heading<%= subtask.id %>">
   <div id="subtask_<%= subtask.id %>" class="subtask-flexbox">
     <%= render 'subtask_form', subtask: subtask %>
+    <div class="underline-subtask"></div>
   </div>
 </div>
 
 <div id="collapse<%= subtask.id %>" class="collapse" aria-labelledby="heading<%= subtask.id %>" data-parent="#accordion">
-  <div class="card-body">
+  <div class="card-body-task">
     <%= subtask.description %>
   </div>
 </div>
+
