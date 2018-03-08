@@ -6,17 +6,22 @@ function sweetAlertReturn() {
   if (subtaskList) {
     subtaskList.addEventListener('click', (e) => {
       const unmarkedSubtasksCount = document.querySelectorAll(".show-subtask-btn").length;
+      const redirectionUrl = e.currentTarget.dataset.redirectionUrl;
+      const alertTitle = e.currentTarget.dataset.alertTitle;
+      const alertDescription = e.currentTarget.dataset.alertDescription;
+      const alertSuccess = e.currentTarget.dataset.alertSuccess;
 
       if (
           unmarkedSubtasksCount == 1 &&
           (e.target.classList.contains('show-subtask-btn') || e.target.classList.contains('fa-check'))
         ) {
+
         swal({
-          title: "Congratulations!",
-          text: "You're all set ☺️, \n you can start your other tasks now",
-          icon: "success",
+          title: alertTitle,
+          text: alertDescription,
+          icon: alertSuccess,
         }).then((value) => {
-          window.location = '/tasks';
+          window.location = redirectionUrl;
         });
       }
     });

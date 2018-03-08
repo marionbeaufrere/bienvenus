@@ -16,6 +16,10 @@ en:
       header: "Have you done these ?"
       sub-header: "Please tell us if you've already completed these then click on 'I'm ready!"
       button: "I'm ready"
+    show:
+      title: "Congratulations!"
+      description: “You’re all set, you can start your other tasks now 🤗“
+      success: ""
 
   users:
     show:
