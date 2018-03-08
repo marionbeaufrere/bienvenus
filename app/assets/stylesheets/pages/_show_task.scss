@@ -80,6 +80,14 @@ h3 {
   line-height: 2em;
   height: 50%;
   overflow: scroll;
+  i {
+    line-height: 2em;
+  }
+}
+
+.show-subtask-btn:focus {
+    outline: none !important;
+    box-shadow: none !important;
 }
 
 .task {
