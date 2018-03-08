@@ -39,7 +39,7 @@ let emailInputs = document.querySelectorAll("#middle-item input");
 let phoneInput = document.getElementById("user_phone_number");
 let buttonSignup = document.getElementById("button-signup");
 
-// function validateForm(){
+
   if (signupInputs) {
     signupInputs.forEach((input) => {
       input.addEventListener("keyup", (event) => {
@@ -68,48 +68,35 @@ if (theNextButton) {
   });
 }
 
-  // if (emailInputs) {
-  //   emailInputs.forEach((input) => {
-  //     input.addEventListener("keyup", (event) => {
-  //       let errors = 0;
-  //       emailInputs.forEach((i) => {
-  //         if (i.value.length === 0) {
-  //           errors += 1;
-  //         }
-  //       });
-  //       if (errors === 0) {
-  //         nextButton.classList.remove('hidden');
-  //         nextButton.addEventListener("click", (event) => {
-  //           nextButton.classList.add('hidden');
-  //         });
-  //       } else {
-  //         // const next = document.querySelector(".signup-control-position-right");
-  //         nextButton.classList.remove('hidden');
-  //         nextButton.classList.add('hidden');
-  //       }
-  //     });
-  //   });
-  // }
+  if (emailInputs) {
+    emailInputs.forEach((input) => {
+      input.addEventListener("keyup", (event) => {
+        let errors = 0;
+        emailInputs.forEach((i) => {
+          if (i.value.length === 0) {
+            errors += 1;
+          }
+        });
+        if (errors === 0) {
+          nextButton.classList.remove('hidden');
+          nextButton.addEventListener("click", (event) => {
+            nextButton.classList.add('hidden');
+          });
+        } else {
+          nextButton.classList.remove('hidden');
+          nextButton.classList.add('hidden');
+        }
+      });
+    });
+  }
 
-  // if (phoneInput) {
+  if (phoneInput) {
 
-  //   phoneInput.addEventListener("keyup", (event) => {
-  //     if (phoneInput.value.length !== 0) {
-  //     //   buttonSignup.classList.add("hidden");
-  //     // } else {
-  //       buttonSignup.classList.remove("hidden");
-  //       // buttonSignup.classList.add("hidden");
-  //     }
-  //   });
-  // }
+    phoneInput.addEventListener("keyup", (event) => {
+      if (phoneInput.value.length !== 0) {
+        buttonSignup.classList.remove("hidden");
+      }
+    });
+  }
 
 
-// }
-
-
-
-// if ( document.getElementById("signup-carousel") ) {
-//   validateForm();
-// };
-
-// export { validateForm };
