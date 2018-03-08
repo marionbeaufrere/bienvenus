@@ -36,12 +36,13 @@
   border: 0;
   background: $white;
   text-transform: uppercase;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.05em;
   color: $grey-button;
   top: 500px;
-  border: 2px solid $white;
+  border: 2px solid $grey-button;
   border-radius: 5px;
   font-size: 16px;
+  font-weight: bold;
   outline: 0;
   padding: 12px;
   transition: opacity 0.4s $bezier, background 0.4s $bezier;
