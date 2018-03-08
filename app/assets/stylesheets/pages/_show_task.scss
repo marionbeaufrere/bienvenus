@@ -16,7 +16,7 @@ h3 {
 }
 
 .task-show-links {
-  text-decoration: none;
+  color: $grey-text;
 }
 
 .show-subtask-line {
@@ -24,19 +24,21 @@ h3 {
 }
 
 .card-header {
-  overflow: scroll;
 }
 
 .subtasks-arrow-down {
   color: $grey-text !important;
   transition: transform 0.4s;
+  position: absolute;
+  right: 10px;
+  top: 10px;
   &:hover {
     color: #FFF;
   }
 }
 
 .rotator {
-  transform: rotate(-90deg);
+  transform: rotate(-180deg);
   transition: transform 0.4s;
 }
 
@@ -48,15 +50,16 @@ h3 {
 .useful-links-box {
   background-color: #fafafa;
   border-radius: 5px;
-  width: 500px;
+  width: 76%;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 20px;
+  margin-top: 30px;
   // padding: 10px 0px 10px 0px;
 }
 
 .useful-links-list {
-  color: $grey-text;
+  list-style-type: none;
+  color: #5C5A5A;
 }
 
 .show-subtask-circle, .show-subtask-btn {
@@ -150,6 +153,10 @@ h3 {
   }
 }
 
+.title-card-task p {
+  padding-left: 10px;
+}
+
 .details__inner {
   padding: 15px 30px;
 }
@@ -164,7 +171,23 @@ h3 {
   height: 85%;
 }
 
+.card-body-task {
+  padding: 15px 30px;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
 .subtask-flexbox {
   display: flex;
-  justify-content: space-between;
+  // border-bottom: 1px solid $grey-text;
+  position: relative;
+  align-items: left;
+}
+
+.underline-subtask {
+  border-bottom: 1px solid #ececeb;
+  position: absolute;
+  bottom: 0;
+  width: 75%;
+  left: 30px;
 }

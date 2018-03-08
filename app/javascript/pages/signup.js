@@ -3,12 +3,7 @@
   let previousButton = document.querySelector(".signup-control-position-left")
   let firstItem = document.getElementById('first-item');
 
-
-
-
-
-  function hideNextButton(){
-
+function hideNextButton(){
     nextButton.addEventListener("click", (event) => {
       if( middleItem.classList.contains("active")) {
         nextButton.classList.add('hidden');
