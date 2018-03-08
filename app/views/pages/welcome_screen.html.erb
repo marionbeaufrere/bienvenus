@@ -1,10 +1,10 @@
 <div class = "welcome-container">
    <div class="img-flag text-right">
-    <% if I18n.locale == I18n.default_locale %>
+    <%# if I18n.locale == I18n.default_locale %>
       <%= link_to (image_tag "france.png"), { :locale=>'fr' } %>
-    <% else %>
-      <%= link_to (image_tag "uk.png"), { :locale=> nil } %>
-    <%end%>
+    <%# else %>
+      <%= link_to (image_tag "uk.png"), { :locale=> '' } %>
+    <%#end%>
   </div>
 <!--     <h4><em> An app to help refugees with their paperwork </em></h4>
   <h5><em> (Currently only available for French paperwork) </em> </h5> -->
