@@ -44,8 +44,8 @@ fr:
       header: "A FAIRE"
       sub-header: "FAIT"
     initializer:
-      header: "Qu'avez-vous déjà fait ?"
-      sub-header: "Spécifiez-nous si vous avez accompli une de ces tâches puis cliquez sur 'Je suis prêt' "
+      header: "Où en-êtes vous?"
+      sub-header: "Dites-nous si vous avez déjà accompli une de ces tâches, puis cliquez sur 'Je suis prêt' "
       button: "Je suis prêt"
     show:
       alert_title: "Bravo!"
@@ -119,5 +119,5 @@ fr:
     resources:
       map: "Plus d'informations"
     welcome_screen:
-      get_started: "Débuter"
-      sign_in: "Connexion"
+      get_started: "Je commence"
+      sign_in: "Je me connecte"

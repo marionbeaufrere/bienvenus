@@ -21,7 +21,7 @@ function getPhoto() {
 
 function sendWelcomeMessage() {
   const firstName = document.getElementById("user-email-crisp").getAttribute("data-first-name").charAt(0).toUpperCase() + document.getElementById("user-email-crisp").getAttribute("data-first-name").slice(1);
-  const message = "Welcome to Bienvenus, " + firstName + " 🤗 Let us know if you need help!";
+  const message = "Bienvenue, " + firstName + " 🤗 \n";
   console.log(message);
   $crisp.push(["do", "message:show", ["text",message]])
 };

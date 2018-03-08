@@ -3,12 +3,25 @@
   width: 315px;
 }
 
+.control-label {
+  color: $grey-text !important;
+}
+
 .sign-in-container {
-  display: flex;
-  justify-content: center;
-  padding: 20px;
-  width: 327px;
+  margin-top: 80px;
+  text-align: center;
+}
+
+abbr {
+  text-decoration: none;
+}
+
+.fnln {
   margin-top: 50px;
+}
+
+.fnln-2 {
+  margin-top: 39px;
 }
 
 .police {
@@ -78,6 +91,10 @@
   font-weight: lighter;
   font-size: 22px;
   text-decoration: underline;
+}
+
+.signup-control:hover {
+  color: $green-button;
 }
 
 

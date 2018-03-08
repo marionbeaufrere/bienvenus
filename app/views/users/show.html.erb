@@ -1,8 +1,9 @@
-<div class="my-container">
-  <div class="user-show">
-    <div class="user-profile-name">
-      <h1><%= @user.first_name.capitalize %> <%= @user.last_name.capitalize %></h1>
-    </div>
+
+ <div class="welcome-container">
+  <!-- <div class="user-show"> -->
+    <!-- <div class="user-profile-name"> -->
+      <h1 style="font-size: 40px"><%= @user.first_name.capitalize %> <%= @user.last_name.capitalize %></h1>
+    <!-- </div> -->
     <div>
       <% if current_user.photo.file.nil?  %>
         <%= image_tag 'medium_fox.png', height: 150, width: 150 %>
@@ -11,7 +12,6 @@
       <% end %>
     </div>
     <div class="user-details">
-      <br><br>
       <p><%= t('.email') %>: <%= current_user.email %></p>
       <p><%= t('.phone_number') %>: <%= current_user.phone_number%></p>
       <!-- FORM BUTTON -->
@@ -29,10 +29,10 @@
       <p> <%= t(".sign_out") %></p>
       <% end %>
     </div>
-  </div>
+<!--   </div> -->
   <% if current_user.admin %>
     <%= link_to "Add a task", new_admin_task_path, class: "button-normal text-center", id:"button-admin" %>
   <% end %>
-
 </div>
+
 <%= render 'shared/footer' %>
