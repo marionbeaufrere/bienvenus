@@ -5,3 +5,10 @@
   width: 100%;
   background: linear-gradient(135deg, $yellow-bienvenus 0%, $yellow-bienvenus 50%, white 50%, white 100%);
 }
+.test {
+    overflow-y: scroll;
+  height: 100vh;
+  position: fixed;
+  width: 100%;
+  background-color: white;
+}

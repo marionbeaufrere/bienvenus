@@ -1,3 +1,3 @@
-const micSubtaskDescription = document.querySelectorAll('.subtask-list');
+// const micSubtaskDescription = document.querySelectorAll('.subtask-list');
 
 
