@@ -1,7 +1,14 @@
+
+
 <div class="my-container">
-  <h1> <%= t('.map') %></h1>
-  <br>
-  <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1JgjMBRNupmhxYI6yuMFk0u6CAZt-Ixd3" width="375" height="420" id="services_map">
-  </iframe>
+  <h1><%= t(".map") %></h1>
+  <div class="resource-card">
+    <div class="map-card" style="background-image: url(<%= image_path('background-map.png')%>);">
+      <%= link_to "Map", map_path, class: "card-link card-link:hover"%>
+    </div>
+    <div class="text-card">
+      <p>Resources</p>
+    </div>
+  </div>
 </div>
 <%= render 'shared/footer' %>

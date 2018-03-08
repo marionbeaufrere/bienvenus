@@ -6,6 +6,7 @@ Rails.application.routes.draw do
     resources :tasks, only: [:index, :show, :update] do
       member do
         post 'complete_subtasks'
+        get 'destroy_subtasks'
       end
     end
     resources :substasks, only: [:show]
@@ -16,6 +17,7 @@ Rails.application.routes.draw do
     get '/pages/are_you', to: 'pages#are_you', as: 'are_you'
     get '/pages/asylum_seeker', to: 'pages#asylum_seeker', as: 'asylum_seeker'
     get '/pages/resources', to: 'pages#resources', as: 'resources'
+    get '/pages/map', to: 'pages#map', as: 'map'
 
     namespace :admin do
       resources :tasks, only: [:show, :new, :create, :edit, :update] do

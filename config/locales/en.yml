@@ -79,7 +79,7 @@ en:
       previous: "Previous"
       next: "Next"
     resources:
-      map: "Map of services"
+      map: "More info"
     welcome_screen:
       get_started: "Get Started"
       sign_in: "Sign in"

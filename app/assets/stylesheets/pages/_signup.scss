@@ -1,29 +1,50 @@
 .sign-up-container {
   padding: 20px;
   width: 315px;
+}
 
+.sign-in-container {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  width: 327px;
+  margin-top: 50px;
 }
 
 .police {
   color: $grey-text;
+  font-size: 16px;
 }
 
+.remember_me {
+  width: 100%;
+}
 
 .signup-control-position-right {
-  top: 80%;
-  right: 30% !important;
+  top: 75%;
+  right: 15% !important;
 }
 
 .signup-control-position-left {
-  top: 80%;
+  top: 75%;
   left: 12% !important;
 }
 
-.button-next {
-  padding-left: 35px;
-  padding-right: 35px;
-  text-align: center;
+#button-signin{
+  margin-top: 10px;
+  margin-bottom: 20px;
+  width: 100%;
 }
+
+.signin-links {
+  margin: 10px 20px;
+}
+
+// .button-next {
+//   padding-left: 35px;
+//   padding-right: 35px;
+//   text-align: center;
+// }
 
 .help-block {
   margin-top: 10px !important;
@@ -31,3 +52,30 @@
   margin-bottom: 10px !important;
   padding-bottom: 0 !important;
 }
+
+.form-control {
+  height: 45px;
+  border-radius: 5px;
+}
+
+.form-control:focus {
+  border: 2px solid $dark-yellow;
+  box-shadow: none;
+}
+
+.carousel-control {
+  color: $white;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.signup-control {
+  color: $green-button;
+  opacity: 1;
+  text-shadow: none;
+  font-weight: lighter;
+  font-size: 22px;
+  text-decoration: underline;
+}
+
+

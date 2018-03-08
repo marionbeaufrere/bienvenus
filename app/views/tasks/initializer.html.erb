@@ -8,15 +8,8 @@
         <p><%= task.title %></p>
       </div>
       <div id="task_<%= task.id %>">
-      <%= simple_form_for task, remote: true, url: complete_subtasks_task_path(task), method: :post do |f| %>
-      <div class="card-btn">
-        <%= f.hidden_field :task_id, value: task.id %>
-        <%= button_tag class: "initialize-btn" do %>
-        <i class="far fa-circle" style="color: #BB6BD9;"></i>
-        <% end %>
+        <%= render 'initialize', task: task %>
       </div>
-      </div>
-    <% end %>
     </div>
     <% end %>
     <br>
@@ -24,6 +17,3 @@
 </div>
 
 <%= render 'shared/footer' %>
-
-
-
