@@ -46,7 +46,11 @@ class TasksController < ApplicationController
       @user_subtask.subtask_id = subtask.id
       @user_subtask.save
     end
-    redirect_to initialize_path
+    respond_to do |format|
+      format.html { redirect_to initialize_path }
+      format.js
+    end
+    current_user.update_user_access
   end
 
 end

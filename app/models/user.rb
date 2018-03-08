@@ -33,14 +33,17 @@ class User < ApplicationRecord
   has_many :user_subtasks
   has_many :subtasks, through: :user_subtasks
   validates :first_name, :last_name, presence: true
+  validates :email, uniqueness: true
 
   mount_uploader :photo, PhotoUploader
+
+  after_create :make_volunteer_crisp_admin
 
   def visible_tasks
     Task.where(position: 1..self.access).order('position DESC, id ASC')
   end
 
-   def update_user_access
+  def update_user_access
     @accessable_tasks = self.visible_tasks
     @completed_tasks = 0
     @accessable_tasks.each do |task|
@@ -52,23 +55,32 @@ class User < ApplicationRecord
       self.access += 1
       self.save
     end
-
     # Intermediate Position: Employment
     Globalize.with_locale(:en) do
       @french_class = Task.where(title: "Learn French")
     end
-
     if @french_class[0].completed?(self) && self.access < 5
       self.access += 1
       self.save
     end
-
     # Intermediate Position: Financial Aid
     # @open_bank_account = Task.where(title: "Open a bank account")
     # if @open_bank_account.status == "completed" && self.access < 6
     #   self.access += 1
     #   self.save
     # end
+  end
+
+  def make_volunteer_crisp_admin
+    if self.user_type == 'volunteer'
+    url = "https://api.crisp.chat/v1/website/697c7692-c8e1-46a8-b080-94bc635691cb/operator"
+    response = RestClient.post(url,
+      {email: "#{self.email}",
+       role: "member"}.to_json,
+       {content_type: "application/json",
+        Authorization: "Basic YjI0YWFjYzYtOTk1MC00NDFkLWJmMTYtYTVlYzJhNWYwYTc0Ojk1NWEyNzY5ODczZTA4MjUwMzFjYTk1OTMwZjM3NTEzNmU0ZmQ2N2U1ZTY1MmNjYjJhYzA1YTdkZmFhODhiZmY="}
+      )
+    end
   end
 end
 

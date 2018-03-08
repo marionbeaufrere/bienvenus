@@ -10,23 +10,18 @@
   </div>
 <!--     <h4><em> An app to help refugees with their paperwork </em></h4>
   <h5><em> (Currently only available for French paperwork) </em> </h5> -->
-  <%= image_tag 'medium_fox.png', id: "fox-image" %>
+  <div> <%= image_tag 'medium_fox.png', id: "fox-image" %> </div>
   <h2>
     <span id="banner-typed-text"></span>
   </h2>
-
-<!--  <script>
-    setTimeout(function () {
-    window.location.href= 'localhost:3000/onboarding'},5000);
-  </script> -->
-<!--   <div class="buttons-welcome"> -->
-    <span>
-      <%= link_to t(".get_started"), onboarding_path, class: 'button-rounded' %>
-    </span>
-    <span>
-      <div class="a">
-      <%= link_to t(".sign_in"), new_user_session_path %>
+      <% if user_signed_in? %>
+        <p style="color: grey"><em> Welcome Back <%= current_user.first_name %> ❤️ </em></p>
+        <%= render 'shared/footer' %>
+      <% else %>
+      <div>
+        <%= link_to t(".get_started"), onboarding_path, class: 'button-rounded', style: 'padding: 12px 90px' %>
       </div>
+        <%= link_to t(".sign_in"), new_user_session_path %>
+      <% end %>
     </span>
-<!--   </div> -->
 </div>
