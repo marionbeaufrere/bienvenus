@@ -1,0 +1,25 @@
+.swal-button {
+  background: $green-button !important;
+  border: 2px solid $green-button;
+  color: $white ;
+  &:hover {
+    color: $green-button;
+    background: $white !important;
+    text-decoration: none;
+  }
+}
+.swal-footer {
+  text-align: center !important;
+}
+.swal-text {
+  text-align: center !important;
+}
+.swal-title {
+  color: $grey-text !important;
+}
+.swal-icon--success__line {
+  background-color: $yellow-bienvenus !important;
+}
+.swal-icon--success__ring {
+  border: 4px solid $yellow-bienvenus !important;
+}

@@ -13,6 +13,7 @@
   border: 2px solid $green-button;
   border-radius: 40px;
   font-size: 16px;
+  font-weight: bold;
   outline: 0;
   padding: 12px;
   transition: opacity 0.4s $bezier, background 0.4s $bezier;
@@ -33,25 +34,26 @@
   height: 50px;
   width: 200px;
   border: 0;
-  background: $grey-button;
+  background: $white;
   text-transform: uppercase;
-  letter-spacing: 0.15em;
-  color: $white;
+  letter-spacing: 0.05em;
+  color: $grey-button;
   top: 500px;
   border: 2px solid $grey-button;
   border-radius: 5px;
   font-size: 16px;
+  font-weight: bold;
   outline: 0;
   padding: 12px;
   transition: opacity 0.4s $bezier, background 0.4s $bezier;
   cursor: pointer;
     &:hover {
-      color: $grey-button;
-      background: $white;
+      color: $white;
+      background: $grey-button;
       text-decoration: none;
     }
     &:focus {
-      color: $grey-button;
-      background: $white;
+      color: $white;
+      background: $grey-button;
     }
   }

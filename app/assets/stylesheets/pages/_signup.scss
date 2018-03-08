@@ -1,7 +1,14 @@
 .sign-up-container {
   padding: 20px;
   width: 315px;
+}
 
+.sign-in-container {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  width: 327px;
+  margin-top: 50px;
 }
 
 .police {
@@ -9,6 +16,9 @@
   font-size: 16px;
 }
 
+.remember_me {
+  width: 100%;
+}
 
 .signup-control-position-right {
   top: 75%;
@@ -18,6 +28,16 @@
 .signup-control-position-left {
   top: 75%;
   left: 12% !important;
+}
+
+#button-signin{
+  margin-top: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.signin-links {
+  margin: 10px 20px;
 }
 
 // .button-next {
@@ -44,8 +64,18 @@
 }
 
 .carousel-control {
-  color: $green-button;
+  color: $white;
   font-size: 30px;
   font-weight: bold;
 }
+
+.signup-control {
+  color: $green-button;
+  opacity: 1;
+  text-shadow: none;
+  font-weight: lighter;
+  font-size: 22px;
+  text-decoration: underline;
+}
+
 

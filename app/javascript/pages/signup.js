@@ -4,9 +4,19 @@
   let firstItem = document.getElementById('first-item');
 
   let photo = document.getElementById('user_photo')
+<<<<<<< HEAD
   if (signupInputs) {
      photo.classList.add("hidden");
    };
+=======
+
+  if (signupInputs) {
+    photo.classList.add("hidden");
+  };
+
+
+
+>>>>>>> master
 
 function hideNextButton(){
 

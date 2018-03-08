@@ -16,7 +16,10 @@
     </div>
   </div>
 
-  <div class="subtask-list">
+  <div class="subtask-list"
+        data-redirection-url= "<%= tasks_path %>"
+        data-alert-title= "<%= t('.alert_title') %>"
+        data-alert-description= "<%= t('.alert_description').html_safe %>">
     <% @subtasks.each do |subtask| %>
       <%= render 'subtask', subtask: subtask, task: @task %>
     <% end %>

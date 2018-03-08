@@ -11,7 +11,13 @@ class PagesController < ApplicationController
   end
 
   def welcome_screen
-    redirect_to home_path if user_signed_in?
+    if user_signed_in?
+      if current_user.user_type == "refugee"
+        redirect_to tasks_path
+      else
+        redirect_to user_path(current_user)
+      end
+    end
   end
 
   def are_you
