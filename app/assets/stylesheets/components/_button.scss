@@ -34,12 +34,12 @@
   height: 50px;
   width: 200px;
   border: 0;
-  background: $grey-button;
+  background: $white;
   text-transform: uppercase;
   letter-spacing: 0.15em;
   color: $white;
   top: 500px;
-  border: 2px solid $grey-button;
+  border: 2px solid $white;
   border-radius: 5px;
   font-size: 16px;
   outline: 0;
@@ -47,12 +47,12 @@
   transition: opacity 0.4s $bezier, background 0.4s $bezier;
   cursor: pointer;
     &:hover {
-      color: $grey-button;
-      background: $white;
+      color: $white;
+      background: $grey-button;
       text-decoration: none;
     }
     &:focus {
-      color: $grey-button;
-      background: $white;
+      color: $white;
+      background: $grey-button;
     }
   }
