@@ -8,7 +8,7 @@ function loadDynamicBannerText() {
   });
 }
 
-if ( document.querySelector(".welcome-container") ) {
+if ( document.getElementById("banner-typed-text") ) {
   loadDynamicBannerText();
 };
 
