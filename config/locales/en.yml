@@ -38,8 +38,8 @@ en:
         confirm-password: "Please, confirm your password"
         phone: "Your phone number"
         photo: "Upload a profile photo (optional)"
-        previous: "Previous"
-        next: "Next"
+        previous: "< Previous"
+        next: "> Next"
     passwords:
       edit:
         characters: "characters minimum"
@@ -84,8 +84,8 @@ en:
       text-3_html: "In case you have an issue with something, you can get in touch with someone to get help.
       Our awesome volunteers will do their best to help you with your specific issue."
       sign-up: "SIGN ME UP"
-      previous: "Previous"
-      next: "Next"
+      previous: "< Previous"
+      next: "Next >"
     resources:
       map: "More info"
     welcome_screen:
