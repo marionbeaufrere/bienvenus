@@ -252,26 +252,26 @@ cc.save
 
 dd = Subtask.create!(
 title: "Medical visit",
-description: "When you receive the protection ‘récépissé’ (receipt), the prefecture will inform the Ofii. They
+description: "When you receive the protection ‘récépissé’ (receipt), the prefecture will inform the OFII. They
 will then call you in for a medical visit (checkup, chest x-ray, vaccinations).
 It is recommended that you bring copies of any examinations that you may have with you.",
 task: b
 )
-dd.attributes = { title: "Visite Médicale", description: "Quand vous obtenez le récépissé de protection, la préfecture informe l’Ofii qui vous convoque pour la visite médicale (bilan, radio des poumons, vaccins).
+dd.attributes = { title: "Visite Médicale", description: "Quand vous obtenez le récépissé de protection, la préfecture informe l’OFII qui vous convoque pour la visite médicale (bilan, radio des poumons, vaccins).
 Il est conseillé d’amener tous les examens que vous possédez.", locale: :fr }
 dd.save
 
 
 ee = Subtask.create!(
 title: "Sign the Republication Integration Contract (CIR)",
-description: "After an interview with the Ofii representative, you will sign the CIR which is valid for 1 year and includes a
+description: "After an interview with the OFII representative, you will sign the CIR which is valid for 1 year and includes a
 6 hour session “Principes, valeurs et institutions de la République française” (Principles, values and institutions of the
 French Republic), a 6 hour session “Vivre et accéder à l’emploi en France” (Living and working in France) as well as a French test.
 For refugees and ‘beneficiaries’ of subsidiary protection, it is not mandatory to sign the CIR but it is strongly recommended.
 It will give you access to integration programmes and will enable you to obtain your residence permit without any problems.",
 task: b
 )
-ee.attributes = { title: "Signer le CIR", description: "Après un entretien avec le représentant de l’Offi, vous signez le CIR. Il est valable un an et comprend une session
+ee.attributes = { title: "Signer le CIR", description: "Après un entretien avec le représentant de l’OFII, vous signez le CIR. Il est valable un an et comprend une session
 « Principes, valeurs et institutions de la République française » (6 heures), une session « Vivre et accéder à l’emploi en France » (6 heures) et un test de français." , locale: :fr }
 ee.save
 
@@ -279,13 +279,13 @@ ff = Subtask.create!(
 title: "French classes",
 description: "Depending on your level of French, you will be given mandatory training lasting 50, 100 or 200 hours in order to
 reach level A1 and, after an exam, receive the “Diplôme Initial de Langue Française” (DILF) (Initial Diploma in the French Language).
-You can then ask the Ofi for additional training in order to reach level A2.
-If you are unable to attend the courses, send a letter by registered post to the Ofi explaining your reasons why.",
+You then can ask the OFII for additional training in order to reach level A2.
+If you are unable to attend the courses, send a letter by registered post to the OFII explaining your reasons why.",
 task: b
 )
-ff.attributes = { title: "Cours de français", description: "Suivant votre niveau de français, une formation obligatoire de 50, 100 ou 200 heures vous est prescrite a n d’atteindre le niveau A1 et obtenir,
-  après examen, le Diplôme Initial de Langue Française (DILF). Vous pouvez ensuite demander à l’O i de béné cier d’une formation supplémentaire pour atteindre le niveau A2. En cas d’empêchement pour les formations,
-  écrivez à l’O i par courrier recommandé en expliquant vos raisons." , locale: :fr }
+ff.attributes = { title: "Cours de français", description: "Suivant votre niveau de français, une formation obligatoire de 50, 100 ou 200 heures vous est prescrite afin d’atteindre le niveau A1 et obtenir,
+  après examen, le Diplôme Initial de Langue Française (DILF). Vous pouvez ensuite demander à l’OFII de bénéficier d’une formation supplémentaire pour atteindre le niveau A2. En cas d’empêchement pour les formations,
+  écrivez à l’OFII par courrier recommandé en expliquant vos raisons." , locale: :fr }
 ff.save
 
 gg = Subtask.create!(
@@ -305,7 +305,7 @@ description: "If your family has joined you in France, they will receive a notif
 Républicaine pour la Famille` (CIRF) (Family Republican Integration Contract).",
 task: c
 )
-hh.attributes = { title: "Demander à votre famille de signer le CIRF", description: "Si votre famille vous a rejoint, elle recevra une convocation pour
+hh.attributes = { title: "Signature du CIRF par votre famille", description: "Si votre famille vous a rejoint, elle recevra une convocation pour
  signer le Contrat d’Intégration Républicaine pour la Famille (CIRF)." , locale: :fr }
 hh.save
 
@@ -327,7 +327,7 @@ description: "If your family has joined you in France, they will receive a notif
 Républicaine pour la Famille` (CIRF) (Family Republican Integration Contract).",
 task: d
 )
-jj.attributes = { title: "Demander à votre famille de signer le CIRF", description: "Si votre famille vous a rejoint, elle recevra une convocation pour
+jj.attributes = { title: "Signature du CIRF par votre famille", description: "Si votre famille vous a rejoint, elle recevra une convocation pour
  signer le Contrat d’Intégration Républicaine pour la Famille (CIRF)." , locale: :fr }
 jj.save
 
@@ -411,35 +411,35 @@ ccc.save
 
 mm = Subtask.create!(
 title: "Medical visit",
-description: "When you receive the protection ‘récépissé’ (receipt), the prefecture will inform the Ofii who
+description: "When you receive the protection ‘récépissé’ (receipt), the prefecture will inform the OFII who
 will then call you in for a medical visit (checkup, chest x-ray, vaccinations) and the signature of the CIR.
 It is recommended that you bring copies of any examinations that you may have with you.",
 task: f
 )
-mm.attributes = { title: "Visite Médicale", description:"Quand vous obtenez le récépissé de protection, la préfecture informe l’Offi qui vous convoque pour la visite médicale
+mm.attributes = { title: "Visite Médicale", description:"Quand vous obtenez le récépissé de protection, la préfecture informe l’OFII qui vous convoque pour la visite médicale
 (bilan, radio des poumons, vaccins) et la signature du CIR. Il est conseillé d’amener tous les examens que vous possédez." , locale: :fr }
 mm.save
 
 nn = Subtask.create!(
 title: "Medical visit",
-description: "When you receive the protection ‘récépissé’ (receipt), the prefecture will inform the Ofii who
+description: "When you receive the protection ‘récépissé’ (receipt), the prefecture will inform the OFII who
 will then call you in for a medical visit (checkup, chest x-ray, vaccinations) and the signature of the CIR.
 It is recommended that you bring copies of any examinations that you may have with you.",
 task: g
 )
-nn.attributes = { title: "Visite Médicale", description:"Quand vous obtenez le récépissé de protection, la préfecture informe l’Offi qui vous convoque pour la visite médicale
+nn.attributes = { title: "Visite Médicale", description:"Quand vous obtenez le récépissé de protection, la préfecture informe l’OFII qui vous convoque pour la visite médicale
 (bilan, radio des poumons, vaccins) et la signature du CIR. Il est conseillé d’amener tous les examens que vous possédez." , locale: :fr }
 nn.save
 
 
 oo = Subtask.create!(
 title: "Medical visit",
-description: "When you receive the protection ‘récépissé’ (receipt), the prefecture will inform the Ofii who
+description: "When you receive the protection ‘récépissé’ (receipt), the prefecture will inform the OFII who
 will then call you in for a medical visit (checkup, chest x-ray, vaccinations) and the signature of the CIR.
 It is recommended that you bring copies of any examinations that you may have with you.",
 task: h
 )
-oo.attributes = { title: "Visite Médicale", description:"Quand vous obtenez le récépissé de protection, la préfecture informe l’Offi qui vous convoque pour la visite médicale
+oo.attributes = { title: "Visite Médicale", description:"Quand vous obtenez le récépissé de protection, la préfecture informe l’OFII qui vous convoque pour la visite médicale
 (bilan, radio des poumons, vaccins) et la signature du CIR. Il est conseillé d’amener tous les examens que vous possédez." , locale: :fr }
 oo.save
 
