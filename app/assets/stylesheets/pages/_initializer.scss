@@ -45,8 +45,19 @@
   line-height: inherit;
   background-color: transparent;
   border: 0px;
+  outline: none !important;
+  box-shadow: none !important;
+  padding-left: 0;
+  padding-right: 10px;
 }
 
-.initialize-two {
+.initialize-btn-two {
   line-height: inherit;
+  background-color: transparent;
+  border: 0px;
+  outline: none !important;
+  box-shadow: none !important;
+  // margin-left: 4px;
 }
+
+
