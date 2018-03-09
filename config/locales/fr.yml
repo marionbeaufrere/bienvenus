@@ -104,15 +104,15 @@ fr:
     onboarding:
       title-1-1: "Simplifier les démarches administratives"
       title-1-2: "Pour les réfugiés"
-      text-1: "L'administration française peut parfois être difficilement compréhensible. Ainsi, nous vous mettons à disposition
-      un outil vous permettant de suivre et de savoir quoi faire afin de profiter au maximum de vos droits."
+      text-1_html: "L'administration française peut parfois être difficilement compréhensible. Ainsi, nous vous mettons à disposition
+      un <strong> gestionnaire de tâches simplifié </strong>, afin de profiter au maximum de vos droits."
       title-2-1: "Sachez exactement"
       title-2-2: "Où vous en êtes"
-      text-2: "Nous sommes à votre disposition à chaque étape du processus afin de vous aider à comprendre ce qui est requis.
+      text-2_html: "Bienvenus vous permet de comprendre <strong> ce qui est requis à chaque étape du processus </strong>.
       Ne vous perdez plus dans les méandres de l'administration française!"
       title-3-1: "Obtenez de l'aide"
       title-3-2: "N'importe Quand"
-      text-3: " Si vous avez besoin d'assistance sur n'importe quel type de sujet, nos bénévoles sont à votre disposition pour vous aider"
+      text-3_html: " Si vous avez besoin d'assistance sur n'importe quel type de sujet, <strong> nos bénévoles sont à votre disposition </strong> pour vous aider"
       sign-up: "M'INSCRIRE !"
       previous: "Précédent"
       next: "Suivant"
