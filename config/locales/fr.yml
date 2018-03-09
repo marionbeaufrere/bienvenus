@@ -70,8 +70,8 @@ fr:
         confirm-password: "Confirmez votre mot de passe"
         phone: "Votre numéro de téléphone"
         photo: "Ajouter une photo de profil (optionnel)"
-        previous: "Précédent"
-        next: "Suivant"
+        previous: "< Précédent"
+        next: "Suivant >"
     passwords:
       edit:
         characters: "caractères minimum"
@@ -114,8 +114,8 @@ fr:
       title-3-2: "N'importe Quand"
       text-3_html: " Si vous avez besoin d'assistance sur n'importe quel type de sujet, <strong> nos bénévoles sont à votre disposition </strong> pour vous aider"
       sign-up: "M'INSCRIRE !"
-      previous: "Précédent"
-      next: "Suivant"
+      previous: "< Précédent"
+      next: "Suivant >"
     resources:
       map: "Plus d'informations"
     welcome_screen:

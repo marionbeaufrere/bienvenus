@@ -8,18 +8,25 @@
   color: white;
   z-index: 1000;
   position: absolute;
-  top: -5px ;
-  height: 20px;
+  top: 0px ;
+  height: 30px;
   width: 100%;
+  padding: 10px;
 }
 
 .alert-info {
-  background: rgba(0, 0, 255, 0);
-  color: $green;
+  font-size: 12px;
+  background: #78DE9D;
+  color: $white;
   border: none;
+  font-family: Arial;
+  font-weight: bolder;
 }
 .alert-warning {
-  background: rgba(0, 0, 255, 0);
-  color: $red;
+  font-size: 12px;
+  background: #E38B8C;
+  color: $white;
   border: none;
+  font-family: Arial;
+  font-weight: bolder;
 }
