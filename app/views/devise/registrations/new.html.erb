@@ -9,7 +9,7 @@
   <!-- Wrapper for slides -->
   <div class="sign-up-container">
     <div class="carousel-inner">
-      <div id="first-item" class="item slow fnln">
+      <div id="first-item" class="item slow active fnln">
         <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
         <%= f.error_notification %>
 
@@ -27,7 +27,7 @@
         <%= f.input :password_confirmation, label: t(".confirm-password"), label_html: {class: "police"}, required: true %>
         </div>
       </div>
-    <div id="last-item" class="item active fnln-2">
+    <div id="last-item" class="item fnln-2">
 <!--      <h3><%#= t(".sign-up") %></h3> -->
       <div class="form-inputs">
         <%= f.input :phone_number, label: t(".phone"), required: true, :input_html => {:style => 'width: 250px margin: 0'} %>

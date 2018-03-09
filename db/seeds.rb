@@ -247,19 +247,18 @@ Domiciliation through an association is recognised but is more difficult.",
 task: b
 )
 cc.attributes = { title: "Confirmer son adresse personnelle", description: "Vous devez avoir une adresse personnelle à l’hôtel (attestation de l’hôtel et facture du dernier mois), chez un propriétaire (attestation, copie de la carte d’identité, copie de la taxe foncière)
-ou chez un locataire (attestation, carte d’identité, copie de la facture de gaz ou autre...). La domiciliation par une association est reconnue mais avec plus de dfficultés." , locale: :fr }
+ou chez un locataire (attestation, carte d’identité, copie de la facture de gaz ou autre...). La domiciliation par une association est reconnue mais avec plus de difficultés." , locale: :fr }
 cc.save
 
 dd = Subtask.create!(
 title: "Medical visit",
-description: "When you receive the protection ‘récépissé’ (receipt), the prefecture will inform the Ofii who
-will then call you in for a medical visit (checkup, chest x-ray, vaccinations) and the signature of the CIR.
+description: "When you receive the protection ‘récépissé’ (receipt), the prefecture will inform the Ofii. They
+will then call you in for a medical visit (checkup, chest x-ray, vaccinations).
 It is recommended that you bring copies of any examinations that you may have with you.",
 task: b
 )
-dd.attributes = { title: "Visite Médicale", description: "Quand vous obtenez le récépissé de protection, la préfecture informe l’O i qui vous convoque pour la visite médicale (bilan, radio des poumons, vaccins) et la signature du CIR.
-Il est conseillé d’amener tous les examens que vous possédez.
-", locale: :fr }
+dd.attributes = { title: "Visite Médicale", description: "Quand vous obtenez le récépissé de protection, la préfecture informe l’Ofii qui vous convoque pour la visite médicale (bilan, radio des poumons, vaccins).
+Il est conseillé d’amener tous les examens que vous possédez.", locale: :fr }
 dd.save
 
 
@@ -272,7 +271,7 @@ For refugees and ‘beneficiaries’ of subsidiary protection, it is not mandato
 It will give you access to integration programmes and will enable you to obtain your residence permit without any problems.",
 task: b
 )
-ee.attributes = { title: "Signer le CIR", description: "Après un entretien avec le représentant de l’Offi, vous signez pour une durée de 1 an le CIR qui comprend une session
+ee.attributes = { title: "Signer le CIR", description: "Après un entretien avec le représentant de l’Offi, vous signez le CIR. Il est valable un an et comprend une session
 « Principes, valeurs et institutions de la République française » (6 heures), une session « Vivre et accéder à l’emploi en France » (6 heures) et un test de français." , locale: :fr }
 ee.save
 
