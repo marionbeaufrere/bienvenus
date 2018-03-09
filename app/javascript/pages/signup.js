@@ -99,20 +99,21 @@ function hideNextButton(){
 
 
 
-const imageInput = document.getElementById("user_photo")
+const imageInput = document.getElementById("user_photo");
 
-imageInput.addEventListener("change", (event) => {
-  let preview = document.getElementById('image-preview');
-  var file    = document.querySelector('user_photo').files[0];
-  var reader  = new FileReader();
+if (imageInput) {
+  imageInput.addEventListener("change", (event) => {
+    let preview = document.querySelector('.image-preview');
+    var file    = imageInput.files[0];
+    var reader  = new FileReader();
 
-  reader.addEventListener("load", function () {
-    preview.src = reader.result;
-  }, false);
+    reader.addEventListener("load", function () {
+      preview.src = reader.result;
+      preview.classList.remove("hidden");
+    }, false);
 
-  if (file) {
-    reader.readAsDataURL(file);
-  }
-});
-
-
+    if (file) {
+      reader.readAsDataURL(file);
+    }
+  });
+}
