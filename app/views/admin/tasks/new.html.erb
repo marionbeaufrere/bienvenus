@@ -1,10 +1,10 @@
 <%= simple_form_for @task, url: admin_tasks_path do |t| %>
   <%= t.association :category, collection: Category.all %>
   <%= t.input :title, label: "Task", required: true %>
-  <%= t.input :description, label: "Description", required: true %>
+  <%= t.input :description, as: :text, label: "Description", required: true %>
   <%= t.simple_fields_for :subtasks do |s| %>
     <%= s.input :title, label: "Subtask" %>
-    <%= s.input :description, label: "Description" %>
+    <%= s.input :description, as: :text, label: "Description" %>
   <% end %>
 <%= t.button :submit, "Add a task", class: "button-rounded" %>
 <% end %>

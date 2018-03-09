@@ -359,7 +359,7 @@ ll.save
 aaa = Subtask.create!(
 title: "Register for social housing",
 description: "You can do this as soon as you have your residence permit application ‘récépissé’ (receipt) by sending by post the social housing form Cerfa 14069*02 (with a copy of your receipt)
-to an HLM organisation (list provided by your town hall) or the website" <%= link_to "Demande de logement social", "https://www.demande-logement-social.gouv.fr/"".",
+to an HLM organisation (list provided by your town hall) or the website <a href=\"https://www.demande-logement-social.gouv.fr/\">Demande de logement social</a>",
 task: e
 )
 aaa.attributes = { title: "Demander un logement social", description: "Vous pouvez le faire dès que vous avez votre récépissé de
