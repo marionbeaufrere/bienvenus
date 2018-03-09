@@ -6,9 +6,10 @@ function loadDynamicBannerText() {
     typeSpeed: 50,
     loop: true
   });
+  debugger
 }
 
-if ( document.querySelector(".welcome-container") ) {
+if ( document.getElementById("banner-typed-text") ) {
   loadDynamicBannerText();
 };
 
