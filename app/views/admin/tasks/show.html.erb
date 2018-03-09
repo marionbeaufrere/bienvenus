@@ -6,7 +6,7 @@
 <ul>
 <% @subtasks.each do |st| %>
   <li>
-    <%= st.title %> - <%= st.description %>
+    <%= st.title %> - <%= st.description.html_safe %>
   </li>
 <% end %>
 </ul>

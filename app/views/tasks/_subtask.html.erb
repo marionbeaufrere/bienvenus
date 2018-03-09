@@ -7,7 +7,7 @@
 
 <div id="collapse<%= subtask.id %>" class="collapse" aria-labelledby="heading<%= subtask.id %>" data-parent="#accordion">
   <div class="card-body-task">
-    <%= subtask.description %>
+    <%= subtask.description.html_safe %>
   </div>
 </div>
 
