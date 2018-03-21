@@ -22,28 +22,24 @@
 }
 
 .map-card{
+  padding: 0px 10px;
   border-radius: 3px;
   display: flex;
+  justify-content: center;
   align-items: center;
-  height: 100px;
   position: relative;
   width: 90%;
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.25);
   p{
-    z-index: 100;
-    color: black;
-    text-align: center;
-    margin: 62px 90px;
+    color: #151719;
   }
   a{
     color: #151719;
     text-decoration: none;
-    text-align: center;
-    margin-top: 50px;
     font-size: 30px;  }
 }
 
-.resources-header {
+.resources-header-title {
   padding-top: 25px;
 }
 
@@ -51,26 +47,26 @@
   background: #fff;
   border-radius: 3px;
   display: flex;
+  justify-content: center;
   align-items: center;
-  height: 100px;
   position: relative;
   width: 90%;
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.25);
   margin-top: 50px;
   p{
-    z-index: 100;
-    color: black;
-    text-align: center;
-    margin: 50px 88px;
-    font-size: 30px;
+    color: #151719;
   }
   a{
     color: #151719;
     text-decoration: none;
-    text-align: center;
-    margin-top: 50px;
     font-size: 30px;
   }
+}
+
+.resources-inner-card-flexbox {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
 
 .card-link {

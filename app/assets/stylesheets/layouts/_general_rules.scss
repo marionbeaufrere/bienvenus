@@ -1,5 +1,5 @@
 .global-wrapper {
-  min-height: calc(100vh - 70px);
+  min-height: calc(100vh - 50px);
 }
 
 .mobile-container {
@@ -21,4 +21,9 @@
   align-items: center;
   justify-content: space-around;
   height: calc(100vh - 220px);
+}
+
+.row {
+  margin-left: 0px !important;
+  margin-right: 0px !important;
 }
