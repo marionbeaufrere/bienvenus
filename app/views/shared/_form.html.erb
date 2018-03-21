@@ -1,5 +1,5 @@
 <div class="my-container">
-  <%= simple_form_for @task, url: admin_tasks_path do |t| %>
+<%= simple_form_for @task, url: admin_tasks_path do |t| %>
   <%= t.association :category, collection: Category.all %>
   <%= t.input :title, label: "Task", required: true %>
   <%= t.input :description, as: :text, label: "Description", required: true %>
@@ -7,7 +7,6 @@
     <%= s.input :title, label: "Subtask" %>
     <%= s.input :description, as: :text, label: "Description" %>
   <% end %>
-  <%= t.button :submit, "Add a task", class: "button-rounded" %>
-  <% end %>
+<%= t.button :submit, "Add a task", class: "button-rounded" %>
+<% end %>
 </div>
-
