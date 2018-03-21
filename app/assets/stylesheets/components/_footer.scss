@@ -2,6 +2,7 @@
   position: sticky;
   bottom: 0px;
   height: 70px;
+  margin-top: -70px;
   background-color: $white;
   display: flex;
   justify-content: space-around;
@@ -35,3 +36,4 @@
 .fas-footer {
   font-size: 2em;
 }
+
