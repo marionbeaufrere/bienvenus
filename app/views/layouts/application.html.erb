@@ -31,8 +31,8 @@
   </head>
   <body>
     <%= render 'shared/flashes' %>
-    <% if params[:controller] == "tasks" && params[:action] == "show" %>
-          <div class="test">
+    <% if (params[:controller] == "tasks" && params[:action] == "show") || (params[:controller] == "pages" && params[:action] == "acronyms") %>
+          <div class="background-white">
     <% elsif current_user %>
       <div class="background_skew" id="user-email-crisp"
         data-email="<%= current_user.email %>"

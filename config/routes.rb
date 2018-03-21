@@ -17,6 +17,7 @@ Rails.application.routes.draw do
     get '/pages/are_you', to: 'pages#are_you', as: 'are_you'
     get '/pages/asylum_seeker', to: 'pages#asylum_seeker', as: 'asylum_seeker'
     get '/pages/resources', to: 'pages#resources', as: 'resources'
+    get '/pages/acronyms', to: 'pages#acronyms', as: 'acronyms'
     get '/pages/map', to: 'pages#map', as: 'map'
 
     namespace :admin do
