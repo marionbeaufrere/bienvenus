@@ -1,4 +1,4 @@
-<div class = "welcome-container">
+<div class = "global-wrapper mobile-container welcome-container">
    <div class="img-flag text-right">
     <%# if I18n.locale == I18n.default_locale %>
       <%= link_to (image_tag "france.png"), { :locale=>'fr' } %>
@@ -17,7 +17,7 @@
         <%= render 'shared/footer' %>
       <% else %>
       <div>
-        <%= link_to t(".get_started"), onboarding_path, class: 'button-rounded', style: 'padding: 12px 85px' %>
+        <%= link_to t(".get_started"), onboarding_path, class: 'button-rounded', style: 'padding: 12px 60px' %>
       </div>
         <%= link_to t(".sign_in"), new_user_session_path %>
       <% end %>
