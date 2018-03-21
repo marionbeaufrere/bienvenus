@@ -1,0 +1,21 @@
+.map-header {
+  height: 150px;
+  width: 100%;
+  background-color: $blue;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  h3 {
+    color: #fff;
+  }
+}
+
+.map-container {
+  width: 90%;
+  height: calc(90vh - 210px);
+}
+
+.map-iframe {
+  width: 100%;
+  height: 100%;
+}

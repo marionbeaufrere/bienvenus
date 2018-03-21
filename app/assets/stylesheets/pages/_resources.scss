@@ -16,17 +16,18 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 100%;
+  width: 80%;
   flex-direction: column;
-  padding-top: 90px;
+  margin-top: 50px;
 }
 
 .map-card{
   border-radius: 3px;
   display: flex;
-  height: 150px;
+  align-items: center;
+  height: 100px;
   position: relative;
-  width: 100%;
+  width: 90%;
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.25);
   p{
     z-index: 100;
@@ -42,13 +43,18 @@
     font-size: 30px;  }
 }
 
+.resources-header {
+  padding-top: 25px;
+}
+
 .text-card{
   background: #fff;
   border-radius: 3px;
   display: flex;
-  height: 150px;
+  align-items: center;
+  height: 100px;
   position: relative;
-  width: 100%;
+  width: 90%;
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.25);
   margin-top: 50px;
   p{
