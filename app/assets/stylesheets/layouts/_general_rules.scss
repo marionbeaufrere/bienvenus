@@ -1,12 +1,12 @@
 .global-wrapper {
-  min-height: calc(100vh - 50px);
+  min-height: calc(100vh - 90px);
 }
 
 .mobile-container {
   display: flex;
   align-items: center;
   flex-direction: column;
-  height: calc(100vh - 70px);
+  height: calc(100vh - 90px);
 }
 
 .mobile-container-with-header-column {
