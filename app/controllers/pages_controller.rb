@@ -37,5 +37,7 @@ class PagesController < ApplicationController
   def map
   end
 
+  def acronyms
+  end
 
 end
