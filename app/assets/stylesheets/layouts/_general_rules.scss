@@ -1,3 +1,24 @@
 #wrapper {
   min-height: calc(100vh - 70px);
 }
+
+.mobile-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: calc(100vh - $footer_height);
+}
+
+.mobile-container-with-header-column {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: calc(100vh - 220px);
+}
+
+.mobile-container-with-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: calc(100vh - 220px);
+}
