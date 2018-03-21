@@ -1,38 +1,43 @@
+<div class="global-wrapper">
+  <div class="row">
+    <div class="col-xs-10 col-sm-8 col-xs-offset-1 col-sm-offset-2">
+      <div class="mobile-container">
+        <div class="user-profile-overview">
+          <div class="user-avatar">
+            <% if @user.photo.file.nil?  %>
+              <%= image_tag 'medium_fox.png', height: 150, width: 150 %>
+            <% else %>
+              <%= cl_image_tag user.photo, height: 150, width: 150, crop: :fill, class: "user-show-photo" %>
+            <% end %>
+          </div>
+          <div class="user-profile-name">
+            <h1 style="font-size: 40px"><%= @user.first_name.capitalize %> <%= @user.last_name.capitalize %></h1>
+          </div>
+          <div class="user-details">
+            <p><%= t('.email') %>: <%= @user.email %></p>
+            <% if @user.phone_number.present? %>
+            <p><%= t('.phone_number') %>: <%= @user.phone_number %></p>
+            <% end %>
+            <!-- FORM BUTTON -->
+             <div class="edit-user-btn-box">
+              <i class="far fa-edit" id="edit-user-btn"></i>
+            </div>
+          </div>
+        </div>
+        <!-- HIDDEN FORM -->
+        <div class="edit-user-details hidden" id="edit_user_<%= @user.id %>">
+        <%= render 'edit', user: @user %>
+        </div>
 
- <div class="welcome-container">
-  <!-- <div class="user-show"> -->
-    <!-- <div class="user-profile-name"> -->
-      <h1 style="font-size: 40px"><%= @user.first_name.capitalize %> <%= @user.last_name.capitalize %></h1>
-    <!-- </div> -->
-    <div>
-      <% if current_user.photo.file.nil?  %>
-        <%= image_tag 'medium_fox.png', height: 150, width: 150 %>
-      <% else %>
-        <%= cl_image_tag current_user.photo, height: 150, width: 150, crop: :fill, class: "user-show-photo" %>
-      <% end %>
-    </div>
-    <div class="user-details">
-      <p><%= t('.email') %>: <%= current_user.email %></p>
-      <p><%= t('.phone_number') %>: <%= current_user.phone_number%></p>
-      <!-- FORM BUTTON -->
-       <div class="edit-user-btn-box">
-        <i class="far fa-edit" id="edit-user-btn"></i>
+        <div class="user-signout">
+          <%= link_to "Sign Out", destroy_user_session_path, class: "button-rounded text-center", method: :delete %>
+        </div>
+        <% if @user.admin %>
+          <%= link_to "Add a task", new_admin_task_path, class: "button-normal text-center", id:"button-admin" %>
+        <% end %>
       </div>
     </div>
-    <!-- HIDDEN FORM -->
-    <div class="edit-user-details hidden" id="edit_user_<%= @user.id %>">
-    <%= render 'edit', user: @user %>
-    </div>
-
-    <div class="user-signout">
-      <%= link_to destroy_user_session_path, method: :delete do %>
-      <p> <%= t(".sign_out") %></p>
-      <% end %>
-    </div>
-<!--   </div> -->
-  <% if current_user.admin %>
-    <%= link_to "Add a task", new_admin_task_path, class: "button-normal text-center", id:"button-admin" %>
-  <% end %>
+  </div>
 </div>
 
 <%= render 'shared/footer' %>

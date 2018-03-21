@@ -1,32 +1,41 @@
-.user-show {
-  height: 85%;
-  display: flex;
-  justify-content: space-around;
-  flex-direction: column;
-  text-align: center;
+
+.user-profile-overview {
+  margin-top: 20px;
 }
 
 .user-details {
-  text-align: center;
+  padding: 20px 15px;
+  background-color: #fff;
+  text-align: left;
   color:$grey-text;
+  border-style: solid;
+  border-width: 0.3px;
+  border-color: rgb(40, 40, 40);
+  border-radius: 3px;
+  box-shadow: 0 2px 10px rgba(0, 0, 10, .1);
 }
 
 .user-profile-name h3 {
   font-size: 20px;
 }
 
+.user-avatar {
+ display: flex;
+ justify-content: center;
+}
+
 .user-show-photo {
-  top: 30px;
-  left: 10px;
   border-radius: 50%;
   margin-top: 20px;
 }
 
 .user-show-details p {
   font-size: 15px;
+  margin-bottom: 0px !important;
 }
 
 .edit-user-btn-box {
+  margin-top: 10px;
   text-align: center;
 }
 
@@ -58,9 +67,7 @@
 }
 
 .user-signout{
-  text-align: center;
-  font-size: 15px;
-  color: $grey-text;
+  padding-top: 20px;
 }
 
 .user-edit-form-field {
