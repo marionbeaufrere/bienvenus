@@ -1,15 +1,32 @@
-<!-- ajouter l'affichage de la catégorie (là je n'arrive à mettre que catégorie id) -->
-<p><%= @task.category.name %> </p>
-<p><%= @task.title %></p>
-<p><%= @task.description %></p>
+<div class="my-container">
+<br>
+  <div class="task">
+    <div class="abstract", style= "background-color:<%= @task.category.color%>">
+      <p> <%= @task.category.name %> </p>
+        <h3>
+          <%= @task.title %>
+        </h3>
+    </div>
+  <br>
+  <p><%= @task.description %></p>
+</div>
 
-<ul>
-<% @subtasks.each do |st| %>
-  <li>
-    <%= st.title %> - <%= st.description.html_safe %>
-  </li>
+<div class="row">
+<% @subtasks.each_with_index do |st, index| %>
+  <div class="card" id="dashboard-card">
+    <div class="card-title police">
+      <strong> Subtask <%= index + 1 %> : <%= st.title %> </strong>
+    </div>
+    <br>
+    <div class="card-title police">
+     <%= st.description.html_safe %>
+    </div>
+  </div>
 <% end %>
-</ul>
+</div>
+
+<%= link_to " Edit this task and its subtasks", edit_admin_task_path(@task), class: "far fa-edit" %>
+<br>
 
 <h2>Add a new subtask</h2>
 <%= simple_form_for @subtask, url: admin_task_subtasks_path([@task, @subtask]) do |s| %>
@@ -18,7 +35,8 @@
   <%= s.button :submit, "Add a subtask", class: "button-rounded" %>
 <% end %>
 
-
+<br>
 <%= link_to "Add another task", new_admin_task_path %>
-
-
+<%= link_to "Back to the list of all tasks", admin_tasks_path %>
+<br>
+</div>
