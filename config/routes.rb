@@ -21,8 +21,8 @@ Rails.application.routes.draw do
     get '/pages/map', to: 'pages#map', as: 'map'
 
     namespace :admin do
-      resources :tasks, only: [:show, :new, :create, :edit, :update] do
-        resources :subtasks, only: [:new, :create]
+      resources :tasks, only: [:index, :show, :new, :create, :edit, :update] do
+        resources :subtasks, only: [:new, :create, :edit, :update]
       end
     end
     get '/pages/dashboard', to: 'pages#dashboard', as: 'dashboard'

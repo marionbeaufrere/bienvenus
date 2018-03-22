@@ -9,6 +9,10 @@ class Admin::TasksController < ApplicationController
     @subtask = Subtask.new
   end
 
+  def index
+    @tasks = Task.all
+  end
+
   def new
     @task = Task.new
     @task.subtasks.build
@@ -18,17 +22,21 @@ class Admin::TasksController < ApplicationController
     @task = Task.new(task_params)
     @task.save
     redirect_to admin_task_path(@task)
-
   end
 
   def edit
-
+    @task = Task.find(params[:id])
+    @task.subtasks.build
   end
 
   def update
-
+    @task = Task.find(params[:id])
+    if @task.update(task_params)
+      redirect_to admin_task_path(@task)
+    else
+      render :edit
+    end
   end
-
 
   private
 

@@ -1,0 +1,23 @@
+<div class="my-container">
+  <h1> List of tasks </h1>
+  <div class="row">
+  <% @tasks.each do |task| %>
+    <div class="col-xs-12 col-sm-4 col-md-3">
+      <div class="card" id="dashboard-card">
+        <div class="category-color", style= "background-color:<%= task.category.color%>"></div>
+        <div class="task-text">
+          <p style= "color:<%= task.category.color%>"><%= task.category.name.upcase %></p>
+        </div>
+        <div class="card-title police"><%= task.title %></div>
+        <%= link_to "See more", admin_task_path(task) %>
+        <br>
+        <%= link_to "Edit this task", edit_admin_task_path(task), class: "far fa-edit" %>
+        </div>
+      </div>
+  <% end %>
+  </div>
+
+<br>
+<%= link_to "Add another task", new_admin_task_path, class: "button-rounded" %>
+<br>
+</div>

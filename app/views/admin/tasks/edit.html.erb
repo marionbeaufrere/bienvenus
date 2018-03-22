@@ -1,5 +1,5 @@
 <div class="my-container">
-  <%= simple_form_for @task, url: edit_admin_task_path do |t| %>
+  <%= simple_form_for @task, url: admin_tasks_path(@task) do |t| %>
   <%= t.association :category, collection: Category.all %>
   <%= t.input :title, label: "Task", required: true %>
   <%= t.input :description, as: :text, label: "Description", required: true %>
@@ -10,3 +10,4 @@
   <%= t.button :submit, "Update this task", class: "button-rounded" %>
   <% end %>
 </div>
+
