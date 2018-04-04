@@ -22,7 +22,7 @@ Rails.application.routes.draw do
 
     namespace :admin do
       resources :tasks, only: [:index, :show, :new, :create, :edit, :update] do
-        resources :subtasks, only: [:new, :create, :edit, :update]
+        resources :subtasks, only: [:new, :create, :edit, :update, :destroy]
       end
     end
     get '/pages/dashboard', to: 'pages#dashboard', as: 'dashboard'

@@ -5,7 +5,6 @@ class Admin::SubtasksController < ApplicationController
 #   ##################################################################
 
   def create
-
     # params[:subtask]
     @task = Task.find(params[:task_id])
     @subtask = Subtask.new(subtask_params)
@@ -19,6 +18,14 @@ class Admin::SubtasksController < ApplicationController
   end
 
   def update
+  end
+
+  def destroy
+    @task = Task.find(params[:id])
+    @subtask = Subtask.find(params[:task_id])
+    @task = @subtask.task
+    @subtask.destroy
+    redirect_to admin_task_path(@subtask.task)
   end
 
 private
