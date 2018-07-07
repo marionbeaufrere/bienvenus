@@ -25,17 +25,20 @@
     <% end %>
   </div>
 
-  <% unless @links.nil? %>
+<!--   <%# unless @links.nil? %>
   <div class="useful-links-box">
     <ul class="useful-links-list">
-      <% @links.each do |l| %>
-        <li><a class="task-show-links"><%= l.link %></a></li>
-      <% end %>
+      <%# @links.each do |l| %>
+        <li><a class="task-show-links"><%#= l.link %></a></li>
+      <%# end %>
     </ul>
   </div>
-  <% end %>
-  <div class="col-sm-offset-2 col-xs-offset-2 col-md-offset-3 col-xl-offset-3"></div>
-  <button class="button-rounded">Return to Tasks</button>
+  <%# end %> -->
+  <div class="button-task-show col-sm-offset-3 col-xs-offset-1 col-md-offset-4 col-xl-offset-5">
+    <%= link_to tasks_path, method: :get do %>
+    <button class="button-rounded">Return to Tasks</button>
+    <% end %>
+  </div>
 </div>
 <!-- <i class="fas fa-circle show-subtask-circle" style="color: #BB6BD9;"></i> -->
 
