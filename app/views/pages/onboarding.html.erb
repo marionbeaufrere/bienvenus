@@ -43,18 +43,20 @@
         <div class='media logo'>
           <%= image_tag 'networking.png', class: 'logo' %>
         </div>
-        <p><%= t('.text-3_html') %> </p>
-        <%= link_to t('.sign-up'), are_you_path, class: 'button-rounded', style: 'padding: 12px 90px'%>
+        <div class="onboarding-center-text-margin">
+          <p><%= t('.text-3_html') %> </p>
+        </div>
+        <%= link_to t('.sign-up'), new_user_registration_path(user_type: "refugee"), class: 'button-rounded onboarding-button', style: 'padding: 12px 90px'%>
     </div>
   </div>
 
   <!-- Left and right controls -->
   <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left"></span>
+    <span class="glyphicon glyphicon-chevron-left glyphicon-color"></span>
     <span class="sr-only"><%= t('.previous') %></span>
   </a>
   <a class="right carousel-control" href="#myCarousel" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right"></span>
+    <span class="glyphicon glyphicon-chevron-right glyphicon-color"></span>
     <span class="sr-only"><%= t('.next') %></span>
   </a>
 </div>

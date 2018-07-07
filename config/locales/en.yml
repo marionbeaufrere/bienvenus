@@ -18,13 +18,13 @@ en:
       button: "I'm ready"
     show:
       alert_title: "Congratulations!"
-      alert_description: "You’re all set, \n you can start your other tasks now 🤗"
+      alert_description: "You’re all set, you can continue on your other tasks now 🤗"
       alert_success: "icon: success"
 
   users:
     show:
       email: "Email"
-      phone_number: "Phone Number"
+      phone_number: "Phone"
       sign_out: "Sign out"
 
   devise:
@@ -83,7 +83,7 @@ en:
       title-3-2: "Any Time"
       text-3_html: "In case you have an issue with something, you can get in touch with someone to get help.
       Our awesome volunteers will do their best to help you with your specific issue."
-      sign-up: "SIGN ME UP"
+      sign-up: "SIGN UP"
       previous: "< Previous"
       next: "Next >"
     resources:

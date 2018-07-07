@@ -4,7 +4,7 @@
 }
 
 .user-details {
-  padding: 20px 15px;
+  padding: 40px 30px;
   background-color: #fff;
   text-align: left;
   color:$grey-text;
@@ -40,9 +40,10 @@
 }
 
 #edit-user-btn {
-  margin-top: 5px;
+  margin-top: 20px;
   text-shadow: 1px 1px 1px #ccc;
   font-size: 1.3em;
+  cursor: pointer;
   &:hover {
     color: $green;
   }
@@ -50,6 +51,10 @@
 
 .user-button {
   margin-top: 15px;
+}
+
+.user-profile-overview {
+  width: 100%;
 }
 
 .user-show-details {

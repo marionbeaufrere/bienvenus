@@ -1,13 +1,31 @@
 <div class="global-wrapper content-wrapper">
   <div class="my-container">
+    <div id="menu_positioner">
+      <div class="dropdown">
+        <i class="fas fa-ellipsis-v dropdown-toggle" id="navbar-wagon-menu" data-toggle="dropdown"></i>
+        <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+          <li><%= link_to "Profile", user_path(current_user) %></li>
+          <li>
+            <%= link_to destroy_user_session_path, method: :delete do %>
+              <%= t(".sign_out", default: "Log out") %>
+            <% end %>
+          </li>
+          <li>
+            <%= link_to "Destroy Account", destroy_user_session_path %>
+          </li>
+        </ul>
+      </div>
+    </div>
     <h1> <%= t('.title') %> </h1>
     <div class="to-do">
       <h2><%= t('.header')%> (<%= @tasks_in_progress.count %>)</h2>
       <%#= select_tag :query_task, options_for_select(["All", "To do", "Done", "Essentials", "Housing", "Language", "Finance", "Education", "Mobility", "Healthcare", "Financial Aid", "Employment", "Family Unit", "Naturalisation", "Integration"], params[:query_task]), class: 'search-dropdown', include_blank: "Filter"%>
     </div>
 
+    <div class="tasks-index">
       <% @tasks_in_progress.each do |task| %>
         <div class="card-container-task">
+          <%= link_to task_path(task), method: :get, class: "task-link" do %>
           <div class="category">
             <div class="category-color", style= "background-color:<%= task.category.color%>">
             </div>
@@ -16,30 +34,39 @@
                 <%= task.category.name.upcase %>
               </p>
               <div class="card-title police">
-                <%= link_to task.title, task_path(task) %>
+                <%= task.title %>
+                <%#= link_to task.title, task_path(task) %>
               </div>
             </div>
           </div>
+          <% end %>
         </div>
       <% end %>
 
-    <h2><%= t('.sub-header') %> (<%= @tasks_completed.count %>)</h2>
-    <% @tasks_completed.each do |task| %>
-    <div class="card-container-task completed-tasks">
-      <div class="category">
-        <div class="category-color", style= "background-color:<%= task.category.color%>">
-        </div>
-        <div class="task-text">
-          <p style= "color:<%= task.category.color%>">
-            <%= task.category.name.upcase %>
-          </p>
-            <%= link_to task.title, task_path(task) %>
-        </div>
-        <div class="checkbox-done">
-        </div>
+      <div class="to-do">
+       <h2><%= t('.sub-header') %> (<%= @tasks_completed.count %>)</h2>
       </div>
+      <% @tasks_completed.each do |task| %>
+        <div class="card-container-task completed-tasks">
+          <%= link_to task_path(task), method: :get, class: "task-link" do %>
+          <div class="category">
+            <div class="category-color", style= "background-color:<%= task.category.color%>">
+            </div>
+            <div class="task-text">
+              <p style= "color:<%= task.category.color%>">
+                <%= task.category.name.upcase %>
+              </p>
+              <div class="card-title police">
+                <%= task.title %>
+                <%#= link_to task.title, task_path(task) %>
+              </div>
+            </div>
+            <div class="checkbox-done">
+            </div>
+          </div>
+          <% end %>
+        </div>
+      <% end%>
     </div>
-  <% end %>
   </div>
 </div>
-<%= render 'shared/footer' %>

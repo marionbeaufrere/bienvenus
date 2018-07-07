@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   scope '(:locale)', locale: /fr/ do
     devise_for :users, controllers: { registrations: "registrations" }
+
     root to: 'pages#welcome_screen'
     resources :users, only: [:edit, :update, :show]
     resources :tasks, only: [:index, :show, :update] do

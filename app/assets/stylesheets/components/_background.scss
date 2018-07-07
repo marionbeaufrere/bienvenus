@@ -3,7 +3,7 @@
   height: 100vh;
   position: fixed;
   width: 100%;
-  background: linear-gradient(135deg, $yellow-bienvenus 0%, $yellow-bienvenus 50%, white 50%, white 100%);
+  background: $light-gray;
 }
 .background-white {
   overflow-y: scroll;
