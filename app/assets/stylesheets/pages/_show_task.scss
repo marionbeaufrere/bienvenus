@@ -102,11 +102,11 @@ h3 {
 }
 
 .abstract,
-.details {
+.task-details {
   width: 100%;
   padding: 15px 30px;
   position: relative;
-  background: $yellow-bienvenus;
+  background: $light-gray;
 
   // .task:hover & {
   //   background: darken($, 2%);
@@ -116,7 +116,6 @@ h3 {
 .abstract {
   //z-index: 10;
   transition: .3s ease all;
-  background: $yellow-bienvenus;
   text-align: center;
   p {
     opacity: 0.7;

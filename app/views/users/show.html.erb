@@ -1,7 +1,20 @@
 <div class="global-wrapper">
   <div class="row">
-    <div class="col-xs-10 col-sm-8 col-xs-offset-1 col-sm-offset-2">
-      <div class="mobile-container">
+        <div id="menu_positioner">
+          <div class="dropdown">
+            <i class="fas fa-ellipsis-v dropdown-toggle" id="navbar-wagon-menu" data-toggle="dropdown"></i>
+            <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+              <li><%= link_to "Tasks", tasks_path %></li>
+              <li>
+                <%= link_to "Sign Out", destroy_user_session_path(current_user) %>
+              </li>
+              <li>
+                <%= link_to "Destroy Account", destroy_user_session_path(current_user) %>
+              </li>
+            </ul>
+          </div>
+        </div>
+      <div class="mobile-container col-xs-10 col-sm-8 col-xs-offset-1 col-sm-offset-2">
         <div class="user-profile-overview">
           <div class="user-avatar">
             <% if @user.photo.file.nil?  %>
@@ -13,7 +26,7 @@
           <div class="user-profile-name">
             <h1 style="font-size: 40px"><%= @user.first_name.capitalize %> <%= @user.last_name.capitalize %></h1>
           </div>
-          <div class="user-details">
+          <div class="user-details col-xs-8 col-sm-8 col-md-6 col-xl-6 col-xs-offset-2 col-sm-offset-2 col-md-offset-3 col-xl-offset-3">
             <p><%= t('.email') %>: <%= @user.email %></p>
             <% if @user.phone_number.present? %>
             <p><%= t('.phone_number') %>: <%= @user.phone_number %></p>
@@ -28,10 +41,10 @@
         <div class="edit-user-details hidden" id="edit_user_<%= @user.id %>">
         <%= render 'edit', user: @user %>
         </div>
-
+<!--
         <div class="user-signout">
-          <%= link_to "Sign Out", destroy_user_session_path, class: "button-rounded text-center", method: :delete %>
-        </div>
+          <%#= link_to "Sign Out", destroy_user_session_path, class: "button-rounded text-center", method: :delete %>
+        </div> -->
         <% if @user.admin %>
           <%= link_to "Add a task", new_admin_task_path, class: "button-normal text-center", id:"button-admin" %>
         <% end %>

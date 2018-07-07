@@ -6,9 +6,9 @@
         <h3>
           <%= @task.title %>
         </h3>
-        <span class="glyphicon glyphicon-menu-down"></span>
+        <span id="toggle-description" class="glyphicon glyphicon-menu-down"></span>
       </div>
-      <div class="details card-content">
+      <div class="task-details card-content hidden">
         <div class="details__inner">
           <%= @task.description %>
         </div>
@@ -34,8 +34,8 @@
     </ul>
   </div>
   <% end %>
-</div>
-<%= render 'shared/footer' %>
+  <div class="col-sm-offset-2 col-xs-offset-2 col-md-offset-3 col-xl-offset-3"></div>
+  <button class="button-rounded">Return to Tasks</button>
 </div>
 <!-- <i class="fas fa-circle show-subtask-circle" style="color: #BB6BD9;"></i> -->
 
