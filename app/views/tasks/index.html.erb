@@ -1,5 +1,19 @@
 <div class="global-wrapper content-wrapper">
   <div class="my-container">
+    <div id="menu_positioner">
+      <div class="dropdown">
+        <i class="fas fa-ellipsis-v dropdown-toggle" id="navbar-wagon-menu" data-toggle="dropdown"></i>
+        <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+          <li><%= link_to "Profile", user_path(current_user) %></li>
+          <li>
+            <%= link_to "Sign Out", destroy_user_session_path(current_user) %>
+          </li>
+          <li>
+            <%= link_to "Destroy Account", destroy_user_session_path(current_user) %>
+          </li>
+        </ul>
+      </div>
+    </div>
     <h1> <%= t('.title') %> </h1>
     <div class="to-do">
       <h2><%= t('.header')%> (<%= @tasks_in_progress.count %>)</h2>

@@ -5,7 +5,7 @@
         <div class="user-profile-overview">
           <div class="user-avatar">
             <% if @user.photo.file.nil?  %>
-              <%= image_tag 'medium_fox.png', height: 150, width: 150 %>
+              <%= image_tag 'user-placeholder.png', height: 150, width: 150 %>
             <% else %>
               <%= cl_image_tag user.photo, height: 150, width: 150, crop: :fill, class: "user-show-photo" %>
             <% end %>
