@@ -80,3 +80,14 @@ padding: 10px 0;
   border-left: 1px solid #E6E6E6;
   border-top: 1px solid #E6E6E6;
 }
+
+.task-link {
+  width: 77%;
+}
+
+.tasks-index {
+  width: 100%;
+  a {
+    text-decoration: none !important;
+  }
+}
